@@ -1,0 +1,2005 @@
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:20){#
+	subj_c1[i] <- mean(rlnorm(30,0.3,0.5))#
+	subj_c2[i] <- mean(rlnorm(30,0.3,0.5))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$statistic#
+}
+length(p[abs(p) > 1.96])
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,10)#
+subj_c2 = rep(NA,10)#
+for (i in 1:10){#
+	subj_c1[i] <- mean(rlnorm(30,0.3,0.5))#
+	subj_c2[i] <- mean(rlnorm(60,0.3,0.5))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$statistic#
+}
+length(p[abs(p) > 1.96])
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,10)#
+subj_c2 = rep(NA,10)#
+for (i in 1:10){#
+	subj_c1[i] <- mean(rlnorm(30,0.3,0.5))#
+	subj_c2[i] <- mean(rlnorm(60,0.3,0.5))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$statistic#
+}
+length(p[abs(p) > 1.96])
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:20){#
+	subj_c1[i] <- mean(rlnorm(30,0.3,0.5))#
+	subj_c2[i] <- mean(rlnorm(60,0.3,0.5))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$statistic#
+}
+length(p[abs(p) > 1.96])
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:20){#
+	subj_c1[i] <- mean(rlnorm(30,0.3,0.5))#
+	subj_c2[i] <- mean(rlnorm(60,0.3,0.5))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$statistic#
+}
+length(p[abs(p) > 1.96])
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:20){#
+	subj_c1[i] <- mean(rlnorm(30,0.3,0.5))#
+	subj_c2[i] <- mean(rlnorm(60,0.3,0.5))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$statistic#
+}
+length(p[abs(p) > 1.96])
+a <- rlnorm(1000,0.3,0.5)
+?qqplot
+qqnorm(a)
+a <- rlnorm(100000,0.3,0.5)
+qqnorm(a)
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:20){#
+	subj_c1[i] <- mean(rlnorm(30,0,1))#
+	subj_c2[i] <- mean(rlnorm(30,0,1))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$statistic#
+}
+length(p[abs(p) > 1.96])
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:20){#
+	subj_c1[i] <- mean(rlnorm(30,0.1,1))#
+	subj_c2[i] <- mean(rlnorm(30,0,1))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$statistic#
+}
+length(p[abs(p) > 1.96])
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:20){#
+	subj_c1[i] <- mean(rlnorm(30,0.01,1))#
+	subj_c2[i] <- mean(rlnorm(30,0,1))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$statistic#
+}
+length(p[abs(p) > 1.96])
+length(p[abs(p) > 2])
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:20){#
+	subj_c1[i] <- mean(rlnorm(30,0.01,1))#
+	subj_c2[i] <- mean(rlnorm(30,0,1))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$statistic#
+}
+length(p[abs(p) > 2])
+length(p[abs(p) >= 1.96])
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:20){#
+	subj_c1[i] <- mean(rlnorm(30,0.01,1))#
+	subj_c2[i] <- mean(rlnorm(30,0,1))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$statistic#
+}
+length(p[abs(p) >= 1.96])
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:20){#
+	subj_c1[i] <- mean(rlnorm(30,0.01,1))#
+	subj_c2[i] <- mean(rlnorm(30,0,1))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$statistic#
+}
+length(p[abs(p) >= 1.96])
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:20){#
+	subj_c1[i] <- mean(rlnorm(30,0.01,1))#
+	subj_c2[i] <- mean(rlnorm(30,0,1))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$statistic#
+}
+length(p[abs(p) >= 1.96])
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:20){#
+	subj_c1[i] <- mean(rlnorm(30,0,1))#
+	subj_c2[i] <- mean(rlnorm(30,0,1))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$statistic#
+}
+length(p[abs(p) >= 1.96])
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:20){#
+	subj_c1[i] <- mean(rlnorm(30,0,1))#
+	subj_c2[i] <- mean(rlnorm(30,0,1))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$statistic#
+}
+length(p[abs(p) >= 1.96])
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:20){#
+	subj_c1[i] <- mean(rlnorm(30,0,1))#
+	subj_c2[i] <- mean(rlnorm(30,0,1))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$statistic#
+}
+length(p[abs(p) >= 1.96])
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:20){#
+	subj_c1[i] <- median(rlnorm(30,0,1))#
+	subj_c2[i] <- media(rlnorm(30,0,1))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$statistic#
+}
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:20){#
+	subj_c1[i] <- median(rlnorm(30,0,1))#
+	subj_c2[i] <- median(rlnorm(30,0,1))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$statistic#
+}
+length(p[abs(p) >= 1.96])
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:20){#
+	subj_c1[i] <- median(rlnorm(30,0,1))#
+	subj_c2[i] <- median(rlnorm(30,0,1))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$statistic#
+}
+length(p[abs(p) >= 1.96])
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:20){#
+	subj_c1[i] <- median(rlnorm(30,0,1))#
+	subj_c2[i] <- median(rlnorm(30,0,1))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$statistic#
+}
+length(p[abs(p) >= 1.96])
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:20){#
+	subj_c1[i] <- median(rlnorm(30,0,1))#
+	subj_c2[i] <- median(rlnorm(30,0,1))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$statistic#
+}
+length(p[abs(p) >= 1.96])
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:20){#
+	subj_c1[i] <- median(rlnorm(30,0,1))#
+	subj_c2[i] <- median(rlnorm(30,0,1))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$statistic#
+}
+length(p[abs(p) >= 1.96])
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:20){#
+	subj_c1[i] <- mean(rlnorm(30,0,1))#
+	subj_c2[i] <- mean(rlnorm(30,0,1))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$statistic#
+}
+length(p[abs(p) >= 1.96])
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:20){#
+	subj_c1[i] <- mean(rlnorm(30,0,1))#
+	subj_c2[i] <- mean(rlnorm(30,0,1))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$statistic#
+}
+length(p[abs(p) >= 1.96])
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:20){#
+	subj_c1[i] <- mean(rlnorm(30,0,1))#
+	subj_c2[i] <- mean(rlnorm(30,0,1))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$statistic#
+}
+length(p[abs(p) >= 1.96])
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:20){#
+	subj_c1[i] <- mean(rlnorm(30,0,1))#
+	subj_c2[i] <- mean(rlnorm(30,0,1))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$statistic#
+}
+length(p[abs(p) >= 1.96])
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:20){#
+	subj_c1[i] <- mean(rlnorm(30,0,1))#
+	subj_c2[i] <- mean(rlnorm(30,0,1))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$statistic#
+}
+length(p[abs(p) >= 1.96])
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:20){#
+	subj_c1[i] <- mean(log(rlnorm(30,0,1)))#
+	subj_c2[i] <- mean(log(rlnorm(30,0,1)))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$statistic#
+}
+length(p[abs(p) >= 1.96])
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:20){#
+	subj_c1[i] <- mean(log(rlnorm(30,0,1)))#
+	subj_c2[i] <- mean(log(rlnorm(30,0,1)))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$statistic#
+}
+length(p[abs(p) >= 1.96])
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:20){#
+	subj_c1[i] <- mean(log(rlnorm(30,0,1)))#
+	subj_c2[i] <- mean(log(rlnorm(30,0,1)))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$statistic#
+}
+length(p[abs(p) >= 1.96])
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:20){#
+	subj_c1[i] <- mean(log(rlnorm(30,0,1)))#
+	subj_c2[i] <- mean(log(rlnorm(30,0,1)))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$statistic#
+}
+length(p[abs(p) >= 1.96])
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:20){#
+	subj_c1[i] <- mean(log(rlnorm(30,0,1)))#
+	subj_c2[i] <- mean(log(rlnorm(30,0,1)))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$statistic#
+}
+length(p[abs(p) >= 1.96])
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:20){#
+	subj_c1[i] <- mean(log(rlnorm(30,0,1)))#
+	subj_c2[i] <- mean(log(rlnorm(30,0,1)))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$statistic#
+}
+length(p[abs(p) >= 1.96])
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:20){#
+	subj_c1[i] <- mean(log(rlnorm(30,0,1)))#
+	subj_c2[i] <- mean(log(rlnorm(30,0,1)))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$statistic#
+}
+p
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:20){#
+	subj_c1[i] <- mean(log(rlnorm(30,0,1)))#
+	subj_c2[i] <- mean(log(rlnorm(30,0,1)))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$p.value#
+}
+length(p[abs(p) <= 0.05])
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:20){#
+	subj_c1[i] <- mean(log(rlnorm(30,0,1)))#
+	subj_c2[i] <- mean(log(rlnorm(30,0,1)))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$p.value#
+}
+length(p[abs(p) <= 0.05])
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:20){#
+	subj_c1[i] <- mean(log(rlnorm(30,0,1)))#
+	subj_c2[i] <- mean(log(rlnorm(30,0,1)))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$p.value#
+}
+length(p[abs(p) <= 0.05])
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:20){#
+	subj_c1[i] <- mean(log(rlnorm(30,0,1)))#
+	subj_c2[i] <- mean(log(rlnorm(30,0,1)))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$p.value#
+}
+length(p[abs(p) <= 0.05])
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:20){#
+	subj_c1[i] <- mean(log(rlnorm(30,0,1)))#
+	subj_c2[i] <- mean(log(rlnorm(30,0,1)))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$p.value#
+}
+length(p[abs(p) <= 0.05])
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:20){#
+	subj_c1[i] <- mean((rlnorm(30,0,1)))#
+	subj_c2[i] <- mean((rlnorm(30,0,1)))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$p.value#
+}
+length(p[abs(p) <= 0.05])
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:20){#
+	subj_c1[i] <- mean((rlnorm(30,0,1)))#
+	subj_c2[i] <- mean((rlnorm(30,0,1)))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$p.value#
+}
+length(p[abs(p) <= 0.05])
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:20){#
+	subj_c1[i] <- mean((rlnorm(30,0,1)))#
+	subj_c2[i] <- mean((rlnorm(30,0,1)))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$p.value#
+}
+length(p[abs(p) <= 0.05])
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:20){#
+	subj_c1[i] <- mean((rlnorm(30,0,1)))#
+	subj_c2[i] <- mean((rlnorm(30,0,1)))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$p.value#
+}
+length(p[abs(p) <= 0.05])
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:20){#
+	subj_c1[i] <- mean((rlnorm(30,0,1)))#
+	subj_c2[i] <- mean((rlnorm(30,0,1)))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$p.value#
+}
+length(p[abs(p) <= 0.05])
+hist(rlnorm(20,0,1))
+hist(rlnorm(30,0,1))
+hist(rlnorm(30,0,1.2))
+hist(rlnorm(30,0,1.02))
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:20){#
+	subj_c1[i] <- mean((rlnorm(30,0,1.02)))#
+	subj_c2[i] <- mean((rlnorm(30,0,1.02)))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$p.value#
+}
+length(p[abs(p) <= 0.05])
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:20){#
+	subj_c1[i] <- mean((rlnorm(30,0,1.2)))#
+	subj_c2[i] <- mean((rlnorm(30,0,1.2)))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$p.value#
+}
+length(p[abs(p) <= 0.05])
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:20){#
+	subj_c1[i] <- mean((rlnorm(20,0,1.2)))#
+	subj_c2[i] <- mean((rlnorm(20,0,1.2)))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$p.value#
+}
+length(p[abs(p) <= 0.05])
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:20){#
+	subj_c1[i] <- mean((rlnorm(20,0,1.2)))#
+	subj_c2[i] <- mean((rlnorm(20,0,1.2)))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$p.value#
+}
+length(p[abs(p) <= 0.05])
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:20){#
+	subj_c1[i] <- mean((rlnorm(20,0,1.2)))#
+	subj_c2[i] <- mean((rlnorm(20,0,1.2)))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = F, var.equal = T)$p.value#
+}
+length(p[abs(p) <= 0.05])
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:20){#
+	subj_c1[i] <- mean((rlnorm(20,0,1.2)))#
+	subj_c2[i] <- mean((rlnorm(20,0,1.2)))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = F, var.equal = T)$p.value#
+}
+length(p[abs(p) <= 0.05])
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:20){#
+	subj_c1[i] <- mean((rlnorm(20,0,1.2)))#
+	subj_c2[i] <- mean((rlnorm(20,0,1.2)))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = F, var.equal = T)$p.value#
+}
+length(p[abs(p) <= 0.05])
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:20){#
+	subj_c1[i] <- mean((rlnorm(20,0,1.2)))#
+	subj_c2[i] <- mean((rlnorm(20,0,1.2)))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = F, var.equal = T)$p.value#
+}
+length(p[abs(p) <= 0.05])
+p <- rep(NA,100000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:20){#
+	subj_c1[i] <- mean((rlnorm(20,0,1.2)))#
+	subj_c2[i] <- mean((rlnorm(20,0,1.2)))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = F, var.equal = T)$p.value#
+}
+length(p[abs(p) <= 0.05])
+length(p[abs(p) <= 0.05])/100000
+p <- rep(NA,10000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:30){#
+	subj_c1[i] <- mean((rlnorm(20,0,1.2)))#
+	subj_c2[i] <- mean((rlnorm(20,0,1.2)))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$p.value#
+}
+length(p[abs(p) <= 0.05])/10000
+p <- rep(NA,10000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:30){#
+	subj_c1[i] <- mean((rlnorm(30,0,1.2)))#
+	subj_c2[i] <- mean((rlnorm(30,0,1.2)))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$p.value#
+}
+length(p[abs(p) <= 0.05])/10000
+length(p[abs(p) > 0.05])/10000
+p <- rep(NA,10000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:30){#
+	subj_c1[i] <- mean((rlnorm(5,0,1.2)))#
+	subj_c2[i] <- mean((rlnorm(5,0,1.2)))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$p.value#
+}
+length(p[abs(p) > 0.05])/10000
+p <- rep(NA,10000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:30){#
+	subj_c1[i] <- mean((rlnorm(1,0,1.2)))#
+	subj_c2[i] <- mean((rlnorm(1,0,1.2)))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$p.value#
+}
+length(p[abs(p) > 0.05])/10000
+p <- rep(NA,10000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:30){#
+	subj_c1[i] <- mean((rlnorm(100,0,1.2)))#
+	subj_c2[i] <- mean((rlnorm(100,0,1.2)))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$p.value#
+}
+length(p[abs(p) > 0.05])/10000
+subj_c1
+subj_c2
+?rlnorm
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:30){#
+	subj_c1[i] <- mean((rlnorm(30,0,0.5)))#
+	subj_c2[i] <- mean((rlnorm(30,0,0,5)))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$p.value#
+}
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:30){#
+	subj_c1[i] <- mean((rlnorm(30,0,0.5)))#
+	subj_c2[i] <- mean((rlnorm(30,0,0.5)))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$p.value#
+}
+length(p[abs(p) > 0.05])/1000
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:30){#
+	subj_c1[i] <- mean((rlnorm(30,0,0.5)))#
+	subj_c2[i] <- mean((rlnorm(30,0,0.5)))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$p.value#
+}
+length(p[abs(p) > 0.05])/1000
+hist(subj_c1)
+hist(subj_c2)
+p[j]
+t.test(subj_c1,subj_c2, paired = T, var.equal = T)
+t.test(subj_c1,subj_c2, paired = F, var.equal = F)
+hist(rlnorm(100,1,0.5))
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:30){#
+	subj_c1[i] <- mean((rlnorm(100,1,0.5)))#
+	subj_c2[i] <- mean((rlnorm(100,1,0.5)))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$p.value#
+}
+length(p[abs(p) > 0.05])/1000
+length(p[abs(p) <= 0.05])/1000
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:30){#
+	subj_c1[i] <- mean((rlnorm(25,1,0.5)))#
+	subj_c2[i] <- mean((rlnorm(25,1,0.5)))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$p.value#
+}
+length(p[abs(p) <= 0.05])/1000
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:30){#
+	subj_c1[i] <- mean((rlnorm(25,1,0.5)))#
+	subj_c2[i] <- mean((rlnorm(25,1,0.5)))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$p.value#
+}
+length(p[abs(p) <= 0.05])/1000
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:30){#
+	subj_c1[i] <- mean((rlnorm(25,1,0.5)))#
+	subj_c2[i] <- mean((rlnorm(25,1,0.5)))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$p.value#
+}
+length(p[abs(p) <= 0.05])/1000
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:30){#
+	subj_c1[i] <- mean((rlnorm(25,1,0.5)))#
+	subj_c2[i] <- mean((rlnorm(25,1,0.5)))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$p.value#
+}
+length(p[abs(p) <= 0.05])/1000
+# NOTE THAT FOR THESE ANALYSES YOU TYPICALLY NEED TO INCLUDE THE LONG RT TAIL. I recommend rt >0 & rt <16000#
+library(ggplot2)#
+library(reshape2)#
+library(retimes)#
+library(doBy)#
+library(ez)#
+library(plyr)#
+ads <- read.csv("Adult_R.csv")#
+fives <- read.csv("5yo_R.csv")#
+threes <- read.csv("3yo_R.csv")#
+#
+ads$Age <- "Adult"#
+fives$Age <- "Five"#
+threes$Age <- "Three"#
+#
+tt <- rbind(ads,fives,threes)#
+tt$Age <- as.factor(tt$Age)#
+tt$Subject <- paste(tt$Age,tt$Subject, sep = "")#
+#
+#tt<- subset(tt, Incorrect == 0)#
+d = data.frame(Subject = rep(NA, times = length(unique(tt$Subject))*4), Pred = NA, Match = NA, Age = NA, Mu = NA, Sigma = NA, Tau = NA)#
+index = 1#
+for (k in unique(tt$Pred)){#
+	for (j in unique(subset(tt, Pred == k)$Subj)){#
+		for (i in unique(subset(tt, Pred == k & Subject == j)$Match)){#
+			a = timefit(subset(tt, Pred == k & Subject == j & Match == i )$RTms)#
+			d$Age[index] <- as.character(unique(subset(tt, Pred == k & Subject == j & Match == i )$Age)[1])#
+			d$Subject[index] <- j#
+			d$Pred[index] <- k#
+			d$Match[index] <- i#
+			d$Mu[index] <- a@par[1]#
+			d$Sigma[index] <- a@par[2]#
+			d$Tau[index] <- a@par[3]#
+			index <- index + 1#
+#
+			}#
+		}#
+	}#
+re.summary <- summaryBy(Mu + Sigma+ Tau ~ Age+Pred + Match, data = d, FUN = c(mean))#
+#
+ezANOVA(d, dv = Mu, wid = Subject, within = .(Pred,Match), between = .(Age))#
+ezANOVA(d, dv = Sigma, wid = Subject, within = .(Pred,Match), between = .(Age))#
+ezANOVA(d, dv = Tau, wid = Subject, within = .(Pred,Match), between = .(Age))#
+#
+re.summary.gg <- melt(re.summary,id.vars = c("Age","Pred","Match"), variable.name = "Parameter",value.name = "Value")#
+ggplot(data = re.summary.gg, aes(x = Pred, y = Value)) +#
+  geom_bar(stat = "identity", position = "dodge", aes(fill = Match)) +#
+  facet_wrap(~Parameter+Age)
+# NOTE THAT FOR THESE ANALYSES YOU TYPICALLY NEED TO INCLUDE THE LONG RT TAIL. I recommend rt >0 & rt <16000#
+library(ggplot2)#
+library(reshape2)#
+library(retimes)#
+library(doBy)#
+library(ez)#
+library(plyr)#
+ads <- read.csv("Adult_R.csv")#
+fives <- read.csv("5yo_R.csv")#
+threes <- read.csv("3yo_R.csv")#
+#
+ads$Age <- "Adult"#
+fives$Age <- "Five"#
+threes$Age <- "Three"#
+#
+tt <- rbind(ads,fives,threes)#
+tt$Age <- as.factor(tt$Age)#
+tt$Subject <- paste(tt$Age,tt$Subject, sep = "")#
+#
+#tt<- subset(tt, Incorrect == 0)#
+d = data.frame(Subject = rep(NA, times = length(unique(tt$Subject))*4), Pred = NA, Match = NA, Age = NA, Mu = NA, Sigma = NA, Tau = NA)#
+index = 1#
+for (k in unique(tt$Pred)){#
+	for (j in unique(subset(tt, Pred == k)$Subj)){#
+		for (i in unique(subset(tt, Pred == k & Subject == j)$Match)){#
+			a = timefit(subset(tt, Pred == k & Subject == j & Match == i )$RTms)#
+			d$Age[index] <- as.character(unique(subset(tt, Pred == k & Subject == j & Match == i )$Age)[1])#
+			d$Subject[index] <- j#
+			d$Pred[index] <- k#
+			d$Match[index] <- i#
+			d$Mu[index] <- a@par[1]#
+			d$Sigma[index] <- a@par[2]#
+			d$Tau[index] <- a@par[3]#
+			index <- index + 1#
+#
+			}#
+		}#
+	}#
+re.summary <- summaryBy(Mu + Sigma+ Tau ~ Age+Pred + Match, data = d, FUN = c(mean))#
+#
+ezANOVA(d, dv = Mu, wid = Subject, within = .(Pred,Match), between = .(Age))#
+ezANOVA(d, dv = Sigma, wid = Subject, within = .(Pred,Match), between = .(Age))#
+ezANOVA(d, dv = Tau, wid = Subject, within = .(Pred,Match), between = .(Age))#
+#
+re.summary.gg <- melt(re.summary,id.vars = c("Age","Pred","Match"), variable.name = "Parameter",value.name = "Value")#
+ggplot(data = re.summary.gg, aes(x = Pred, y = Value)) +#
+  geom_bar(stat = "identity", position = "dodge", aes(fill = Match)) +#
+  facet_wrap(~Parameter+Age)
+colnames(ads)
+ads <- read.csv("Adult_R.csv")
+colnames(ads)
+summary(ads)
+ads <- read.csv("Adult_R.csv")
+summary(ads)
+summary(3s)
+summary(threes)
+fives <- read.csv("5s_R.csv")
+summary(fives)
+ads <- read.csv("3yo_R.csv")
+summary(ads)
+fives <- read.csv("5yo_R.csv")
+summary(fives)
+ads <- read.csv("Adult_R.csv")#
+fives <- read.csv("5yo_R.csv")#
+threes <- read.csv("3yo_R.csv")#
+#
+ads$Age <- "Adult"#
+fives$Age <- "Five"#
+threes$Age <- "Three"#
+#
+tt <- rbind(ads,fives,threes)#
+tt$Age <- as.factor(tt$Age)#
+tt$Subject <- paste(tt$Age,tt$Subject, sep = "")
+ads <- read.csv("Adult_R.csv")#
+fives <- read.csv("5yo_R.csv")#
+threes <- read.csv("3yo_R.csv")#
+#
+ads$Age <- "Adult"#
+fives$Age <- "Five"#
+threes$Age <- "Three"#
+#
+tt <- rbind(fives,threes)#
+tt$Age <- as.factor(tt$Age)#
+tt$Subject <- paste(tt$Age,tt$Subject, sep = "")
+ads <- read.csv("Adult_R.csv")
+ads <- read.csv("Adult_R.csv")#
+fives <- read.csv("5yo_R.csv")#
+threes <- read.csv("3yo_R.csv")
+fives <- read.csv("5yo_R.csv")
+summary(fives)
+summary(threes)
+summary(ads)
+ads <- read.csv("Adult_R.csv")#
+fives <- read.csv("5yo_R.csv")#
+threes <- read.csv("3yo_R.csv")#
+#
+ads$Age <- "Adult"#
+fives$Age <- "Five"#
+threes$Age <- "Three"#
+#
+tt <- rbind(ads,fives,threes)
+threes$Response. <- as.character(threes$Response.)
+fives$Response. <- as.character(fives$Response.)
+ads$Response. <- as.character(ads$Response.)
+ads <- read.csv("Adult_R.csv")#
+fives <- read.csv("5yo_R.csv")#
+threes <- read.csv("3yo_R.csv")#
+#
+ads$Age <- "Adult"#
+fives$Age <- "Five"#
+threes$Age <- "Three"#
+#
+tt <- rbind(ads,fives,threes)
+ads <- read.csv("Adult_R.csv")#
+fives <- read.csv("5yo_R.csv")#
+threes <- read.csv("3yo_R.csv")#
+#
+ads$Age <- "Adult"#
+fives$Age <- "Five"#
+threes$Age <- "Three"#
+#
+tt <- rbind(ads,fives,threes)
+tt$Age <- as.factor(tt$Age)#
+tt$Subject <- paste(tt$Age,tt$Subject, sep = "")#
+#
+#tt<- subset(tt, Incorrect == 0)#
+d = data.frame(Subject = rep(NA, times = length(unique(tt$Subject))*4), Pred = NA, Match = NA, Age = NA, Mu = NA, Sigma = NA, Tau = NA)#
+index = 1#
+for (k in unique(tt$Pred)){#
+	for (j in unique(subset(tt, Pred == k)$Subj)){#
+		for (i in unique(subset(tt, Pred == k & Subject == j)$Match)){#
+			a = timefit(subset(tt, Pred == k & Subject == j & Match == i )$RTms)#
+			d$Age[index] <- as.character(unique(subset(tt, Pred == k & Subject == j & Match == i )$Age)[1])#
+			d$Subject[index] <- j#
+			d$Pred[index] <- k#
+			d$Match[index] <- i#
+			d$Mu[index] <- a@par[1]#
+			d$Sigma[index] <- a@par[2]#
+			d$Tau[index] <- a@par[3]#
+			index <- index + 1#
+#
+			}#
+		}#
+	}#
+re.summary <- summaryBy(Mu + Sigma+ Tau ~ Age+Pred + Match, data = d, FUN = c(mean))#
+#
+ezANOVA(d, dv = Mu, wid = Subject, within = .(Pred,Match), between = .(Age))#
+ezANOVA(d, dv = Sigma, wid = Subject, within = .(Pred,Match), between = .(Age))#
+ezANOVA(d, dv = Tau, wid = Subject, within = .(Pred,Match), between = .(Age))#
+#
+re.summary.gg <- melt(re.summary,id.vars = c("Age","Pred","Match"), variable.name = "Parameter",value.name = "Value")#
+ggplot(data = re.summary.gg, aes(x = Pred, y = Value)) +#
+  geom_bar(stat = "identity", position = "dodge", aes(fill = Match)) +#
+  facet_wrap(~Parameter+Age)
+tt$Age <- as.factor(tt$Age)#
+tt$Subject <- paste(tt$Age,tt$Subject, sep = "")#
+#
+#tt<- subset(tt, Incorrect == 0)#
+d = data.frame(Subject = rep(NA, times = length(unique(tt$Subject))*4), Pred = NA, Match = NA, Age = NA, Mu = NA, Sigma = NA, Tau = NA)#
+index = 1#
+for (k in unique(tt$Pred)){#
+	for (j in unique(subset(tt, Pred == k)$Subj)){#
+		for (i in unique(subset(tt, Pred == k & Subject == j)$Match)){#
+			a = timefit(subset(tt, Pred == k & Subject == j & Match == i )$RTms)#
+			d$Age[index] <- as.character(unique(subset(tt, Pred == k & Subject == j & Match == i )$Age)[1])#
+			d$Subject[index] <- j#
+			d$Pred[index] <- k#
+			d$Match[index] <- i#
+			d$Mu[index] <- a@par[1]#
+			d$Sigma[index] <- a@par[2]#
+			d$Tau[index] <- a@par[3]#
+			index <- index + 1#
+#
+			}#
+		}#
+	}#
+re.summary <- summaryBy(Mu + Sigma+ Tau ~ Age+Pred + Match, data = d, FUN = c(mean))#
+#
+ezANOVA(d, dv = Mu, wid = Subject, within = .(Pred,Match), between = .(Age))#
+ezANOVA(d, dv = Sigma, wid = Subject, within = .(Pred,Match), between = .(Age))#
+ezANOVA(d, dv = Tau, wid = Subject, within = .(Pred,Match), between = .(Age))#
+#
+re.summary.gg <- melt(re.summary,id.vars = c("Age","Pred","Match"), variable.name = "Parameter",value.name = "Value")#
+ggplot(data = re.summary.gg, aes(x = Pred, y = Value)) +#
+  geom_bar(stat = "identity", position = "dodge", aes(fill = Match)) +#
+  facet_wrap(~Parameter+Age)
+# NOTE THAT FOR THESE ANALYSES YOU TYPICALLY NEED TO INCLUDE THE LONG RT TAIL. I recommend rt >0 & rt <16000#
+library(ggplot2)#
+library(reshape2)#
+library(retimes)#
+library(doBy)#
+library(ez)#
+library(plyr)#
+ads <- read.csv("Adult_R.csv")#
+fives <- read.csv("5yo_R.csv")#
+threes <- read.csv("3yo_R.csv")#
+#
+ads$Age <- "Adult"#
+fives$Age <- "Five"#
+threes$Age <- "Three"#
+#
+tt <- rbind(ads,fives,threes)#
+tt$Age <- as.factor(tt$Age)#
+tt$Subject <- paste(tt$Age,tt$Subject, sep = "")#
+#
+#tt<- subset(tt, Incorrect == 0)#
+d = data.frame(Subject = rep(NA, times = length(unique(tt$Subject))*4), Pred = NA, Match = NA, Age = NA, Mu = NA, Sigma = NA, Tau = NA)#
+index = 1#
+for (k in unique(tt$Pred)){#
+	for (j in unique(subset(tt, Pred == k)$Subj)){#
+		for (i in unique(subset(tt, Pred == k & Subject == j)$Match)){#
+			a = timefit(subset(tt, Pred == k & Subject == j & Match == i )$RTms)#
+			d$Age[index] <- as.character(unique(subset(tt, Pred == k & Subject == j & Match == i )$Age)[1])#
+			d$Subject[index] <- j#
+			d$Pred[index] <- k#
+			d$Match[index] <- i#
+			d$Mu[index] <- a@par[1]#
+			d$Sigma[index] <- a@par[2]#
+			d$Tau[index] <- a@par[3]#
+			index <- index + 1#
+#
+			}#
+		}#
+	}#
+re.summary <- summaryBy(Mu + Sigma+ Tau ~ Age+Pred + Match, data = d, FUN = c(mean))#
+#
+ezANOVA(d, dv = Mu, wid = Subject, within = .(Pred,Match), between = .(Age))#
+ezANOVA(d, dv = Sigma, wid = Subject, within = .(Pred,Match), between = .(Age))#
+ezANOVA(d, dv = Tau, wid = Subject, within = .(Pred,Match), between = .(Age))#
+#
+re.summary.gg <- melt(re.summary,id.vars = c("Age","Pred","Match"), variable.name = "Parameter",value.name = "Value")#
+ggplot(data = re.summary.gg, aes(x = Pred, y = Value)) +#
+  geom_bar(stat = "identity", position = "dodge", aes(fill = Match)) +#
+  facet_wrap(~Parameter+Age)
+d
+summary(tt)
+# NOTE THAT FOR THESE ANALYSES YOU TYPICALLY NEED TO INCLUDE THE LONG RT TAIL. I recommend rt >0 & rt <16000#
+library(ggplot2)#
+library(reshape2)#
+library(retimes)#
+library(doBy)#
+library(ez)#
+library(plyr)#
+ads <- read.csv("Adult_R.csv")#
+fives <- read.csv("5yo_R.csv")#
+threes <- read.csv("3yo_R.csv")#
+#
+ads$Age <- "Adult"#
+fives$Age <- "Five"#
+threes$Age <- "Three"#
+#
+tt <- rbind(ads,fives,threes)#
+tt$Age <- as.factor(tt$Age)#
+tt$Subject <- paste(tt$Age,tt$Participant, sep = "")#
+#
+#tt<- subset(tt, Incorrect == 0)#
+d = data.frame(Subject = rep(NA, times = length(unique(tt$Subject))*4), Pred = NA, Match = NA, Age = NA, Mu = NA, Sigma = NA, Tau = NA)#
+index = 1#
+for (k in unique(tt$Pred)){#
+	for (j in unique(subset(tt, Pred == k)$Subj)){#
+		for (i in unique(subset(tt, Pred == k & Subject == j)$Match)){#
+			a = timefit(subset(tt, Pred == k & Subject == j & Match == i )$RTms)#
+			d$Age[index] <- as.character(unique(subset(tt, Pred == k & Subject == j & Match == i )$Age)[1])#
+			d$Subject[index] <- j#
+			d$Pred[index] <- k#
+			d$Match[index] <- i#
+			d$Mu[index] <- a@par[1]#
+			d$Sigma[index] <- a@par[2]#
+			d$Tau[index] <- a@par[3]#
+			index <- index + 1#
+#
+			}#
+		}#
+	}#
+re.summary <- summaryBy(Mu + Sigma+ Tau ~ Age+Pred + Match, data = d, FUN = c(mean))#
+#
+ezANOVA(d, dv = Mu, wid = Subject, within = .(Pred,Match), between = .(Age))#
+ezANOVA(d, dv = Sigma, wid = Subject, within = .(Pred,Match), between = .(Age))#
+ezANOVA(d, dv = Tau, wid = Subject, within = .(Pred,Match), between = .(Age))#
+#
+re.summary.gg <- melt(re.summary,id.vars = c("Age","Pred","Match"), variable.name = "Parameter",value.name = "Value")#
+ggplot(data = re.summary.gg, aes(x = Pred, y = Value)) +#
+  geom_bar(stat = "identity", position = "dodge", aes(fill = Match)) +#
+  facet_wrap(~Parameter+Age)
+summary(tt)
+tt <- tt[tt$RTms < 5000,]
+d = data.frame(Subject = rep(NA, times = length(unique(tt$Subject))*4), Pred = NA, Match = NA, Age = NA, Mu = NA, Sigma = NA, Tau = NA)#
+index = 1#
+for (k in unique(tt$Pred)){#
+	for (j in unique(subset(tt, Pred == k)$Subj)){#
+		for (i in unique(subset(tt, Pred == k & Subject == j)$Match)){#
+			a = timefit(subset(tt, Pred == k & Subject == j & Match == i )$RTms)#
+			d$Age[index] <- as.character(unique(subset(tt, Pred == k & Subject == j & Match == i )$Age)[1])#
+			d$Subject[index] <- j#
+			d$Pred[index] <- k#
+			d$Match[index] <- i#
+			d$Mu[index] <- a@par[1]#
+			d$Sigma[index] <- a@par[2]#
+			d$Tau[index] <- a@par[3]#
+			index <- index + 1#
+#
+			}#
+		}#
+	}#
+re.summary <- summaryBy(Mu + Sigma+ Tau ~ Age+Pred + Match, data = d, FUN = c(mean))#
+#
+ezANOVA(d, dv = Mu, wid = Subject, within = .(Pred,Match), between = .(Age))#
+ezANOVA(d, dv = Sigma, wid = Subject, within = .(Pred,Match), between = .(Age))#
+ezANOVA(d, dv = Tau, wid = Subject, within = .(Pred,Match), between = .(Age))#
+#
+re.summary.gg <- melt(re.summary,id.vars = c("Age","Pred","Match"), variable.name = "Parameter",value.name = "Value")#
+ggplot(data = re.summary.gg, aes(x = Pred, y = Value)) +#
+  geom_bar(stat = "identity", position = "dodge", aes(fill = Match)) +#
+  facet_wrap(~Parameter+Age)
+ezANOVA(d, dv = Tau, wid = Subject, within = .(Pred,Match), between = .(Age))
+ezANOVA(subset(d, Age == "Adult"), dv = Tau, wid = Subject, within = .(Pred,Match))
+ezANOVA(subset(d, Age == "Three"), dv = Tau, wid = Subject, within = .(Pred,Match))
+for (k in unique(tt$Pred)){#
+			for (i in unique(subset(tt, Pred == k )$Match)){#
+			a = timefit(subset(tt, Pred == k  & Match == i )$RTms)#
+			d$Age[index] <- as.character(unique(subset(tt, Pred == k  & Match == i )$Age)[1])#
+			d$Pred[index] <- k#
+			d$Match[index] <- i#
+			d$Mu[index] <- a@par[1]#
+			d$Sigma[index] <- a@par[2]#
+			d$Tau[index] <- a@par[3]#
+			index <- index + 1#
+#
+			}#
+		}#
+	}#
+re.summary <- summaryBy(Mu + Sigma+ Tau ~ Age+Pred + Match, data = d, FUN = c(mean))
+for (k in unique(tt$Pred)){#
+			for (i in unique(subset(tt, Pred == k )$Match)){#
+			a = timefit(subset(tt, Pred == k  & Match == i )$RTms)#
+			d$Pred[index] <- k#
+			d$Match[index] <- i#
+			d$Mu[index] <- a@par[1]#
+			d$Sigma[index] <- a@par[2]#
+			d$Tau[index] <- a@par[3]#
+			index <- index + 1#
+#
+			}#
+		}#
+	}#
+re.summary <- summaryBy(Mu + Sigma+ Tau ~ Age+Pred + Match, data = d, FUN = c(mean))
+k
+timefit(subset(tt, Pred == k  & Match == i )$RTms)
+d = data.frame( Pred = NA, Match = NA, Age = NA, Mu = NA, Sigma = NA, Tau = NA)#
+index = 1
+for (k in unique(tt$Pred)){#
+			for (i in unique(subset(tt, Pred == k )$Match)){#
+			a = timefit(subset(tt, Pred == k  & Match == i )$RTms)#
+			d$Pred[index] <- k#
+			d$Match[index] <- i#
+			d$Mu[index] <- a@par[1]#
+			d$Sigma[index] <- a@par[2]#
+			d$Tau[index] <- a@par[3]#
+			index <- index + 1#
+#
+			}#
+		}#
+	}#
+re.summary <- summaryBy(Mu + Sigma+ Tau ~ Age+Pred + Match, data = d, FUN = c(mean))
+#tt<- subset(tt, Incorrect == 0)#
+d = data.frame(Subject = rep(NA, times = 4), Pred = NA, Match = NA, Age = NA, Mu = NA, Sigma = NA, Tau = NA)#
+index = 1#
+for (k in unique(tt$Pred)){#
+	for (j in unique(subset(tt, Pred == k)$Subj)){#
+		for (i in unique(subset(tt, Pred == k & Age == j)$Match)){#
+			a = timefit(subset(tt, Pred == k & Age == j & Match == i )$RTms)#
+			d$Age[index] <- j#
+			d$Pred[index] <- k#
+			d$Match[index] <- i#
+			d$Mu[index] <- a@par[1]#
+			d$Sigma[index] <- a@par[2]#
+			d$Tau[index] <- a@par[3]#
+			index <- index + 1#
+#
+			}#
+		}#
+	}#
+re.summary <- summaryBy(Mu + Sigma+ Tau ~ Age+Pred + Match, data = d, FUN = c(mean))
+re.summary
+#tt<- subset(tt, Incorrect == 0)#
+d = data.frame(Subject = rep(NA, times = 4), Pred = NA, Match = NA, Age = NA, Mu = NA, Sigma = NA, Tau = NA)#
+index = 1#
+for (k in unique(tt$Pred)){#
+	for (j in unique(subset(tt, Pred == k)$Age)){#
+		for (i in unique(subset(tt, Pred == k & Age == j)$Match)){#
+			a = timefit(subset(tt, Pred == k & Age == j & Match == i )$RTms)#
+			d$Age[index] <- j#
+			d$Pred[index] <- k#
+			d$Match[index] <- i#
+			d$Mu[index] <- a@par[1]#
+			d$Sigma[index] <- a@par[2]#
+			d$Tau[index] <- a@par[3]#
+			index <- index + 1#
+#
+			}#
+		}#
+	}#
+re.summary <- summaryBy(Mu + Sigma+ Tau ~ Age+Pred + Match, data = d, FUN = c(mean))
+j
+#tt<- subset(tt, Incorrect == 0)#
+d = data.frame(Pred = NA, Match = NA, Age = NA, Mu = NA, Sigma = NA, Tau = NA)#
+index = 1#
+for (k in unique(tt$Pred)){#
+	for (j in unique(subset(tt, Pred == k)$Age)){#
+		for (i in unique(subset(tt, Pred == k & Age == j)$Match)){#
+			a = timefit(subset(tt, Pred == k & Age == j & Match == i )$RTms)#
+			d$Age[index] <- j#
+			d$Pred[index] <- k#
+			d$Match[index] <- i#
+			d$Mu[index] <- a@par[1]#
+			d$Sigma[index] <- a@par[2]#
+			d$Tau[index] <- a@par[3]#
+			index <- index + 1#
+#
+			}#
+		}#
+	}#
+re.summary <- summaryBy(Mu + Sigma+ Tau ~ Age+Pred + Match, data = d, FUN = c(mean))
+timefit(subset(tt, Pred == k & Age == j & Match == i )$RTms)
+k
+j
+i
+#tt<- subset(tt, Incorrect == 0)#
+d = data.frame(Pred = NA, Match = NA, Age = NA, Mu = NA, Sigma = NA, Tau = NA)#
+index = 1#
+for (k in unique(tt$Pred)){#
+	for (j in unique(subset(tt, Pred == k)$Age)){#
+		for (i in unique(subset(tt, Pred == k & Age == j)$Match)){#
+			#a = timefit(subset(tt, Pred == k & Age == j & Match == i )$RTms)#
+			d$Age[index] <- j#
+			d$Pred[index] <- k#
+			d$Match[index] <- i#
+			d$Mu[index] <- a@par[1]#
+			d$Sigma[index] <- a@par[2]#
+			d$Tau[index] <- a@par[3]#
+			index <- index + 1#
+#
+			}#
+		}#
+	}#
+re.summary <- summaryBy(Mu + Sigma+ Tau ~ Age+Pred + Match, data = d, FUN = c(mean))
+#tt<- subset(tt, Incorrect == 0)#
+d = data.frame(Pred = NA, Match = NA, Age = NA, Mu = NA, Sigma = NA, Tau = NA)#
+index = 1#
+for (k in unique(tt$Pred)){#
+	for (j in unique(subset(tt, Pred == k)$Age)){#
+		for (i in unique(subset(tt, Pred == k & Age == j)$Match)){#
+			#a = timefit(subset(tt, Pred == k & Age == j & Match == i )$RTms)#
+			#d$Age[index] <- j#
+			d$Pred[index] <- k#
+			d$Match[index] <- i#
+			d$Mu[index] <- a@par[1]#
+			d$Sigma[index] <- a@par[2]#
+			d$Tau[index] <- a@par[3]#
+			index <- index + 1#
+#
+			}#
+		}#
+	}#
+re.summary <- summaryBy(Mu + Sigma+ Tau ~ Age+Pred + Match, data = d, FUN = c(mean))
+unique(subset(tt, Pred == k & Age == j)$Match
+)
+#tt<- subset(tt, Incorrect == 0)#
+d = data.frame(Pred = NA, Match = NA, Age = NA, Mu = NA, Sigma = NA, Tau = NA)#
+index = 1#
+for (k in unique(tt$Pred)){#
+	for (j in unique(subset(tt, Pred == k)$Age)){#
+		for (i in unique(subset(tt, Pred == k & Age == j)$Match)){#
+			#a = timefit(subset(tt, Pred == k & Age == j & Match == i )$RTms)#
+			#d$Age[index] <- j#
+			d$Pred[index] <- k#
+			d$Match[index] <- i#
+			#d$Mu[index] <- a@par[1]#
+			#d$Sigma[index] <- a@par[2]#
+			#d$Tau[index] <- a@par[3]#
+			index <- index + 1#
+#
+			}#
+		}#
+	}#
+re.summary <- summaryBy(Mu + Sigma+ Tau ~ Age+Pred + Match, data = d, FUN = c(mean))
+#tt<- subset(tt, Incorrect == 0)#
+d = data.frame(Pred = NA, Match = NA, Age = NA, Mu = NA, Sigma = NA, Tau = NA)#
+index = 1#
+for (k in unique(tt$Pred)){#
+	for (j in unique(subset(tt, Pred == k)$Age)){#
+		for (i in unique(subset(tt, Pred == k & Age == j)$Match)){#
+			#a = timefit(subset(tt, Pred == k & Age == j & Match == i )$RTms)#
+			#d$Age[index] <- j#
+			#d$Pred[index] <- k#
+			#d$Match[index] <- i#
+			#d$Mu[index] <- a@par[1]#
+			#d$Sigma[index] <- a@par[2]#
+			#d$Tau[index] <- a@par[3]#
+			index <- index + 1#
+#
+			}#
+		}#
+	}#
+re.summary <- summaryBy(Mu + Sigma+ Tau ~ Age+Pred + Match, data = d, FUN = c(mean))
+#tt<- subset(tt, Incorrect == 0)#
+d = data.frame(Pred = NA, Match = NA, Age = NA, Mu = NA, Sigma = NA, Tau = NA)#
+index = 1#
+for (k in unique(tt$Pred)){#
+	for (j in unique(subset(tt, Pred == k)$Age)){#
+		for (i in unique(subset(tt, Pred == k & Age == j)$Match)){#
+			#a = timefit(subset(tt, Pred == k & Age == j & Match == i )$RTms)#
+			d$Age[index] <- j#
+			#d$Pred[index] <- k#
+			#d$Match[index] <- i#
+			#d$Mu[index] <- a@par[1]#
+			#d$Sigma[index] <- a@par[2]#
+			#d$Tau[index] <- a@par[3]#
+			index <- index + 1#
+#
+			}#
+		}#
+	}#
+re.summary <- summaryBy(Mu + Sigma+ Tau ~ Age+Pred + Match, data = d, FUN = c(mean))
+#tt<- subset(tt, Incorrect == 0)#
+d = data.frame(Pred = NA, Match = NA, Age = NA, Mu = NA, Sigma = NA, Tau = NA)#
+index = 1#
+for (k in unique(tt$Pred)){#
+	for (j in unique(subset(tt, Pred == k)$Age)){#
+		for (i in unique(subset(tt, Pred == k & Age == j)$Match)){#
+			print(j)#
+			#a = timefit(subset(tt, Pred == k & Age == j & Match == i )$RTms)#
+			d$Age[index] <- j#
+			#d$Pred[index] <- k#
+			#d$Match[index] <- i#
+			#d$Mu[index] <- a@par[1]#
+			#d$Sigma[index] <- a@par[2]#
+			#d$Tau[index] <- a@par[3]#
+			index <- index + 1#
+#
+			}#
+		}#
+	}#
+re.summary <- summaryBy(Mu + Sigma+ Tau ~ Age+Pred + Match, data = d, FUN = c(mean))
+#tt<- subset(tt, Incorrect == 0)#
+d = data.frame(Pred = NA, Match = NA, Age = NA, Mu = NA, Sigma = NA, Tau = NA)#
+index = 1#
+for (k in unique(tt$Pred)){#
+	for (j in unique(subset(tt, Pred == k)$Age)){#
+		for (i in unique(subset(tt, Pred == k & Age == j)$Match)){#
+			print(j)#
+			print(k)#
+			#a = timefit(subset(tt, Pred == k & Age == j & Match == i )$RTms)#
+			d$Age[index] <- j#
+			#d$Pred[index] <- k#
+			#d$Match[index] <- i#
+			#d$Mu[index] <- a@par[1]#
+			#d$Sigma[index] <- a@par[2]#
+			#d$Tau[index] <- a@par[3]#
+			index <- index + 1#
+#
+			}#
+		}#
+	}#
+re.summary <- summaryBy(Mu + Sigma+ Tau ~ Age+Pred + Match, data = d, FUN = c(mean))
+j
+summary(tt)
+timefit(subset(tt, Pred == k & Age == "Three" & Match == i )$RTms)
+#tt<- subset(tt, Incorrect == 0)#
+d = data.frame(Pred = NA, Match = NA, Age = NA, Mu = NA, Sigma = NA, Tau = NA)#
+index = 1#
+for (k in unique(tt$Pred)){#
+	for (j in unique(subset(tt, Pred == k)$Age)){#
+		for (i in unique(subset(tt, Pred == k & Age == j)$Match)){#
+			print(j)#
+			print(k)#
+			#a = timefit(subset(tt, Pred == k & Age == j & Match == i )$RTms)#
+			#d$Age[index] <- j#
+			#d$Pred[index] <- k#
+			#d$Match[index] <- i#
+			#d$Mu[index] <- a@par[1]#
+			#d$Sigma[index] <- a@par[2]#
+			#d$Tau[index] <- a@par[3]#
+			index <- index + 1#
+#
+			}#
+		}#
+	}#
+re.summary <- summaryBy(Mu + Sigma+ Tau ~ Age+Pred + Match, data = d, FUN = c(mean))
+#tt<- subset(tt, Incorrect == 0)#
+d = data.frame(Pred = NA, Match = NA, Age = NA, Mu = NA, Sigma = NA, Tau = NA)#
+index = 1#
+for (k in unique(tt$Pred)){#
+	for (j in unique(subset(tt, Pred == k)$Age)){#
+		for (i in unique(subset(tt, Pred == k & Age == j)$Match)){#
+			print(j)#
+			print(k)#
+			a = timefit(subset(tt, Pred == k & Age == j & Match == i )$RTms)#
+			#d$Age[index] <- j#
+			#d$Pred[index] <- k#
+			#d$Match[index] <- i#
+			#d$Mu[index] <- a@par[1]#
+			#d$Sigma[index] <- a@par[2]#
+			#d$Tau[index] <- a@par[3]#
+			index <- index + 1#
+#
+			}#
+		}#
+	}#
+re.summary <- summaryBy(Mu + Sigma+ Tau ~ Age+Pred + Match, data = d, FUN = c(mean))
+#tt<- subset(tt, Incorrect == 0)#
+d = data.frame(Pred = rep(NA, length = 16), Match = NA, Age = NA, Mu = NA, Sigma = NA, Tau = NA)#
+index = 1#
+for (k in unique(tt$Pred)){#
+	for (j in unique(subset(tt, Pred == k)$Age)){#
+		for (i in unique(subset(tt, Pred == k & Age == j)$Match)){#
+			print(j)#
+			print(k)#
+			a = timefit(subset(tt, Pred == k & Age == j & Match == i )$RTms)#
+			#d$Age[index] <- j#
+			#d$Pred[index] <- k#
+			#d$Match[index] <- i#
+			#d$Mu[index] <- a@par[1]#
+			#d$Sigma[index] <- a@par[2]#
+			#d$Tau[index] <- a@par[3]#
+			index <- index + 1#
+#
+			}#
+		}#
+	}#
+re.summary <- summaryBy(Mu + Sigma+ Tau ~ Age+Pred + Match, data = d, FUN = c(mean))
+#tt<- subset(tt, Incorrect == 0)#
+d = data.frame(Pred = rep(NA, length = 16), Match = NA, Age = NA, Mu = NA, Sigma = NA, Tau = NA)#
+index = 1#
+for (k in unique(tt$Pred)){#
+	for (j in unique(subset(tt, Pred == k)$Age)){#
+		for (i in unique(subset(tt, Pred == k & Age == j)$Match)){#
+			print(j)#
+			print(k)#
+			a = timefit(subset(tt, Pred == k & Age == j & Match == i )$RTms)#
+			d$Age[index] <- j#
+			#d$Pred[index] <- k#
+			#d$Match[index] <- i#
+			#d$Mu[index] <- a@par[1]#
+			#d$Sigma[index] <- a@par[2]#
+			#d$Tau[index] <- a@par[3]#
+			index <- index + 1#
+#
+			}#
+		}#
+	}#
+re.summary <- summaryBy(Mu + Sigma+ Tau ~ Age+Pred + Match, data = d, FUN = c(mean))
+#tt<- subset(tt, Incorrect == 0)#
+d = data.frame(Pred = rep(NA, length = 16), Match = NA, Age = NA, Mu = NA, Sigma = NA, Tau = NA)#
+index = 1#
+for (k in unique(tt$Pred)){#
+	for (j in unique(subset(tt, Pred == k)$Age)){#
+		for (i in unique(subset(tt, Pred == k & Age == j)$Match)){#
+#
+			a = timefit(subset(tt, Pred == k & Age == j & Match == i )$RTms)#
+			d$Age[index] <- j#
+			d$Pred[index] <- k#
+			d$Match[index] <- i#
+			d$Mu[index] <- a@par[1]#
+			d$Sigma[index] <- a@par[2]#
+			d$Tau[index] <- a@par[3]#
+			index <- index + 1#
+#
+			}#
+		}#
+	}#
+re.summary <- summaryBy(Mu + Sigma+ Tau ~ Age+Pred + Match, data = d, FUN = c(mean))
+re.summary
+#tt<- subset(tt, Incorrect == 0)#
+d = data.frame(Pred = rep(NA, length = 12), Match = NA, Age = NA, Mu = NA, Sigma = NA, Tau = NA)#
+index = 1#
+for (k in unique(tt$Pred)){#
+	for (j in unique(subset(tt, Pred == k)$Age)){#
+		for (i in unique(subset(tt, Pred == k & Age == j)$Match)){#
+#
+			a = timefit(subset(tt, Pred == k & Age == j & Match == i )$RTms)#
+			d$Age[index] <- j#
+			d$Pred[index] <- k#
+			d$Match[index] <- i#
+			d$Mu[index] <- a@par[1]#
+			d$Sigma[index] <- a@par[2]#
+			d$Tau[index] <- a@par[3]#
+			index <- index + 1#
+#
+			}#
+		}#
+	}#
+re.summary <- summaryBy(Mu + Sigma+ Tau ~ Age+Pred + Match, data = d, FUN = c(mean))
+re.summary
+# NOTE THAT FOR THESE ANALYSES YOU TYPICALLY NEED TO INCLUDE THE LONG RT TAIL. I recommend rt >0 & rt <16000#
+library(ggplot2)#
+library(reshape2)#
+library(retimes)#
+library(doBy)#
+library(ez)#
+library(plyr)#
+ads <- read.csv("Adult_R.csv")#
+fives <- read.csv("5yo_R.csv")#
+threes <- read.csv("3yo_R.csv")#
+#
+ads$Age <- "Adult"#
+fives$Age <- "Five"#
+threes$Age <- "Three"#
+#
+tt <- rbind(ads,fives,threes)#
+tt$Age <- as.factor(tt$Age)#
+tt$Subject <- paste(tt$Age,tt$Participant, sep = "")#
+#
+#tt<- subset(tt, Incorrect == 0)#
+d = data.frame(Subject = rep(NA, times = length(unique(tt$Subject))*4), Pred = NA, Match = NA, Age = NA, Mu = NA, Sigma = NA, Tau = NA)#
+index = 1#
+for (k in unique(tt$Pred)){#
+	for (j in unique(subset(tt, Pred == k)$Subj)){#
+		for (i in unique(subset(tt, Pred == k & Subject == j)$Match)){#
+			a = timefit(subset(tt, Pred == k & Subject == j & Match == i )$RTms)#
+			d$Age[index] <- as.character(unique(subset(tt, Pred == k & Subject == j & Match == i )$Age)[1])#
+			d$Subject[index] <- j#
+			d$Pred[index] <- k#
+			d$Match[index] <- i#
+			d$Mu[index] <- a@par[1]#
+			d$Sigma[index] <- a@par[2]#
+			d$Tau[index] <- a@par[3]#
+			index <- index + 1#
+#
+			}#
+		}#
+	}#
+re.summary <- summaryBy(Mu + Sigma+ Tau ~ Age+Pred + Match, data = d, FUN = c(mean))#
+#
+ezANOVA(d, dv = Mu, wid = Subject, within = .(Pred,Match), between = .(Age))#
+ezANOVA(d, dv = Sigma, wid = Subject, within = .(Pred,Match), between = .(Age))#
+ezANOVA(d, dv = Tau, wid = Subject, within = .(Pred,Match), between = .(Age))#
+#
+re.summary.gg <- melt(re.summary,id.vars = c("Age","Pred","Match"), variable.name = "Parameter",value.name = "Value")#
+ggplot(data = re.summary.gg, aes(x = Pred, y = Value)) +#
+  geom_bar(stat = "identity", position = "dodge", aes(fill = Match)) +#
+  facet_wrap(~Parameter+Age)#
+ # Now for all individuals#
+#tt<- subset(tt, Incorrect == 0)#
+d = data.frame(Pred = rep(NA, length = 12), Match = NA, Age = NA, Mu = NA, Sigma = NA, Tau = NA)#
+index = 1#
+for (k in unique(tt$Pred)){#
+	for (j in unique(subset(tt, Pred == k)$Age)){#
+		for (i in unique(subset(tt, Pred == k & Age == j)$Match)){#
+#
+			a = timefit(subset(tt, Pred == k & Age == j & Match == i )$RTms)#
+			d$Age[index] <- j#
+			d$Pred[index] <- k#
+			d$Match[index] <- i#
+			d$Mu[index] <- a@par[1]#
+			d$Sigma[index] <- a@par[2]#
+			d$Tau[index] <- a@par[3]#
+			index <- index + 1#
+#
+			}#
+		}#
+	}#
+re.summary <- summaryBy(Mu + Sigma+ Tau ~ Age+Pred + Match, data = d, FUN = c(mean))#
+re.summary.gg <- melt(re.summary,id.vars = c("Age","Pred","Match"), variable.name = "Parameter",value.name = "Value")#
+ggplot(data = re.summary.gg, aes(x = Pred, y = Value)) +#
+  geom_bar(stat = "identity", position = "dodge", aes(fill = Match)) +#
+  facet_wrap(~Parameter+Age)
+# NOTE THAT FOR THESE ANALYSES YOU TYPICALLY NEED TO INCLUDE THE LONG RT TAIL. I recommend rt >0 & rt <16000#
+library(ggplot2)#
+library(reshape2)#
+library(retimes)#
+library(doBy)#
+library(ez)#
+library(plyr)#
+ads <- read.csv("Adult_R.csv")#
+fives <- read.csv("5yo_R.csv")#
+threes <- read.csv("3yo_R.csv")#
+#
+ads$Age <- "Adult"#
+fives$Age <- "Five"#
+threes$Age <- "Three"#
+#
+tt <- rbind(ads,fives,threes)#
+tt$Age <- as.factor(tt$Age)#
+tt$Subject <- paste(tt$Age,tt$Participant, sep = "")#
+#
+#tt<- subset(tt, Incorrect == 0)#
+d = data.frame(Subject = rep(NA, times = length(unique(tt$Subject))*4), Pred = NA, Match = NA, Age = NA, Mu = NA, Sigma = NA, Tau = NA)#
+index = 1#
+for (k in unique(tt$Pred)){#
+	for (j in unique(subset(tt, Pred == k)$Subj)){#
+		for (i in unique(subset(tt, Pred == k & Subject == j)$Match)){#
+			a = timefit(subset(tt, Pred == k & Subject == j & Match == i )$RTms)#
+			d$Age[index] <- as.character(unique(subset(tt, Pred == k & Subject == j & Match == i )$Age)[1])#
+			d$Subject[index] <- j#
+			d$Pred[index] <- k#
+			d$Match[index] <- i#
+			d$Mu[index] <- a@par[1]#
+			d$Sigma[index] <- a@par[2]#
+			d$Tau[index] <- a@par[3]#
+			index <- index + 1#
+#
+			}#
+		}#
+	}#
+re.summary <- summaryBy(Mu + Sigma+ Tau ~ Age+Pred + Match, data = d, FUN = c(mean))#
+#
+ezANOVA(d, dv = Mu, wid = Subject, within = .(Pred,Match), between = .(Age))#
+ezANOVA(d, dv = Sigma, wid = Subject, within = .(Pred,Match), between = .(Age))#
+ezANOVA(d, dv = Tau, wid = Subject, within = .(Pred,Match), between = .(Age))#
+#
+re.summary.gg <- melt(re.summary,id.vars = c("Age","Pred","Match"), variable.name = "Parameter",value.name = "Value")#
+ggplot(data = re.summary.gg, aes(x = Pred, y = Value)) +#
+  geom_bar(stat = "identity", position = "dodge", aes(fill = Match)) +#
+  facet_wrap(~Parameter+Age)#
+ # Now for all individuals#
+#tt<- subset(tt, Incorrect == 0)#
+d = data.frame(Pred = rep(NA, length = 12), Match = NA, Age = NA, Mu = NA, Sigma = NA, Tau = NA)#
+index = 1#
+for (k in unique(tt$Pred)){#
+	for (j in unique(subset(tt, Pred == k)$Age)){#
+		for (i in unique(subset(tt, Pred == k & Age == j)$Match)){#
+#
+			a = timefit(subset(tt, Pred == k & Age == j & Match == i )$RTms)#
+			d$Age[index] <- j#
+			d$Pred[index] <- k#
+			d$Match[index] <- i#
+			d$Mu[index] <- a@par[1]#
+			d$Sigma[index] <- a@par[2]#
+			d$Tau[index] <- a@par[3]#
+			index <- index + 1#
+#
+			}#
+		}#
+	}#
+re.summary <- summaryBy(Mu + Sigma+ Tau ~ Age+Pred + Match, data = d, FUN = c(mean))#
+re.summary.gg <- melt(re.summary,id.vars = c("Age","Pred","Match"), variable.name = "Parameter",value.name = "Value")#
+ggplot(data = re.summary.gg, aes(x = Pred, y = Value)) +#
+  geom_bar(stat = "identity", position = "dodge", aes(fill = Match)) +#
+  facet_wrap(~Parameter+Age)
+# NOTE THAT FOR THESE ANALYSES YOU TYPICALLY NEED TO INCLUDE THE LONG RT TAIL. I recommend rt >0 & rt <16000#
+library(ggplot2)#
+library(reshape2)#
+library(retimes)#
+library(doBy)#
+library(ez)#
+library(plyr)#
+ads <- read.csv("Adult_R.csv")#
+fives <- read.csv("5yo_R.csv")#
+threes <- read.csv("3yo_R.csv")#
+#
+ads$Age <- "Adult"#
+fives$Age <- "Five"#
+threes$Age <- "Three"#
+#
+tt <- rbind(ads,fives,threes)#
+tt$Age <- as.factor(tt$Age)#
+tt$Subject <- paste(tt$Age,tt$Participant, sep = "")#
+#
+tt<- subset(tt, RTms < 8000)#
+d = data.frame(Subject = rep(NA, times = length(unique(tt$Subject))*4), Pred = NA, Match = NA, Age = NA, Mu = NA, Sigma = NA, Tau = NA)#
+index = 1#
+for (k in unique(tt$Pred)){#
+	for (j in unique(subset(tt, Pred == k)$Subj)){#
+		for (i in unique(subset(tt, Pred == k & Subject == j)$Match)){#
+			a = timefit(subset(tt, Pred == k & Subject == j & Match == i )$RTms)#
+			d$Age[index] <- as.character(unique(subset(tt, Pred == k & Subject == j & Match == i )$Age)[1])#
+			d$Subject[index] <- j#
+			d$Pred[index] <- k#
+			d$Match[index] <- i#
+			d$Mu[index] <- a@par[1]#
+			d$Sigma[index] <- a@par[2]#
+			d$Tau[index] <- a@par[3]#
+			index <- index + 1#
+#
+			}#
+		}#
+	}#
+re.summary <- summaryBy(Mu + Sigma+ Tau ~ Age+Pred + Match, data = d, FUN = c(mean))#
+#
+ezANOVA(d, dv = Mu, wid = Subject, within = .(Pred,Match), between = .(Age))#
+ezANOVA(d, dv = Sigma, wid = Subject, within = .(Pred,Match), between = .(Age))#
+ezANOVA(d, dv = Tau, wid = Subject, within = .(Pred,Match), between = .(Age))#
+#
+re.summary.gg <- melt(re.summary,id.vars = c("Age","Pred","Match"), variable.name = "Parameter",value.name = "Value")#
+ggplot(data = re.summary.gg, aes(x = Pred, y = Value)) +#
+  geom_bar(stat = "identity", position = "dodge", aes(fill = Match)) +#
+  facet_wrap(~Parameter+Age)#
+ # Now for all individuals#
+#tt<- subset(tt, Incorrect == 0)#
+d = data.frame(Pred = rep(NA, length = 12), Match = NA, Age = NA, Mu = NA, Sigma = NA, Tau = NA)#
+index = 1#
+for (k in unique(tt$Pred)){#
+	for (j in unique(subset(tt, Pred == k)$Age)){#
+		for (i in unique(subset(tt, Pred == k & Age == j)$Match)){#
+#
+			a = timefit(subset(tt, Pred == k & Age == j & Match == i )$RTms)#
+			d$Age[index] <- j#
+			d$Pred[index] <- k#
+			d$Match[index] <- i#
+			d$Mu[index] <- a@par[1]#
+			d$Sigma[index] <- a@par[2]#
+			d$Tau[index] <- a@par[3]#
+			index <- index + 1#
+#
+			}#
+		}#
+	}#
+re.summary <- summaryBy(Mu + Sigma+ Tau ~ Age+Pred + Match, data = d, FUN = c(mean))#
+re.summary.gg <- melt(re.summary,id.vars = c("Age","Pred","Match"), variable.name = "Parameter",value.name = "Value")#
+ggplot(data = re.summary.gg, aes(x = Pred, y = Value)) +#
+  geom_bar(stat = "identity", position = "dodge", aes(fill = Match)) +#
+  facet_wrap(~Parameter+Age)
+summary(d)
+re.summary
+re.summary.gg
+# NOTE THAT FOR THESE ANALYSES YOU TYPICALLY NEED TO INCLUDE THE LONG RT TAIL. I recommend rt >0 & rt <16000#
+library(ggplot2)#
+library(reshape2)#
+library(retimes)#
+library(doBy)#
+library(ez)#
+library(plyr)#
+ads <- read.csv("Adult_R.csv")#
+fives <- read.csv("5yo_R.csv")#
+threes <- read.csv("3yo_R.csv")#
+#
+ads$Age <- "Adult"#
+fives$Age <- "Five"#
+threes$Age <- "Three"#
+#
+tt <- rbind(ads,fives,threes)#
+tt$Age <- as.factor(tt$Age)#
+tt$Subject <- paste(tt$Age,tt$Participant, sep = "")#
+#
+tt<- subset(tt, RTms < 4000)#
+d = data.frame(Subject = rep(NA, times = length(unique(tt$Subject))*4), Pred = NA, Match = NA, Age = NA, Mu = NA, Sigma = NA, Tau = NA)#
+index = 1#
+for (k in unique(tt$Pred)){#
+	for (j in unique(subset(tt, Pred == k)$Subj)){#
+		for (i in unique(subset(tt, Pred == k & Subject == j)$Match)){#
+			a = timefit(subset(tt, Pred == k & Subject == j & Match == i )$RTms)#
+			d$Age[index] <- as.character(unique(subset(tt, Pred == k & Subject == j & Match == i )$Age)[1])#
+			d$Subject[index] <- j#
+			d$Pred[index] <- k#
+			d$Match[index] <- i#
+			d$Mu[index] <- a@par[1]#
+			d$Sigma[index] <- a@par[2]#
+			d$Tau[index] <- a@par[3]#
+			index <- index + 1#
+#
+			}#
+		}#
+	}#
+re.summary <- summaryBy(Mu + Sigma+ Tau ~ Age+Pred + Match, data = d, FUN = c(mean))#
+#
+ezANOVA(d, dv = Mu, wid = Subject, within = .(Pred,Match), between = .(Age))#
+ezANOVA(d, dv = Sigma, wid = Subject, within = .(Pred,Match), between = .(Age))#
+ezANOVA(d, dv = Tau, wid = Subject, within = .(Pred,Match), between = .(Age))#
+#
+re.summary.gg <- melt(re.summary,id.vars = c("Age","Pred","Match"), variable.name = "Parameter",value.name = "Value")#
+ggplot(data = re.summary.gg, aes(x = Pred, y = Value)) +#
+  geom_bar(stat = "identity", position = "dodge", aes(fill = Match)) +#
+  facet_wrap(~Parameter+Age)#
+ # Now for all individuals#
+#tt<- subset(tt, Incorrect == 0)#
+d = data.frame(Pred = rep(NA, length = 12), Match = NA, Age = NA, Mu = NA, Sigma = NA, Tau = NA)#
+index = 1#
+for (k in unique(tt$Pred)){#
+	for (j in unique(subset(tt, Pred == k)$Age)){#
+		for (i in unique(subset(tt, Pred == k & Age == j)$Match)){#
+#
+			a = timefit(subset(tt, Pred == k & Age == j & Match == i )$RTms)#
+			d$Age[index] <- j#
+			d$Pred[index] <- k#
+			d$Match[index] <- i#
+			d$Mu[index] <- a@par[1]#
+			d$Sigma[index] <- a@par[2]#
+			d$Tau[index] <- a@par[3]#
+			index <- index + 1#
+#
+			}#
+		}#
+	}#
+re.summary <- summaryBy(Mu + Sigma+ Tau ~ Age+Pred + Match, data = d, FUN = c(mean))#
+re.summary.gg <- melt(re.summary,id.vars = c("Age","Pred","Match"), variable.name = "Parameter",value.name = "Value")#
+ggplot(data = re.summary.gg, aes(x = Pred, y = Value)) +#
+  geom_bar(stat = "identity", position = "dodge", aes(fill = Match)) +#
+  facet_wrap(~Parameter+Age)
+hist(subset(tt,Age == "three")$RTms)
+hist(subset(tt,Age == "Three")$RTms)
+ads <- read.csv("Adult_R.csv")#
+fives <- read.csv("5yo_R.csv")#
+threes <- read.csv("3yo_R.csv")#
+#
+ads$Age <- "Adult"#
+fives$Age <- "Five"#
+threes$Age <- "Three"#
+#
+tt <- rbind(ads,fives,threes)#
+tt$Age <- as.factor(tt$Age)#
+tt$Subject <- paste(tt$Age,tt$Participant, sep = "")
+hist(subset(tt,Age == "Three")$RTms)
+hist(subset(tt,Age == "Five")$RTms)
+hist(subset(tt,Age == "Adult")$RTms)
+# NOTE THAT FOR THESE ANALYSES YOU TYPICALLY NEED TO INCLUDE THE LONG RT TAIL. I recommend rt >0 & rt <16000#
+library(ggplot2)#
+library(reshape2)#
+library(retimes)#
+library(doBy)#
+library(ez)#
+library(plyr)#
+ads <- read.csv("Adult_R.csv")#
+fives <- read.csv("5yo_R.csv")#
+threes <- read.csv("3yo_R.csv")#
+#
+ads$Age <- "Adult"#
+fives$Age <- "Five"#
+threes$Age <- "Three"#
+#
+tt <- rbind(ads,fives,threes)#
+tt$Age <- as.factor(tt$Age)#
+tt$Subject <- paste(tt$Age,tt$Participant, sep = "")#
+#
+tt<- subset(tt, RTms < 6000)#
+d = data.frame(Subject = rep(NA, times = length(unique(tt$Subject))*4), Pred = NA, Match = NA, Age = NA, Mu = NA, Sigma = NA, Tau = NA)#
+index = 1#
+for (k in unique(tt$Pred)){#
+	for (j in unique(subset(tt, Pred == k)$Subj)){#
+		for (i in unique(subset(tt, Pred == k & Subject == j)$Match)){#
+			a = timefit(subset(tt, Pred == k & Subject == j & Match == i )$RTms)#
+			d$Age[index] <- as.character(unique(subset(tt, Pred == k & Subject == j & Match == i )$Age)[1])#
+			d$Subject[index] <- j#
+			d$Pred[index] <- k#
+			d$Match[index] <- i#
+			d$Mu[index] <- a@par[1]#
+			d$Sigma[index] <- a@par[2]#
+			d$Tau[index] <- a@par[3]#
+			index <- index + 1#
+#
+			}#
+		}#
+	}#
+re.summary <- summaryBy(Mu + Sigma+ Tau ~ Age+Pred + Match, data = d, FUN = c(mean))#
+#
+ezANOVA(d, dv = Mu, wid = Subject, within = .(Pred,Match), between = .(Age))#
+ezANOVA(d, dv = Sigma, wid = Subject, within = .(Pred,Match), between = .(Age))#
+ezANOVA(d, dv = Tau, wid = Subject, within = .(Pred,Match), between = .(Age))#
+#
+re.summary.gg <- melt(re.summary,id.vars = c("Age","Pred","Match"), variable.name = "Parameter",value.name = "Value")#
+ggplot(data = re.summary.gg, aes(x = Pred, y = Value)) +#
+  geom_bar(stat = "identity", position = "dodge", aes(fill = Match)) +#
+  facet_wrap(~Parameter+Age)#
+ # Now for all individuals#
+#tt<- subset(tt, Incorrect == 0)#
+d = data.frame(Pred = rep(NA, length = 12), Match = NA, Age = NA, Mu = NA, Sigma = NA, Tau = NA)#
+index = 1#
+for (k in unique(tt$Pred)){#
+	for (j in unique(subset(tt, Pred == k)$Age)){#
+		for (i in unique(subset(tt, Pred == k & Age == j)$Match)){#
+#
+			a = timefit(subset(tt, Pred == k & Age == j & Match == i )$RTms)#
+			d$Age[index] <- j#
+			d$Pred[index] <- k#
+			d$Match[index] <- i#
+			d$Mu[index] <- a@par[1]#
+			d$Sigma[index] <- a@par[2]#
+			d$Tau[index] <- a@par[3]#
+			index <- index + 1#
+#
+			}#
+		}#
+	}#
+re.summary <- summaryBy(Mu + Sigma+ Tau ~ Age+Pred + Match, data = d, FUN = c(mean))#
+re.summary.gg <- melt(re.summary,id.vars = c("Age","Pred","Match"), variable.name = "Parameter",value.name = "Value")#
+ggplot(data = re.summary.gg, aes(x = Pred, y = Value)) +#
+  geom_bar(stat = "identity", position = "dodge", aes(fill = Match)) +#
+  facet_wrap(~Parameter+Age)
+length(subset(tt,Age == "Adult")$RTms)
+length(subset(tt,Age == "Three")$RTms)
+length(subset(tt,Age == "Five")$RTms)
+tt$RTms <- tt$RTms + min(tt$RTms)#
+d = data.frame(Subject = rep(NA, times = length(unique(tt$Subject))*4), Pred = NA, Match = NA, Age = NA, Mu = NA, Sigma = NA, Tau = NA)#
+index = 1#
+for (k in unique(tt$Pred)){#
+	for (j in unique(subset(tt, Pred == k)$Subj)){#
+		for (i in unique(subset(tt, Pred == k & Subject == j)$Match)){#
+			a = timefit(subset(tt, Pred == k & Subject == j & Match == i )$RTms)#
+			d$Age[index] <- as.character(unique(subset(tt, Pred == k & Subject == j & Match == i )$Age)[1])#
+			d$Subject[index] <- j#
+			d$Pred[index] <- k#
+			d$Match[index] <- i#
+			d$Mu[index] <- a@par[1]#
+			d$Sigma[index] <- a@par[2]#
+			d$Tau[index] <- a@par[3]#
+			index <- index + 1#
+#
+			}#
+		}#
+	}#
+re.summary <- summaryBy(Mu + Sigma+ Tau ~ Age+Pred + Match, data = d, FUN = c(mean))#
+#
+ezANOVA(d, dv = Mu, wid = Subject, within = .(Pred,Match), between = .(Age))#
+ezANOVA(d, dv = Sigma, wid = Subject, within = .(Pred,Match), between = .(Age))#
+ezANOVA(d, dv = Tau, wid = Subject, within = .(Pred,Match), between = .(Age))#
+#
+re.summary.gg <- melt(re.summary,id.vars = c("Age","Pred","Match"), variable.name = "Parameter",value.name = "Value")#
+ggplot(data = re.summary.gg, aes(x = Pred, y = Value)) +#
+  geom_bar(stat = "identity", position = "dodge", aes(fill = Match)) +#
+  facet_wrap(~Parameter+Age)#
+ # Now for all individuals#
+#tt<- subset(tt, Incorrect == 0)#
+d = data.frame(Pred = rep(NA, length = 12), Match = NA, Age = NA, Mu = NA, Sigma = NA, Tau = NA)#
+index = 1#
+for (k in unique(tt$Pred)){#
+	for (j in unique(subset(tt, Pred == k)$Age)){#
+		for (i in unique(subset(tt, Pred == k & Age == j)$Match)){#
+#
+			a = timefit(subset(tt, Pred == k & Age == j & Match == i )$RTms)#
+			d$Age[index] <- j#
+			d$Pred[index] <- k#
+			d$Match[index] <- i#
+			d$Mu[index] <- a@par[1]#
+			d$Sigma[index] <- a@par[2]#
+			d$Tau[index] <- a@par[3]#
+			index <- index + 1#
+#
+			}#
+		}#
+	}#
+re.summary <- summaryBy(Mu + Sigma+ Tau ~ Age+Pred + Match, data = d, FUN = c(mean))#
+re.summary.gg <- melt(re.summary,id.vars = c("Age","Pred","Match"), variable.name = "Parameter",value.name = "Value")#
+ggplot(data = re.summary.gg, aes(x = Pred, y = Value)) +#
+  geom_bar(stat = "identity", position = "dodge", aes(fill = Match)) +#
+  facet_wrap(~Parameter+Age)
+# NOTE THAT FOR THESE ANALYSES YOU TYPICALLY NEED TO INCLUDE THE LONG RT TAIL. I recommend rt >0 & rt <16000#
+library(ggplot2)#
+library(reshape2)#
+library(retimes)#
+library(doBy)#
+library(ez)#
+library(plyr)#
+ads <- read.csv("Adult_R.csv")#
+fives <- read.csv("5yo_R.csv")#
+threes <- read.csv("3yo_R.csv")#
+#
+ads$Age <- "Adult"#
+fives$Age <- "Five"#
+threes$Age <- "Three"#
+#
+tt <- rbind(ads,fives,threes)#
+tt$Age <- as.factor(tt$Age)#
+tt$Subject <- paste(tt$Age,tt$Participant, sep = "")#
+#
+tt<- subset(tt, RTms <= 6000)#
+tt$RTms <- tt$RTms + abs(mins(tt$RTms))#
+d = data.frame(Subject = rep(NA, times = length(unique(tt$Subject))*4), Pred = NA, Match = NA, Age = NA, Mu = NA, Sigma = NA, Tau = NA)#
+index = 1#
+for (k in unique(tt$Pred)){#
+	for (j in unique(subset(tt, Pred == k)$Subj)){#
+		for (i in unique(subset(tt, Pred == k & Subject == j)$Match)){#
+			a = timefit(subset(tt, Pred == k & Subject == j & Match == i )$RTms)#
+			d$Age[index] <- as.character(unique(subset(tt, Pred == k & Subject == j & Match == i )$Age)[1])#
+			d$Subject[index] <- j#
+			d$Pred[index] <- k#
+			d$Match[index] <- i#
+			d$Mu[index] <- a@par[1]#
+			d$Sigma[index] <- a@par[2]#
+			d$Tau[index] <- a@par[3]#
+			index <- index + 1#
+#
+			}#
+		}#
+	}#
+re.summary <- summaryBy(Mu + Sigma+ Tau ~ Age+Pred + Match, data = d, FUN = c(mean))#
+#
+ezANOVA(d, dv = Mu, wid = Subject, within = .(Pred,Match), between = .(Age))#
+ezANOVA(d, dv = Sigma, wid = Subject, within = .(Pred,Match), between = .(Age))#
+ezANOVA(d, dv = Tau, wid = Subject, within = .(Pred,Match), between = .(Age))#
+#
+re.summary.gg <- melt(re.summary,id.vars = c("Age","Pred","Match"), variable.name = "Parameter",value.name = "Value")#
+ggplot(data = re.summary.gg, aes(x = Pred, y = Value)) +#
+  geom_bar(stat = "identity", position = "dodge", aes(fill = Match)) +#
+  facet_wrap(~Parameter+Age)#
+ # Now for all individuals#
+#tt<- subset(tt, Incorrect == 0)#
+d = data.frame(Pred = rep(NA, length = 12), Match = NA, Age = NA, Mu = NA, Sigma = NA, Tau = NA)#
+index = 1#
+for (k in unique(tt$Pred)){#
+	for (j in unique(subset(tt, Pred == k)$Age)){#
+		for (i in unique(subset(tt, Pred == k & Age == j)$Match)){#
+#
+			a = timefit(subset(tt, Pred == k & Age == j & Match == i )$RTms)#
+			d$Age[index] <- j#
+			d$Pred[index] <- k#
+			d$Match[index] <- i#
+			d$Mu[index] <- a@par[1]#
+			d$Sigma[index] <- a@par[2]#
+			d$Tau[index] <- a@par[3]#
+			index <- index + 1#
+#
+			}#
+		}#
+	}#
+re.summary <- summaryBy(Mu + Sigma+ Tau ~ Age+Pred + Match, data = d, FUN = c(mean))#
+re.summary.gg <- melt(re.summary,id.vars = c("Age","Pred","Match"), variable.name = "Parameter",value.name = "Value")#
+ggplot(data = re.summary.gg, aes(x = Pred, y = Value)) +#
+  geom_bar(stat = "identity", position = "dodge", aes(fill = Match)) +#
+  facet_wrap(~Parameter+Age)
+summary(tt)
