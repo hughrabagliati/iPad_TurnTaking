@@ -18,7 +18,7 @@ tt$Age <- as.factor(tt$Age)
 tt$Subject <- paste(tt$Age,tt$Participant, sep = "")
 
 tt<- subset(tt, RTms <= 8000)
-tt$RTms <- tt$RTms + abs(min(tt$RTms))
+#tt$RTms <- tt$RTms + abs(min(tt$RTms))
 d = data.frame(Subject = rep(NA, times = length(unique(tt$Subject))*4), Pred = NA, Match = NA, Age = NA, Mu = NA, Sigma = NA, Tau = NA)
 index = 1
 for (k in unique(tt$Pred)){
