@@ -1,0 +1,54 @@
+library(retimes)
+library(rstan)
+ads <- read.csv("Adult_R.csv")
+fives <- read.csv("5yo_R.csv")
+threes <- read.csv("3yo_R.csv")
+
+ads$Age <- "Adult"
+fives$Age <- "Five"
+threes$Age <- "Three"
+
+tt <- rbind(ads,fives,threes)
+tt$Age <- as.factor(tt$Age)
+tt$Subject <- paste(tt$Age,tt$Participant, sep = "")
+
+tt<- subset(tt, RTms <= 8000)
+tt$rt <- tt$RTms
+tt$N_Match <- ifelse(tt$Match == "Match",0,1)
+tt$N_Pred <- ifelse(tt$Pred == "Pred",0,1)
+tt$N_AgeFive <- model.matrix(~tt$Age)[,2]
+tt$N_AgeThree <- model.matrix(~tt$Age)[,3]
+tt$N_M_P_Interact <- tt$N_Pred * tt$N_Match
+tt$N_Match_AgeFive_Interact <-  tt$N_Match * tt$N_AgeFive
+tt$N_Match_AgeThree_Interact <- tt$N_Match * tt$N_AgeThree
+tt$N_Pred_AgeFive_Interact <- tt$N_Pred * tt$N_AgeFive
+tt$N_Pred_AgeThree_Interact <- tt$N_Pred * tt$N_AgeThree
+tt$N_Match_Pred_AgeFive_Interact <- tt$N_Match * tt$N_Pred * tt$N_AgeFive
+tt$N_Match_Pred_AgeThree_Interact <- tt$N_Match * tt$N_Pred * tt$N_AgeThree
+# For some reason, model won't converge with RTs above zero?
+tt$rt <- tt$rt + abs(min(tt$rt))
+
+
+# Fit Ex-Gaussian using ML (retimes library) 
+eg_ml <- timefit(tt$rt)
+print(eg_ml)
+
+
+# STAN model for ex-Gaussian fit
+stanDat <- list(rt = tt$rt,factor1 = tt$N_Match,factor2 = tt$N_Pred,factor3 = tt$N_AgeFive,factor4 = tt$N_AgeThree, factor5 = tt$N_M_P_Interact, 
+					factor6 = tt$N_Match_AgeFive_Interact, factor6a = tt$N_Match_AgeThree_Interact, factor7 = tt$N_Pred_AgeFive_Interact, factor7a = tt$N_Pred_AgeThree_Interact, 
+					factor8 = tt$N_Match_Pred_AgeFive_Interact, factor8a = tt$N_Match_Pred_AgeThree_Interact, N = nrow(tt), J = nlevels(as.factor(tt$Subject)), Subj = as.integer(as.factor(tt$Subject)))
+
+eg_stan <- stan(file="fixEf.stan",
+                data=stanDat,
+                iter=5000, warmup = 2000, chains = 4)
+
+timefit(subset(tt, Match == "Match")$rt)
+timefit(subset(tt, Match == "Mismatch")$rt)
+timefit(subset(tt, Pred == "Pred")$rt)
+timefit(subset(tt, Pred == "Unpred")$rt)
+
+timefit(subset(tt, Age == "Adult")$rt)
+timefit(subset(tt, Age == "Three")$rt)
+timefit(subset(tt, Age == "Five")$rt)
+summary(eg_stan)

@@ -74,3 +74,7 @@ re.summary.gg <- melt(re.summary,id.vars = c("Age","Pred","Match"), variable.nam
 ggplot(data = re.summary.gg, aes(x = Pred, y = Value)) +
   geom_bar(stat = "identity", position = "dodge", aes(fill = Match)) +
   facet_wrap(~Parameter+Age)
+  
+re.summary.mean <- summaryBy(RTms ~ Subject + Age+Pred + Match, data = tt, FUN = c(mean), keep.names = T)
+summaryBy(RTms ~ Age+Pred + Match, data = re.summary.mean, FUN = c(mean))
+ezANOVA(re.summary.mean, dv = RTms, wid = Subject, within = .(Pred,Match), between = .(Age))
