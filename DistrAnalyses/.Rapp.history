@@ -1,50 +1,3 @@
-cbind(a,b,c,d)
-length(d)
-d = c(rep(c("Co","Exp"),19), rep(c("Co","Exp"),40))
-length(d)
-length(c)
-rep(c("Co","Exp"),19)
-c = c(rep(1:38,2),rep(41:80,2))
-length(c)
-length(b)
-length(a)
-38*2
-cbind(a,b,c)
-d = c(rep(c("Co","Exp"),38), rep(c("Co","Exp"),40))
-length(d)
-cbind(a,b,c,d)
-cbind(a,b,c,d) -> k
-libraru(ez)
-library(ez)
-rnorm(3)
-cbind(a,b,c,d, rnorm(156)) -> k
-k[,3]
-ezANOVA(k,dv = k[,5], wid = k[,3], within = k[,2], between = .(k[,1],k[,4]))
-k <- data.frame(k)
-summary(k)
-ezANOVA(k,dv = V5, wid = c, within = b, between = .(a,d))
-k$V5 <- as.numeric(as.character(k$V5))
-ezANOVA(k,dv = V5, wid = c, within = b, between = .(a,d))
-length(k$c)
-length(k$V5)
-length(k$d)
-length(k$e)
-length(k$d)
-summary(k)
-ezANOVA(k,dv = V5, wid = c, within = b, between = .(a,d))
-ezANOVA(k,dv = k$V5, wid = k$c, within = k$b, between = .(k$a,k$d))
-ezANOVA(k,dv = V5, wid = c, within = b, between = .(a,d), type = 3)
-?ezANOVA
-k[1:40]
-k[1:40,]
-ezANOVA(k,dv = V5, wid = c, within = b, between = .(a), type = 3)
-ezANOVA(k,dv = V5, wid = c, between = .(a), type = 3)
-ezANOVA(k,dv = V5, wid = c, within = .(b), type = 3)
-ezANOVA(k,dv = V5, wid = c, within = .(b), between = .(a),type = 3)
-options(contrasts=c("contr.sum","contr.poly"))
-ezANOVA(k,dv = V5, wid = c, within = .(b), between = .(a),type = 3)
-library(arm)
-logit(0.99)
 logit(0.9)
 library(jsonlite)#
 #
@@ -1024,6 +977,47 @@ for (i in 1:30){#
 p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$p.value#
 }
 length(p[abs(p) <= 0.05])/1000
+a <- c()"boats", "houses", "lamps", "stars", "discs", "planes" , "bags", "locks", "canes", "hands", "shoes", "bones", "squares", "bells", "bows", "cars", "crosses", "cups", "flags", "forks" "hearts", "leaves", "trees","bikes","chairs","toys","coin","keys","clocks","pumps","shells","houses","hats","planes","dolls","spoons","forks","beds","beetles","cups","bowls","bags","buckets","dogs","geese","cats","cans","hammers","bricks","bottles","pens","pencils","ribbons","cards","buttons","rings","dice","shirts","socks","shoes","belts","bells","flowers","pots","eagles","frogs")
+a <- c("boats", "houses", "lamps", "stars", "discs", "planes" , "bags", "locks", "canes", "hands", "shoes", "bones", "squares", "bells", "bows", "cars", "crosses", "cups", "flags", "forks" "hearts", "leaves", "trees","bikes","chairs","toys","coin","keys","clocks","pumps","shells","houses","hats","planes","dolls","spoons","forks","beds","beetles","cups","bowls","bags","buckets","dogs","geese","cats","cans","hammers","bricks","bottles","pens","pencils","ribbons","cards","buttons","rings","dice","shirts","socks","shoes","belts","bells","flowers","pots","eagles","frogs")
+a <- c("boats", "houses", "lamps", "stars", "discs", "planes" , "bags", "locks", "canes", "hands", "shoes", "bones", "squares", "bells", "bows", "cars", "crosses", "cups", "flags", "forks" "hearts", "leaves","trees","bikes","chairs","toys","coin","keys","clocks","pumps","shells","houses","hats","planes","dolls","spoons","forks","beds","beetles","cups","bowls","bags","buckets","dogs","geese","cats","cans","hammers","bricks","bottles","pens","pencils","ribbons","cards","buttons","rings","dice","shirts","socks","shoes","belts","bells","flowers","pots","eagles","frogs")
+a <- c("boats", "houses", "lamps", "stars", "discs", "planes" , "bags", "locks", "canes", "hands", "shoes", "bones", "squares", "bells", "bows", "cars", "crosses", "cups", "flags", "forks",leaves","trees","bikes","chairs","toys","coin","keys","clocks","pumps","shells","houses","hats","planes","dolls","spoons","forks","beds","beetles","cups","bowls","bags","buckets","dogs","geese","cats","cans","hammers","bricks","bottles","pens","pencils","ribbons","cards","buttons","rings","dice","shirts","socks","shoes","belts","bells","flowers","pots","eagles","frogs")
+a = c("boats", "houses", "lamps", "stars", "discs", "planes" , "bags", "locks", "canes", "hands", "shoes", "bones", "squares", "bells", "bows", "cars", "crosses", "cups", "flags", "forks" ,"hearts", "leaves", "trees","bikes","chairs","toys","coin","keys","clocks","pumps","shells","houses","hats","planes","dolls","spoons","forks","beds","beetles","cups","bowls","bags","buckets","dogs","geese","cats","cans","hammers","bricks","bottles","pens","pencils","ribbons","cards","buttons","rings","dice","shirts","socks","shoes","belts","bells","flowers","pots","eagles","frogs")
+length(a)
+unique(a)
+length(unique(a))
+summary(a)
+summary(as.factor(a))
+?aspell
+aspell(a)
+a = c("boats", "houses", "lamps", "stars", "discs", "planes" , "bags", "locks", "canes", "hands", "shoes", "bones", "squares", "bells", "bows", "cars", "crosses", "flags", "hearts", "leaves", "trees","bikes","chairs","toys","coin","keys","clocks","pumps","shells","houses","hats","planes","dolls","spoons","forks","beds","beetles","cups","bowls","bags","buckets","dogs","geese","cats","cans","hammers","bricks","bottles","pens","pencils","ribbons","cards","buttons","rings","dice","shirts","socks","belts","flowers","pots","eagles","frogs","combs","candies","trays","pipes","baskets","cushions","blankets","towels","cans","tubes","monkeys","napkins","crates","pills","rocks","ropes","sticks","wheels","boots","cones","squares","triangle","puppets")
+length(a)
+a <- c("boats", "houses", "lamps", "stars", "discs", "planes" , "bags", "locks", "canes", "hands", "shoes", "bones", "squares", "bells", "bows", "cars", "crosses", "flags", "hearts", "leaves", "trees","bikes","chairs","toys","coin","keys","clocks","pumps","shells","houses","hats","planes","dolls","spoons","forks","beds","beetles","cups","bowls","bags","buckets","dogs","geese","cats","cans","hammers","bricks","bottles","pens","pencils","ribbons","cards","buttons","rings","dice","shirts","socks","belts","flowers","pots","eagles","frogs","combs","candies","trays","pipes","baskets","cushions","blankets","towels","cans","tubes","monkeys","napkins","crates","pills","rocks","ropes","sticks","wheels","boots","cones","squares","triangle","puppets","violins","barrels","gloves","erasers","beans","rings","pillows","candles","mugs","books")
+length(a)
+length(unique(a))
+a <- c("boats", "houses", "lamps", "stars", "discs", "planes" , "bags", "locks", "canes", "hands", "shoes", "bones", "squares", "bells", "bows", "cars", "crosses", "flags", "hearts", "leaves", "trees","bikes","chairs","toys","coin","keys","clocks","pumps","shells","houses","hats","planes","dolls","spoons","forks","beds","beetles","cups","bowls","bags","buckets","dogs","geese","cats","cans","hammers","bricks","bottles","pens","pencils","ribbons","cards","buttons","rings","dice","shirts","socks","belts","flowers","pots","eagles","frogs","combs","candies","trays","pipes","baskets","cushions","blankets","towels","cans","tubes","monkeys","napkins","crates","pills","rocks","ropes","sticks","wheels","boots","cones","squares","triangle","puppets","violins","barrels","gloves","erasers","beans","rings","pillows","candles","mugs","books","toys","balloons",)
+a <- c("boats", "houses", "lamps", "stars", "discs", "planes" , "bags", "locks", "canes", "hands", "shoes", "bones", "squares", "bells", "bows", "cars", "crosses", "flags", "hearts", "leaves", "trees","bikes","chairs","toys","coin","keys","clocks","pumps","shells","houses","hats","planes","dolls","spoons","forks","beds","beetles","cups","bowls","bags","buckets","dogs","geese","cats","cans","hammers","bricks","bottles","pens","pencils","ribbons","cards","buttons","rings","dice","shirts","socks","belts","flowers","pots","eagles","frogs","combs","candies","trays","pipes","baskets","cushions","blankets","towels","cans","tubes","monkeys","napkins","crates","pills","rocks","ropes","sticks","wheels","boots","cones","squares","triangle","puppets","violins","barrels","gloves","erasers","beans","rings","pillows","candles","mugs","books","toys","balloons")
+length(unique(a))
+summary(as.factor(a))
+a <- c("boats", "houses", "lamps", "stars", "discs", "planes" , "locks", "canes", "hands", "shoes", "bones", "squares", "bells", "bows", "cars", "crosses", "flags", "hearts", "leaves", "trees","bikes","chairs","coin","keys","clocks","pumps","shells","hats","planes","dolls","spoons","forks","beds","beetles","cups","bowls","bags","buckets","dogs","geese","cats","cans","hammers","bricks","bottles","pens","pencils","ribbons","cards","buttons","dice","shirts","socks","belts","flowers","pots","eagles","frogs","combs","candies","trays","pipes","baskets","cushions","blankets","towels","tubes","monkeys","napkins","crates","pills","rocks","ropes","sticks","wheels","boots","cones","squares","triangle","puppets","violins","barrels","gloves","erasers","beans","rings","pillows","candles","mugs","books","toys","balloons")
+length(unique(a))
+length(a)
+summary(as.factor(a))
+a <- c("boats", "houses", "lamps", "stars", "discs", "planes" , "locks", "canes", "hands", "shoes", "bones", "squares", "bells", "bows", "cars", "crosses", "flags", "hearts", "leaves", "trees","bikes","chairs","coin","keys","clocks","pumps","shells","hats","dolls","spoons","forks","beds","beetles","cups","bowls","bags","buckets","dogs","geese","cats","cans","hammers","bricks","bottles","pens","pencils","ribbons","cards","buttons","dice","shirts","socks","belts","flowers","pots","eagles","frogs","combs","candies","trays","pipes","baskets","cushions","blankets","towels","tubes","monkeys","napkins","crates","pills","rocks","ropes","sticks","wheels","boots","cones","triangle","puppets","violins","barrels","gloves","erasers","beans","rings","pillows","candles","mugs","books","toys","balloons","clocks","letters","parcels","slippers")
+length(a)
+length(unique(a))
+summary(as.factor(a))
+a <- c("boats", "houses", "lamps", "stars", "discs", "planes" , "locks", "canes", "hands", "shoes", "bones", "squares", "bells", "bows", "cars", "crosses", "flags", "hearts", "leaves", "trees","bikes","chairs","coin","keys","clocks","pumps","shells","hats","dolls","spoons","forks","beds","beetles","cups","bowls","bags","buckets","dogs","geese","cats","cans","hammers","bricks","bottles","pens","pencils","ribbons","cards","buttons","dice","shirts","socks","belts","flowers","pots","eagles","frogs","combs","candies","trays","pipes","baskets","cushions","blankets","towels","tubes","monkeys","napkins","crates","pills","rocks","ropes","sticks","wheels","boots","cones","triangle","puppets","violins","barrels","gloves","erasers","beans","rings","pillows","candles","mugs","books","toys","balloons","letters","parcels","slippers","masks","shells")
+length(unique(a))
+length(a)
+summary(as.factor(a))
+a <- c("boats", "houses", "lamps", "stars", "discs", "planes" , "locks", "canes", "hands", "shoes", "bones", "squares", "bells", "bows", "cars", "crosses", "flags", "hearts", "leaves", "trees","bikes","chairs","coin","keys","clocks","pumps","shells","hats","dolls","spoons","forks","beds","beetles","cups","bowls","bags","buckets","dogs","geese","cats","cans","hammers","bricks","bottles","pens","pencils","ribbons","cards","buttons","dice","shirts","socks","belts","flowers","pots","eagles","frogs","combs","candies","trays","pipes","baskets","cushions","blankets","towels","tubes","monkeys","napkins","crates","pills","rocks","ropes","sticks","wheels","boots","cones","triangle","puppets","violins","barrels","gloves","erasers","beans","rings","pillows","candles","mugs","books","toys","balloons","letters","parcels","slippers","masks","seeds","cookies","dishes","drums","carrots")
+summary(as.factor(a))
+length(unique(a))
+length(a)
+a <- c(""boats", "houses", "lamps", "stars", "discs", "planes" , "locks", "canes", "hands", "shoes", "bones", "squares", "bells", "bows", "cars", "crosses", "flags", "hearts", "leaves", "trees","bikes","chairs","coin","keys","clocks","pumps","shells","hats","dolls","spoons","forks","beds","beetles","cups","bowls","bags","buckets","dogs","geese","cats","cans","hammers","bricks","bottles","pens","pencils","ribbons","cards","buttons","dice","shirts","socks","belts","flowers","pots","eagles","frogs","combs","candies","trays","pipes","baskets","cushions","blankets","towels","tubes","monkeys","napkins","crates","pills","rocks","ropes","sticks","wheels","boots","cones","triangle","puppets","violins","barrels","gloves","erasers","beans","rings","pillows","candles","mugs","books","toys","balloons","letters","parcels","slippers","masks","seeds","cookies","dishes","drums","carrots","peppers"")
+a <- c("boats", "houses", "lamps", "stars", "discs", "planes" , "locks", "canes", "hands", "shoes", "bones", "squares", "bells", "bows", "cars", "crosses", "flags", "hearts", "leaves", "trees","bikes","chairs","coin","keys","clocks","pumps","shells","hats","dolls","spoons","forks","beds","beetles","cups","bowls","bags","buckets","dogs","geese","cats","cans","hammers","bricks","bottles","pens","pencils","ribbons","cards","buttons","dice","shirts","socks","belts","flowers","pots","eagles","frogs","combs","candies","trays","pipes","baskets","cushions","blankets","towels","tubes","monkeys","napkins","crates","pills","rocks","ropes","sticks","wheels","boots","cones","triangle","puppets","violins","barrels","gloves","erasers","beans","rings","pillows","candles","mugs","books","toys","balloons","letters","parcels","slippers","masks","seeds","cookies","dishes","drums","carrots","peppers")
+length(a)
+length(unique(a))
 # NOTE THAT FOR THESE ANALYSES YOU TYPICALLY NEED TO INCLUDE THE LONG RT TAIL. I recommend rt <8000#
 library(ggplot2)#
 library(reshape2)#
@@ -1044,7 +1038,7 @@ tt$Age <- as.factor(tt$Age)#
 tt$Subject <- paste(tt$Age,tt$Participant, sep = "")#
 #
 tt<- subset(tt, RTms <= 8000)#
-tt$RTms <- tt$RTms + abs(min(tt$RTms))#
+#tt$RTms <- tt$RTms + abs(min(tt$RTms))#
 d = data.frame(Subject = rep(NA, times = length(unique(tt$Subject))*4), Pred = NA, Match = NA, Age = NA, Mu = NA, Sigma = NA, Tau = NA)#
 index = 1#
 for (k in unique(tt$Pred)){#
@@ -1098,100 +1092,14 @@ re.summary.gg <- melt(re.summary,id.vars = c("Age","Pred","Match"), variable.nam
 ggplot(data = re.summary.gg, aes(x = Pred, y = Value)) +#
   geom_bar(stat = "identity", position = "dodge", aes(fill = Match)) +#
   facet_wrap(~Parameter+Age)
-hist(tt$RTms)
-# NOTE THAT FOR THESE ANALYSES YOU TYPICALLY NEED TO INCLUDE THE LONG RT TAIL. I recommend rt <8000#
-library(ggplot2)#
-library(reshape2)#
-library(retimes)#
-library(doBy)#
-library(ez)#
-library(plyr)#
-ads <- read.csv("Adult_R.csv")#
-fives <- read.csv("5yo_R.csv")#
-threes <- read.csv("3yo_R.csv")#
-#
-ads$Age <- "Adult"#
-fives$Age <- "Five"#
-threes$Age <- "Three"#
-#
-tt <- rbind(ads,fives,threes)#
-tt$Age <- as.factor(tt$Age)#
-tt$Subject <- paste(tt$Age,tt$Participant, sep = "")#
-#
-tt<- subset(tt, RTms <= 8000)#
-tt$RTms <- tt$RTms + abs(min(tt$RTms))#
-d = data.frame(Subject = rep(NA, times = length(unique(tt$Subject))*4), Pred = NA, Match = NA, Age = NA, Mu = NA, Sigma = NA, Tau = NA)#
-index = 1#
-for (k in unique(tt$Pred)){#
-	for (j in unique(subset(tt, Pred == k)$Subj)){#
-		for (i in unique(subset(tt, Pred == k & Subject == j)$Match)){#
-			a = timefit(subset(tt, Pred == k & Subject == j & Match == i )$RTms)#
-			d$Age[index] <- as.character(unique(subset(tt, Pred == k & Subject == j & Match == i )$Age)[1])#
-			d$Subject[index] <- j#
-			d$Pred[index] <- k#
-			d$Match[index] <- i#
-			d$Mu[index] <- a@par[1]#
-			d$Sigma[index] <- a@par[2]#
-			d$Tau[index] <- a@par[3]#
-			index <- index + 1#
-#
-			}#
-		}#
-	}#
-re.summary <- summaryBy(Mu + Sigma+ Tau ~ Age+Pred + Match, data = d, FUN = c(mean))#
-#
-ezANOVA(d, dv = Mu, wid = Subject, within = .(Pred,Match), between = .(Age))#
-ezANOVA(d, dv = Sigma, wid = Subject, within = .(Pred,Match), between = .(Age))#
-ezANOVA(d, dv = Tau, wid = Subject, within = .(Pred,Match), between = .(Age))#
-#
-re.summary.gg <- melt(re.summary,id.vars = c("Age","Pred","Match"), variable.name = "Parameter",value.name = "Value")#
-ggplot(data = re.summary.gg, aes(x = Pred, y = Value)) +#
-  geom_bar(stat = "identity", position = "dodge", aes(fill = Match)) +#
-  facet_wrap(~Parameter+Age)#
- # Now for all individuals#
-#tt<- subset(tt, Incorrect == 0)#
-d = data.frame(Pred = rep(NA, length = 12), Match = NA, Age = NA, Mu = NA, Sigma = NA, Tau = NA)#
-index = 1#
-for (k in unique(tt$Pred)){#
-	for (j in unique(subset(tt, Pred == k)$Age)){#
-		for (i in unique(subset(tt, Pred == k & Age == j)$Match)){#
-#
-			a = timefit(subset(tt, Pred == k & Age == j & Match == i )$RTms)#
-			d$Age[index] <- j#
-			d$Pred[index] <- k#
-			d$Match[index] <- i#
-			d$Mu[index] <- a@par[1]#
-			d$Sigma[index] <- a@par[2]#
-			d$Tau[index] <- a@par[3]#
-			index <- index + 1#
-#
-			}#
-		}#
-	}#
-re.summary <- summaryBy(Mu + Sigma+ Tau ~ Age+Pred + Match, data = d, FUN = c(mean))#
-re.summary.gg <- melt(re.summary,id.vars = c("Age","Pred","Match"), variable.name = "Parameter",value.name = "Value")#
-ggplot(data = re.summary.gg, aes(x = Pred, y = Value)) +#
-  geom_bar(stat = "identity", position = "dodge", aes(fill = Match)) +#
-  facet_wrap(~Parameter+Age)
-hist(tt$RTms)
-# NOTE THAT FOR THESE ANALYSES YOU TYPICALLY NEED TO INCLUDE THE LONG RT TAIL. I recommend rt <8000#
-library(ggplot2)#
-library(reshape2)#
-library(retimes)#
-library(doBy)#
-library(ez)#
-library(plyr)#
-ads <- read.csv("Adult_R.csv")#
-fives <- read.csv("5yo_R.csv")#
-threes <- read.csv("3yo_R.csv")#
-#
-ads$Age <- "Adult"#
-fives$Age <- "Five"#
-threes$Age <- "Three"#
-#
-tt <- rbind(ads,fives,threes)#
-tt$Age <- as.factor(tt$Age)#
-tt$Subject <- paste(tt$Age,tt$Participant, sep = "")#
-#
-tt<- subset(tt, RTms <= 8000)
-hist(tt$RTms)
+summary(lmer(RTms ~ Age * Pred * Match + (1+ Pred+Match|Subject), data = tt))
+library(lme4)
+summary(lmer(RTms ~ Age * Pred * Match + (1+ Pred+Match|Subject), data = tt))
+contrats(tt$Pred)
+contrasts(tt$Pred)
+contrasts(tt$Pred)[1] <- -1
+contrasts(tt$Match)[1] <- -1
+summary(lmer(RTms ~ Age * Pred * Match + (1+ Pred+Match|Subject), data = tt))
+summary(lmer(RTms ~ Age * Pred * Match + (1+ Pred+Match|Subject), data = tt))
+tt<- subset(tt, RTms <= 2000)
+summary(lmer(RTms ~ Age * Pred * Match + (1+ Pred+Match|Subject), data = tt))
