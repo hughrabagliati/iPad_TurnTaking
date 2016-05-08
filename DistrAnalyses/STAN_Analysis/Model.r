@@ -42,6 +42,7 @@ stanDat <- list(rt = tt$rt,factor1 = tt$N_Match,factor2 = tt$N_Pred,factor3 = tt
 eg_stan <- stan(file="fixEf.stan",
                 data=stanDat,
                 iter=2000, warmup = 1000, chains = 2)
+print(eg_stan, pars = c("beta","beta_s","beta_t"), probs = c(0.025,0.5,0.975))
 
 timefit(subset(tt, Match == "Match")$rt)
 timefit(subset(tt, Match == "Mismatch")$rt)
