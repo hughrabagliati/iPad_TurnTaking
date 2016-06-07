@@ -49,11 +49,11 @@ model {
     beta_s[i] ~ double_exponential(0,10); 
 	}
 	sigma_u ~ normal(0,1);
-  sigma_u_t ~ normal(0,1);
-  sigma_u_s ~ normal(0,1);
+//  sigma_u_t ~ normal(0,1);
+//  sigma_u_s ~ normal(0,1);
   u ~ normal(0,sigma_u);
-  u_t ~ normal(0,sigma_u_t);
-  u_s ~ normal(0,sigma_u_s);
+//  u_t ~ normal(0,sigma_u_t);
+//  u_s ~ normal(0,sigma_u_s);
 
   for (i in 1:N){
   mu <- beta[1] + beta[2] * factor1[i]+ beta[3] * factor2[i]+ beta[4] * factor3[i] +  beta[5] * factor4[i] + 
