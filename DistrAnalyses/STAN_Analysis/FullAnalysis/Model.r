@@ -26,6 +26,7 @@ tt$N_Pred_AgeThree_Interact <- tt$N_Pred * tt$N_AgeThree
 tt$N_Match_Pred_AgeFive_Interact <- tt$N_Match * tt$N_Pred * tt$N_AgeFive
 tt$N_Match_Pred_AgeThree_Interact <- tt$N_Match * tt$N_Pred * tt$N_AgeThree
 # For some reason, model won't converge with RTs above zero?
+tt$rt_scale <- (tt$rt - mean(tt$rt,na.rm = T))/sd(tt$rt, na.rm = T)
 tt$rt <- tt$rt + abs(min(tt$rt))
 
 
@@ -34,7 +35,25 @@ eg_ml <- timefit(tt$rt)
 print(eg_ml)
 
 
-# STAN model for ex-Gaussian fit
+# STAN model for ex-Gaussian fit - Age Only
+#stanDat <- list(rt = tt$rt,factor1 = tt$N_AgeFive,factor2 = tt$N_AgeThree, N = nrow(tt), J = nlevels(as.factor(tt$Subject)), Subj = as.integer(as.factor(tt$Subject)))
+
+#eg_stan <- stan(file="fixEf_AgeOnly.stan",
+#                data=stanDat,
+#                iter=2000, warmup = 1000, chains = 2)
+#print(eg_stan, pars = c("beta","beta_s","beta_t"), probs = c(0.025,0.5,0.975))
+
+
+# STAN model for ex-Gaussian fit - Age and Conds
+stanDat <- list(rt = tt$rt_scale,factor1 = tt$N_Match,factor2 = tt$N_Pred,factor3 = tt$N_AgeFive,factor4 = tt$N_AgeThree, N = nrow(tt), J = nlevels(as.factor(tt$Subject)), Subj = as.integer(as.factor(tt$Subject)))
+
+eg_stan <- stan(file="fixEf_Age_and_Conds_priors_on_mu.stan",
+                data=stanDat,
+                iter=500, warmup = 200, chains = 1)
+print(eg_stan, pars = c("beta","beta_s","beta_t"), probs = c(0.025,0.5,0.975))
+
+
+# STAN model for ex-Gaussian fit - Full model
 stanDat <- list(rt = tt$rt,factor1 = tt$N_Match,factor2 = tt$N_Pred,factor3 = tt$N_AgeFive,factor4 = tt$N_AgeThree, factor5 = tt$N_M_P_Interact, 
 					factor6 = tt$N_Match_AgeFive_Interact, factor6a = tt$N_Match_AgeThree_Interact, factor7 = tt$N_Pred_AgeFive_Interact, factor7a = tt$N_Pred_AgeThree_Interact, 
 					factor8 = tt$N_Match_Pred_AgeFive_Interact, factor8a = tt$N_Match_Pred_AgeThree_Interact, N = nrow(tt), J = nlevels(as.factor(tt$Subject)), Subj = as.integer(as.factor(tt$Subject)))
@@ -43,6 +62,9 @@ eg_stan <- stan(file="fixEf_Transf3.stan",
                 data=stanDat,
                 iter=2000, warmup = 1000, chains = 2)
 print(eg_stan, pars = c("beta","beta_s","beta_t"), probs = c(0.025,0.5,0.975))
+
+
+
 
 timefit(subset(tt, Match == "Match")$rt)
 timefit(subset(tt, Match == "Mismatch")$rt)

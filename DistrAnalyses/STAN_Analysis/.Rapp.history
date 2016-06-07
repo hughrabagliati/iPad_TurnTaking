@@ -1,3 +1,116 @@
+perm$LargeSample[1:20]
+OneSample <- q#
+LargeSample <- matrix(NA, nrow = 10000, ncol = 1)#
+#
+perm = list(OneSample = OneSample,LargeSample = LargeSample)#
+#
+for (j in seq(1:10000)){#
+a <- cbind(matrix(rnorm(24,0,2),12,2),1)#
+#
+for (i in 1:20){#
+a <- rbind(a, cbind(matrix(rnorm(24,0,2),12,2),1))#
+t <- t.test(a[,1],a[,2])$p.value#
+if(t < 0.05){#
+	break#
+	}#
+}#
+#
+perm$LargeSample[j] <- i#
+}
+hist(perm$LargeSample)
+hist(perm$SmallSample)
+hist(perm$OneSample)
+hist(perm$LargeSample)
+hist(perm$LargeSample[perm$LargeSample < 5])
+while(y <5){ print( y<-y+1) }
+y
+?control
+?Control
+y = 1
+while(y <5){ print( y<-y+1) }
+?t.test
+Marginal <- matrix(NA, nrow = 10000, ncol = 1)#
+perm = list(OneSample = OneSample,LargeSample = LargeSample, Marginal = Marginal)
+h = 1#
+while (h < 11){#
+a <- cbind(matrix(rnorm(24,0,2),12,2),1)#
+if (t.test(a[,1],a[,2])$statistic < 1.96 & a[,1],a[,2])$statistic > 1.4) {#
+h <- h + 1#
+for (i in 1:20){#
+a <- rbind(a, cbind(matrix(rnorm(24,0,2),12,2),1))#
+t <- t.test(a[,1],a[,2])$p.value#
+if(t < 0.05){#
+	break#
+	}#
+}#
+}#
+perm$Marginal[h] <- i#
+}
+h = 1#
+while (h < 11){#
+a <- cbind(matrix(rnorm(24,0,2),12,2),1)#
+if (t.test(a[,1],a[,2])$statistic < 1.96 & t.test(a[,1],a[,2])$statistic > 1.4) {#
+h <- h + 1#
+for (i in 1:20){#
+a <- rbind(a, cbind(matrix(rnorm(24,0,2),12,2),1))#
+t <- t.test(a[,1],a[,2])$p.value#
+if(t < 0.05){#
+	break#
+	}#
+}#
+}#
+perm$Marginal[h] <- i#
+}
+perm$Marginal[1:13]
+h = 1#
+while (h < 11){#
+a <- cbind(matrix(rnorm(24,0,2),12,2),1)#
+if (t.test(a[,1],a[,2])$statistic < 1.96 & t.test(a[,1],a[,2])$statistic > 1.4) {#
+h <- h + 1#
+for (i in 1:20){#
+a <- rbind(a, cbind(matrix(rnorm(24,0,2),12,2),1))#
+t <- t.test(a[,1],a[,2])$p.value#
+if(t < 0.05){#
+	break#
+	}#
+}#
+#
+perm$Marginal[h] <- i#
+}#
+}
+perm$Marginal[1:13]
+h = 1#
+while (h < 11){print("j")#
+a <- cbind(matrix(rnorm(24,0,2),12,2),1)#
+if (t.test(a[,1],a[,2])$statistic < 1.96 & t.test(a[,1],a[,2])$statistic > 1.4) {#
+h <- h + 1#
+for (i in 1:20){#
+a <- rbind(a, cbind(matrix(rnorm(24,0,2),12,2),1))#
+t <- t.test(a[,1],a[,2])$p.value#
+if(t < 0.05){#
+	break#
+	}#
+}#
+#
+perm$Marginal[h] <- i#
+}#
+}
+h = 1#
+while (h < 10001){#
+a <- cbind(matrix(rnorm(24,0,2),12,2),1)#
+if (t.test(a[,1],a[,2])$statistic < 1.96 & t.test(a[,1],a[,2])$statistic > 1.4) {#
+h <- h + 1#
+for (i in 1:20){#
+a <- rbind(a, cbind(matrix(rnorm(24,0,2),12,2),1))#
+t <- t.test(a[,1],a[,2])$p.value#
+if(t < 0.05){#
+	break#
+	}#
+}#
+#
+perm$Marginal[h] <- i#
+}#
+}
 seq(1,3,1)
 seq(100,10000,100)
 h = 1#
@@ -2604,95 +2717,4 @@ tt$N_Match_Pred_AgeFive_Interact <- tt$N_Match * tt$N_Pred * tt$N_AgeFive#
 tt$N_Match_Pred_AgeThree_Interact <- tt$N_Match * tt$N_Pred * tt$N_AgeThree#
 # For some reason, model won't converge with RTs above zero?#
 tt$rt <- tt$rt + abs(min(tt$rt))
-# STAN model for ex-Gaussian fit#
-stanDat <- list(rt = tt$rt,factor1 = tt$N_AgeFive,factor2 = tt$N_AgeThree, N = nrow(tt), J = nlevels(as.factor(tt$Subject)), Subj = as.integer(as.factor(tt$Subject)))#
-#
-eg_stan <- stan(file="fixEf_AgeOnly.stan",#
-                data=stanDat,#
-                iter=2000, warmup = 1000, chains = 2)#
-print(eg_stan, pars = c("beta","beta_s","beta_t"), probs = c(0.025,0.5,0.975))
-# STAN model for ex-Gaussian fit#
-stanDat <- list(rt = tt$rt,factor1 = tt$N_AgeFive,factor2 = tt$N_AgeThree, N = nrow(tt), J = nlevels(as.factor(tt$Subject)), Subj = as.integer(as.factor(tt$Subject)))#
-#
-eg_stan <- stan(file="fixEf_AgeOnly_Mix.stan",#
-                data=stanDat,#
-                iter=2000, warmup = 1000, chains = 2)#
-print(eg_stan, pars = c("beta","beta_s","beta_t"), probs = c(0.025,0.5,0.975))
-# STAN model for ex-Gaussian fit#
-stanDat <- list(rt = tt$rt,factor1 = tt$N_AgeFive,factor2 = tt$N_AgeThree, N = nrow(tt), J = nlevels(as.factor(tt$Subject)), Subj = as.integer(as.factor(tt$Subject)))#
-#
-eg_stan <- stan(file="fixEf_AgeOnly_Mix.stan",#
-                data=stanDat,#
-                iter=2000, warmup = 1000, chains = 2)#
-print(eg_stan, pars = c("beta","beta_s","beta_t"), probs = c(0.025,0.5,0.975))
-# STAN model for ex-Gaussian fit#
-stanDat <- list(rt = tt$rt,factor1 = tt$N_AgeFive,factor2 = tt$N_AgeThree, N = nrow(tt), J = nlevels(as.factor(tt$Subject)), Subj = as.integer(as.factor(tt$Subject)))#
-#
-eg_stan <- stan(file="fixEf_AgeOnly_Mix.stan",#
-                data=stanDat,#
-                iter=2000, warmup = 1000, chains = 2)#
-print(eg_stan, pars = c("beta","beta_s","beta_t"), probs = c(0.025,0.5,0.975))
-# STAN model for ex-Gaussian fit#
-stanDat <- list(rt = tt$rt,factor1 = tt$N_AgeFive,factor2 = tt$N_AgeThree, N = nrow(tt), J = nlevels(as.factor(tt$Subject)), Subj = as.integer(as.factor(tt$Subject)))#
-#
-eg_stan <- stan(file="fixEf_AgeOnly_Mix.stan",#
-                data=stanDat,#
-                iter=2000, warmup = 1000, chains = 2)#
-print(eg_stan, pars = c("beta","beta_s","beta_t"), probs = c(0.025,0.5,0.975))
-# STAN model for ex-Gaussian fit#
-stanDat <- list(rt = tt$rt,factor1 = tt$N_AgeFive,factor2 = tt$N_AgeThree, N = nrow(tt), J = nlevels(as.factor(tt$Subject)), Subj = as.integer(as.factor(tt$Subject)))#
-#
-eg_stan <- stan(file="fixEf_AgeOnly_Mix.stan",#
-                data=stanDat,#
-                iter=2000, warmup = 1000, chains = 2)#
-print(eg_stan, pars = c("beta","beta_s","beta_t"), probs = c(0.025,0.5,0.975))
-# STAN model for ex-Gaussian fit#
-stanDat <- list(rt = tt$rt,factor1 = tt$N_AgeFive,factor2 = tt$N_AgeThree, N = nrow(tt), J = nlevels(as.factor(tt$Subject)), Subj = as.integer(as.factor(tt$Subject)))#
-#
-eg_stan <- stan(file="fixEf_AgeOnly_Mix.stan",#
-                data=stanDat,#
-                iter=2000, warmup = 1000, chains = 2)#
-print(eg_stan, pars = c("beta","beta_s","beta_t"), probs = c(0.025,0.5,0.975))
-# STAN model for ex-Gaussian fit#
-stanDat <- list(rt = tt$rt,factor1 = tt$N_AgeFive,factor2 = tt$N_AgeThree, N = nrow(tt), J = nlevels(as.factor(tt$Subject)), Subj = as.integer(as.factor(tt$Subject)))#
-#
-eg_stan <- stan(file="fixEf_AgeOnly_Mix.stan",#
-                data=stanDat,#
-                iter=2000, warmup = 1000, chains = 2)#
-print(eg_stan, pars = c("beta","beta_s","beta_t"), probs = c(0.025,0.5,0.975))
-print(eg_stan,  probs = c(0.025,0.5,0.975))
-print(eg_stan,  probs = c(0.025,0.5,0.975))
-# STAN model for ex-Gaussian fit#
-stanDat <- list(rt = tt$rt,factor1 = tt$N_AgeFive,factor2 = tt$N_AgeThree, N = nrow(tt), J = nlevels(as.factor(tt$Subject)), Subj = as.integer(as.factor(tt$Subject)))#
-#
-eg_stan <- stan(file="fixEf_AgeOnly_Mix.stan",#
-                data=stanDat,#
-                iter=2000, warmup = 1000, chains = 2)#
-print(eg_stan, pars = c("beta","beta_s","beta_t"), probs = c(0.025,0.5,0.975))
-print(eg_stan,  probs = c(0.025,0.5,0.975))
-# STAN model for ex-Gaussian fit#
-stanDat <- list(rt = tt$rt,factor1 = tt$N_AgeFive,factor2 = tt$N_AgeThree, N = nrow(tt), J = nlevels(as.factor(tt$Subject)), Subj = as.integer(as.factor(tt$Subject)))#
-#
-eg_stan <- stan(file="fixEf_AgeOnly_Mix.stan",#
-                data=stanDat,#
-                iter=2000, warmup = 1000, chains = 1)#
-print(eg_stan, pars = c("beta","beta_s","beta_t"), probs = c(0.025,0.5,0.975))
-library(gamlss.dist)
-curve(dexGAUS(x, mu=300 ,sigma=35,nu=100), 100, 600, #
- main = "The ex-GAUS  density mu=300 ,sigma=35,nu=100")
-curve(dexGAUS(x, mu=300 ,sigma=35,nu=100), 100, 600, #
- main = "The ex-GAUS  density mu=300 ,sigma=35,nu=300")
-lines(dexGAUS(x, mu=300 ,sigma=35,nu=100), 100, 600, #
- main = "The ex-GAUS  density mu=300 ,sigma=35,nu=300")
-?lines
-?curve
-lines(dexGAUS(x, mu=300 ,sigma=35,nu=100), 100, 600, #
- main = "The ex-GAUS  density mu=300 ,sigma=35,nu=300")
-curve(dexGAUS(x, mu=300 ,sigma=35,nu=100), 100, 600, #
- main = "The ex-GAUS  density mu=300 ,sigma=35,nu=100")
-curve(dexGAUS(x, mu=300 ,sigma=35,nu=300), 100, 600,add = T, #
- main = "The ex-GAUS  density mu=300 ,sigma=35,nu=100")
-curve(dexGAUS(x, mu=300 ,sigma=35,nu=100), 100, 600, #
- main = "The ex-GAUS  density mu=300 ,sigma=35,nu=100")#
-curve(dexGAUS(x, mu=300 ,sigma=35,nu=300), 100, 600,add = T, #
- main = "The ex-GAUS  density mu=300 ,sigma=35,nu=100")
+as.integer(as.factor(tt$Subject))

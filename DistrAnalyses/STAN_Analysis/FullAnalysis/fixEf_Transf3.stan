@@ -40,19 +40,21 @@ model {
   real lambda;
   real tau;
   real sigma_e;
-  beta[1] ~ double_exponential(800,10);
-  beta_t[1] ~ double_exponential(250,10);
-  beta_s[1] ~ double_exponential(200,10); 
+  beta[1] ~ double_exponential(0,10);
+  beta_t[1] ~ double_exponential(1,10);
+  beta_s[1] ~ double_exponential(1,10); 
   for (i in 2:12){
     beta[i] ~ double_exponential(0,10);
     beta_t[i] ~ double_exponential(0,10);
     beta_s[i] ~ double_exponential(0,10); 
 	}
+	sigma_u ~ normal(0,1);
+  sigma_u_t ~ normal(0,1);
+  sigma_u_s ~ normal(0,1);
   u ~ normal(0,sigma_u);
   u_t ~ normal(0,sigma_u_t);
   u_s ~ normal(0,sigma_u_s);
-//  sigma_u ~ normal(0,1);
-//  sigma_u_t ~ normal(0,1);
+
   for (i in 1:N){
   mu <- beta[1] + beta[2] * factor1[i]+ beta[3] * factor2[i]+ beta[4] * factor3[i] +  beta[5] * factor4[i] + 
   				beta[6] * factor5[i] + beta[7] * factor6[i] + beta[8] * factor6a[i] + beta[9] * factor7[i]+ 
