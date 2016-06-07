@@ -11,8 +11,8 @@ data {
 
 parameters {
   vector[J] u; //subject intercepts for mean
-  vector[J] u_t; //subject intercepts for tau
-  vector[J] u_s; //subject intercepts for sigma
+//  vector[J] u_t; //subject intercepts for tau
+//  vector[J] u_s; //subject intercepts for sigma
   vector[5] beta;
   vector[5] beta_t;
   vector[5] beta_s;
@@ -24,6 +24,8 @@ parameters {
   
 }
 transformed parameters {
+  //  real<lower = 0> tau;
+//  tau <- inv(lambda);
 }
 
 model {
@@ -32,25 +34,14 @@ model {
   real tau;
   real sigma_e;
   
-  // priors on intercepts
-  beta[1] ~ double_exponential(800,10);
-  beta_t[1] ~ cauchy(0,2);
-  beta_s[1] ~ cauchy(0,0.5); 
-  
-  // priors on predictor Betas
-  for (i in 2:5){ 
-    beta[i] ~ double_exponential(0,10);
-    beta_t[i] ~ double_exponential(0,10);
-    beta_s[i] ~ double_exponential(0,10); 
-  }
-  
-  // priors on by subject effects
-    sigma_u ~ normal(0,1);
-  //  sigma_u_t ~ normal(0,1);
-  //  sigma_u_s ~ normal(0,1);
+  // priors on beta
+  beta ~ double_exponential(0,10);
+  beta_t ~ double_exponential(0,10);
+  beta_s ~ double_exponential(0,10); 
+
   u ~ normal(0,sigma_u);
 //  u_t ~ normal(0,sigma_u_t);
-//  u_s ~ normal(0,sigma_u_s);
+  //u_s ~ normal(0,sigma_u_s);
 
   for (i in 1:N){
     mu <- beta[1] + beta[2] * factor1[i]+ beta[3] * factor2[i] + beta[4] * factor3[i]+ beta[5] * factor4[i] + u[Subj[i]];
