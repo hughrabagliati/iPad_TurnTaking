@@ -61,10 +61,10 @@ model {
   				beta[10] * factor7a[i] + beta[11] * factor8[i] + beta[12] * factor8a[i] + u[Subj[i]];
   lambda <- beta_t[1] + beta_t[2] * factor1[i]+ beta_t[3] * factor2[i]+ beta_t[4] * factor3[i] + beta_t[5] * factor4[i] + 
   				beta_t[6] * factor5[i]+ beta_t[7] * factor6[i] + beta_t[8] * factor6a[i] + beta_t[9] * factor7[i]+ 
-  				beta_t[10] * factor7a[i] + beta_t[11] * factor8[i] + beta_t[12] * factor8a[i]//; + u_t[Subj[i]];
+  				beta_t[10] * factor7a[i] + beta_t[11] * factor8[i] + beta_t[12] * factor8a[i];// + u_t[Subj[i]];
   sigma_e <- beta_s[1] + beta_s[2] * factor1[i]+ beta_s[3] * factor2[i]+ beta_s[4] * factor3[i] + beta_s[5] * factor4[i] + 
   				beta_s[6] * factor5[i]+ beta_s[7] * factor6[i] + beta_s[8] * factor6a[i] + beta_s[9] * factor7[i]+ 
-  				beta_s[10] * factor7a[i] + beta_s[11] * factor8[i] + beta_s[12] * factor8a[i]//; + u_s[Subj[i]];  		
+  				beta_s[10] * factor7a[i] + beta_s[11] * factor8[i] + beta_s[12] * factor8a[i];// + u_s[Subj[i]];  		
   tau <- inv(lambda);
   rt[i] ~ exp_mod_normal(mu,sigma_e,tau);
   }
