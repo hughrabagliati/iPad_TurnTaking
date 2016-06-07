@@ -18,15 +18,14 @@ parameters {
   vector[5] beta_s;
   
   real<lower=0> sigma_u;
-  real<lower=0> sigma_u_t;
-  real<lower=0> sigma_u_s;
+//  real<lower=0> sigma_u_t;
+//  real<lower=0> sigma_u_s;
 
   
 }
 transformed parameters {
-  //  
-    //  tau <- inv(lambda);
 }
+
 model {
   real mu;
   real lambda;
@@ -46,12 +45,12 @@ model {
   }
   
   // priors on by subject effects
-  //  sigma_u ~ normal(0,1);
+    sigma_u ~ normal(0,1);
   //  sigma_u_t ~ normal(0,1);
   //  sigma_u_s ~ normal(0,1);
   u ~ normal(0,sigma_u);
-  u_t ~ normal(0,sigma_u_t);
-  u_s ~ normal(0,sigma_u_s);
+//  u_t ~ normal(0,sigma_u_t);
+//  u_s ~ normal(0,sigma_u_s);
 
   for (i in 1:N){
     mu <- beta[1] + beta[2] * factor1[i]+ beta[3] * factor2[i] + beta[4] * factor3[i]+ beta[5] * factor4[i] + u[Subj[i]];
