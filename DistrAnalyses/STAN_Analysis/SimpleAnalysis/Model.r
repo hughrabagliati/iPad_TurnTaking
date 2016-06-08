@@ -1,5 +1,6 @@
 library(retimes)
 library(rstan)
+library(ggplot2)
 ads <- read.csv("Adult_R.csv")
 fives <- read.csv("5yo_R.csv")
 threes <- read.csv("3yo_R.csv")
@@ -33,6 +34,8 @@ ggplot(tt,aes(x=rt,..density..,col=Age))+ geom_freqpoly(alpha=1,lwd =1.5,binwidt
 tt$rt <- tt$rt + abs(min(tt$rt))
 
 
+
+
 # Fit Ex-Gaussian using ML (retimes library) 
 eg_ml <- timefit(tt$rt)
 print(eg_ml)
@@ -48,7 +51,6 @@ eg_stan <- stan(file="fixEf_Age_and_Conds_transf.stan",
                 data=stanDat,
                 iter=500, warmup = 200, chains = 1)
 print(eg_stan, pars = c("beta","beta_s","beta_t"), probs = c(0.025,0.5,0.975))
-
 
 
 timefit(subset(tt, Match == "Match")$rt)
