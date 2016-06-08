@@ -25,8 +25,11 @@ tt$N_Pred_AgeFive_Interact <- tt$N_Pred * tt$N_AgeFive
 tt$N_Pred_AgeThree_Interact <- tt$N_Pred * tt$N_AgeThree
 tt$N_Match_Pred_AgeFive_Interact <- tt$N_Match * tt$N_Pred * tt$N_AgeFive
 tt$N_Match_Pred_AgeThree_Interact <- tt$N_Match * tt$N_Pred * tt$N_AgeThree
-# For some reason, model won't converge with RTs above zero?
 # tt$rt_scale <- (tt$rt - mean(tt$rt,na.rm = T))/sd(tt$rt, na.rm = T)
+
+ggplot(tt,aes(x=rt,..density..,col=Age))+ geom_freqpoly(alpha=1,lwd =1.5,binwidth=150)+xlab("Response Time (ms)")
+
+# For some reason, model won't converge with RTs above zero?
 tt$rt <- tt$rt + abs(min(tt$rt))
 
 
@@ -38,10 +41,10 @@ print(eg_ml)
 
 
 
-# STAN model for ex-Gaussian fit - Age and Conds
-stanDat <- list(rt = tt$rt,factor1 = tt$N_Match,factor2 = tt$N_Pred,factor3 = tt$N_AgeFive,factor4 = tt$N_AgeThree, N = nrow(tt), J = nlevels(as.factor(tt$Subject)), Subj = as.integer(as.factor(tt$Subject)))
+# STAN model for ex-Gaussian fit - Age 
+stanDat <- list(rt = tt$rt,factor1 = tt$N_AgeThree,factor2 = tt$N_AgeFive, N = nrow(tt), J = nlevels(as.factor(tt$Subject)), Subj = as.integer(as.factor(tt$Subject)))
 
-eg_stan <- stan(file="fixEf_Age_and_Conds.stan",
+eg_stan <- stan(file="fixEf_Age_and_Conds_transf.stan",
                 data=stanDat,
                 iter=500, warmup = 200, chains = 1)
 print(eg_stan, pars = c("beta","beta_s","beta_t"), probs = c(0.025,0.5,0.975))

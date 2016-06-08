@@ -34,13 +34,13 @@ model {
   real tau;
   real sigma_e;
   
-<<<<<<< Updated upstream
+
   // priors on beta
   beta ~ double_exponential(0,10);
   beta_t ~ double_exponential(0,10);
   beta_s ~ double_exponential(0,10); 
 
-=======
+
   // priors on intercepts
   beta[1] ~ double_exponential(800,10);
   beta_t[1] ~ cauchy(0,10);
@@ -57,7 +57,7 @@ model {
   //  sigma_u ~ normal(0,1);
   //  sigma_u_t ~ normal(0,1);
   //  sigma_u_s ~ normal(0,1);
->>>>>>> Stashed changes
+
   u ~ normal(0,sigma_u);
 //  u_t ~ normal(0,sigma_u_t);
   //u_s ~ normal(0,sigma_u_s);
