@@ -1,9 +1,6 @@
 library(retimes)
 library(rstan)
 library(ggplot2)
-library(retimes)
-library(rstan)
-library(ggplot2)
 
 
 rstan_options(auto_write = TRUE)
