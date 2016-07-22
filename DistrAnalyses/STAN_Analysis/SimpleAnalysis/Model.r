@@ -65,36 +65,18 @@ print(eg_stan, pars = c("beta","beta_s","beta_t"), probs = c(0.025,0.5,0.975))
 
 
 # Full regression
- # Set realistic Initial values. don't assign initial u_e2 values; seems to make convergence worse
- initf1 <- function() {
- list(beta = c(800,rep(0,11)), beta_t = c(300,rep(0,11)),beta_s = c(150,rep(0,11)),u_e2 = rep(0,87),u_s_e2 = rep(0,87),u_t_e2 = rep(0,87))
- }
- 
- stanDat_full <- list(rt = tt$rt,factor1 = tt$N_Match,factor2 = tt$N_Pred,factor3 = tt$N_AgeFive,factor4 = tt$N_AgeThree, factor5 = tt$N_M_P_Interact, 
- 					factor6 = tt$N_Match_AgeFive_Interact, factor6a = tt$N_Match_AgeThree_Interact, factor7 = tt$N_Pred_AgeFive_Interact, factor7a = tt$N_Pred_AgeThree_Interact, 
- 					factor8 = tt$N_Match_Pred_AgeFive_Interact, factor8a = tt$N_Match_Pred_AgeThree_Interact, N = nrow(tt), J = nlevels(as.factor(tt$Subject)), Subj = as.integer(as.factor(tt$Subject)))
- 
- eg_stan_full <- stan(file="fixEf_Age_and_Conds_transf.stan",
-                 data=stanDat_full,
-                   init = initf1, control = list(adapt_delta = 0.8))
-
- print(eg_stan_full, pars = c("beta","beta_s","beta_t"), probs = c(0.025,0.5,0.975))
-
-
-# Full regression
 # Initial values at 1
 initf1 <- function() {
-list(beta = c(800,rep(0,11)), beta_t = c(300,rep(0,11)),beta_s = c(150,rep(0,11)),u = rep(0,87),u_t = rep(0,87))
+list(beta = c(800,rep(0,11)), beta_t = c(300,rep(0,11)),beta_s = c(150,rep(0,11)),u = rep(0,87),u_s = rep(0,87),u_t = rep(0,87))
 }
 
-stanDat_no_s <- list(rt = tt$rt,factor1 = tt$N_Match,factor2 = tt$N_Pred,factor3 = tt$N_AgeFive,factor4 = tt$N_AgeThree, factor5 = tt$N_M_P_Interact, 
+stanDat_full <- list(rt = tt$rt,factor1 = tt$N_Match,factor2 = tt$N_Pred,factor3 = tt$N_AgeFive,factor4 = tt$N_AgeThree, factor5 = tt$N_M_P_Interact, 
 					factor6 = tt$N_Match_AgeFive_Interact, factor6a = tt$N_Match_AgeThree_Interact, factor7 = tt$N_Pred_AgeFive_Interact, factor7a = tt$N_Pred_AgeThree_Interact, 
 					factor8 = tt$N_Match_Pred_AgeFive_Interact, factor8a = tt$N_Match_Pred_AgeThree_Interact, N = nrow(tt), J = nlevels(as.factor(tt$Subject)), Subj = as.integer(as.factor(tt$Subject)))
 
-eg_stan_no_s <- stan(file="fixEf_Age_and_Conds_transf_no_s.stan",
+eg_stan_full <- stan(file="fixEf_Age_and_Conds_transf.stan",
                 data=stanDat_full,
                 iter=600, warmup = 250, chains = 1, init = initf1, control = list(adapt_delta = 0.9))
-print(eg_stan_no_s, pars = c("beta","beta_s","beta_t"), probs = c(0.025,0.5,0.975))
 
 
 timefit(subset(tt, Match == "Match")$rt)
