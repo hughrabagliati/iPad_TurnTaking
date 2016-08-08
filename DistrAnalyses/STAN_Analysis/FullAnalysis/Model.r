@@ -40,7 +40,7 @@ tt$rt <- (tt$rt - mean(tt$rt))/sd(tt$rt)
 ggplot(tt,aes(x=rt,..density..,col=Age))+ geom_freqpoly(alpha=1,lwd =1.5)+xlab("Response Time (ms)")
 
 # For some reason, model won't converge with RTs above zero?
-tt$rt <- tt$rt + abs(min(tt$rt))
+#tt$rt <- tt$rt + abs(min(tt$rt))
 # Fit Ex-Gaussian using ML (retimes library) 
 eg_ml <- timefit(tt$rt)
 print(eg_ml)
@@ -48,14 +48,11 @@ print(eg_ml)
 
 
 
-stanDat_full <- list(rt = tt$rt,factor1 = tt$N_Match,factor2 = tt$N_Pred,factor3 = tt$N_AgeFive,factor4 = tt$N_AgeThree, factor5 = tt$N_M_P_Interact, 
-					factor6 = tt$N_Match_AgeFive_Interact, factor6a = tt$N_Match_AgeThree_Interact, factor7 = tt$N_Pred_AgeFive_Interact, factor7a = tt$N_Pred_AgeThree_Interact, 
-					factor8 = tt$N_Match_Pred_AgeFive_Interact, factor8a = tt$N_Match_Pred_AgeThree_Interact, N = nrow(tt), J = nlevels(as.factor(tt$Subject)), Subj = as.integer(as.factor(tt$Subject)))
-
-eg_stan_exp <- stan(file="fixEf_Age_and_Conds_transf_exp.stan",
+eg_stan_exp <- stan(file="fixEf_Age_and_Conds_transf_exp2.stan",
                 data=stanDat_full,
-                 chains = 4)
+                 chains = 4, iter = 2000, control = list(adapt_delta = 0.88))
 print(eg_stan_exp, pars = c("beta0","beta","beta_s0","beta_s","beta_t0","beta_t"), probs = c(0.025,0.5,0.975))
+
 
 # Full regression
 # Initial values at 1
