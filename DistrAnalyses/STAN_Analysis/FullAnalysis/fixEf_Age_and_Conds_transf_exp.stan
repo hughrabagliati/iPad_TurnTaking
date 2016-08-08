@@ -17,17 +17,17 @@ data {
 }
 
 parameters {
-  real<lower=0> beta0;
-  real<lower=0> beta_t0;
-  real<lower=0> beta_s0;
+  real beta0;
+  real beta_t0;
+  real beta_s0;
 
-  vector<lower=(-1*fabs(beta0)),upper=fabs(beta0)>[11] beta;
-  vector<lower=(-1*fabs(beta_t0)),upper=fabs(beta_t0)>[11] beta_t;
-  vector<lower=(-1*fabs(beta_s0)), upper=fabs(beta_s0)>[11] beta_s;
+  vector[11] beta;
+  vector[11] beta_t;
+  vector[11] beta_s;
 
-  vector<lower=(-0.999*fabs(beta0)),upper=(0.999*fabs(beta0))>[J] u; //subject intercepts for mean
-  vector<lower=(-0.999*fabs(beta_t0)),upper=(0.999*fabs(beta_t0))>[J] u_t; //subject intercepts for tau
-  vector<lower=(-0.999*fabs(beta_s0)),upper=(0.999*fabs(beta_s0))>[J] u_s; //subject intercepts for sigma
+  vector[J] u; //subject intercepts for mean
+  vector[J] u_t; //subject intercepts for tau
+  vector[J] u_s; //subject intercepts for sigma
 
 
   real<lower=0> sigma_u_1;
@@ -78,13 +78,13 @@ transformed parameters {
   				beta[5] * factor5[i] + beta[6] * factor6[i] + beta[7] * factor6a[i] + beta[8] * factor7[i]+ 
   				beta[9] * factor7a[i] + beta[10] * factor8[i] + beta[11] * factor8a[i] + u[Subj[i]]; // maybe replace u here by u_e[Subj[i]] * u_e2 ?
  
-  lambda[i] <- beta_t0 + beta_t[1] * factor1[i]+ beta_t[2] * factor2[i]+ beta_t[3] * factor3[i] + beta_t[4] * factor4[i] + 
+  lambda[i] <- exp(beta_t0 + beta_t[1] * factor1[i]+ beta_t[2] * factor2[i]+ beta_t[3] * factor3[i] + beta_t[4] * factor4[i] + 
   				beta_t[5] * factor5[i]+ beta_t[6] * factor6[i] + beta_t[7] * factor6a[i] + beta_t[8] * factor7[i]+ 
-  				beta_t[9] * factor7a[i] + beta_t[10] * factor8[i] + beta_t[11] * factor8a[i] + u_t[Subj[i]] ; 				
+  				beta_t[9] * factor7a[i] + beta_t[10] * factor8[i] + beta_t[11] * factor8a[i] + u_t[Subj[i]]) ; 				
  
-  sigma_e[i] <-  beta_s0 + beta_s[1] * factor1[i]+ beta_s[2] * factor2[i]+ beta_s[3] * factor3[i] + beta_s[4] * factor4[i] + 
+  sigma_e[i] <-  exp(beta_s0 + beta_s[1] * factor1[i]+ beta_s[2] * factor2[i]+ beta_s[3] * factor3[i] + beta_s[4] * factor4[i] + 
   				beta_s[5] * factor5[i]+ beta_s[6] * factor6[i] + beta_s[7] * factor6a[i] + beta_s[8] * factor7[i]+ 
-  				beta_s[9] * factor7a[i] + beta_s[10] * factor8[i] + beta_s[11] * factor8a[i] +  u_s[Subj[i]]; 
+  				beta_s[9] * factor7a[i] + beta_s[10] * factor8[i] + beta_s[11] * factor8a[i] +  u_s[Subj[i]]); 
  
   tau[i] <-     inv(lambda[i]);
   }
@@ -101,14 +101,14 @@ model {
   sigma_u_s_1 ~ normal(0,1);
   
   // priors on variability in beta
-  sigma_beta_1 ~ double_exponential(0,10);
-  sigma_beta_t_1 ~ double_exponential(0,10);
-  sigma_beta_s_1 ~ double_exponential(0,10);
+  sigma_beta_1 ~ normal(0,1);
+  sigma_beta_t_1 ~ normal(0,1);
+  sigma_beta_s_1 ~ normal(0,1);
 
   // priors on variability in beta
-  sigma_beta0_1 ~ double_exponential(0,10);
-  sigma_beta0_t_1 ~ double_exponential(0,10);
-  sigma_beta0_s_1 ~ double_exponential(0,10);
+  sigma_beta0_1 ~ normal(0,1);
+  sigma_beta0_t_1 ~ normal(0,1);
+  sigma_beta0_s_1 ~ normal(0,1);
 
   
   // parameters for generating by subject intercepts
@@ -118,15 +118,15 @@ model {
 
   
   // priors on intercepts
-  beta0 ~ double_exponential(800,sigma_beta0_1); //double_exponential
-  beta_t0 ~ double_exponential(400,sigma_beta0_t_1);
-  beta_s0 ~ double_exponential(150,sigma_beta0_s_1);//cauchy(150,10); 
+  beta0 ~ normal(0,sigma_beta0_1); //double_exponential
+  beta_t0 ~ normal(0,sigma_beta0_t_1);
+  beta_s0 ~ normal(0,sigma_beta0_s_1);//cauchy(150,10); 
  
   // priors on remaining betas. got worse fit when i estimated a separate variance parameter for each beta.
   for (i in 1:11){ 
-    beta[i] ~ double_exponential(0,sigma_beta_1);//cauchy(0,10);
-    beta_t[i] ~ double_exponential(0,sigma_beta_t_1);//cauchy(0,10);
-    beta_s[i] ~ double_exponential(0,sigma_beta_s_1);//cauchy(0,10); 
+    beta[i] ~ normal(0,sigma_beta_1);//cauchy(0,10);
+    beta_t[i] ~ normal(0,sigma_beta_t_1);//cauchy(0,10);
+    beta_s[i] ~ normal(0,sigma_beta_s_1);//cauchy(0,10); 
   }
 
   

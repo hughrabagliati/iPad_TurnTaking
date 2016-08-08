@@ -17,17 +17,17 @@ data {
 }
 
 parameters {
-  real<lower=0> beta0;
+  real beta0;
   real<lower=0> beta_t0;
   real<lower=0> beta_s0;
 
-  vector<lower=(-1*fabs(beta0)),upper=fabs(beta0)>[11] beta;
-  vector<lower=(-1*fabs(beta_t0)),upper=fabs(beta_t0)>[11] beta_t;
-  vector<lower=(-1*fabs(beta_s0)), upper=fabs(beta_s0)>[11] beta_s;
+  vector[11] beta;
+  vector<lower=(-0.5*fabs(beta_t0)),upper=(0.8*fabs(beta_t0))>[11] beta_t;
+  vector<lower=(-0.5*fabs(beta_s0)),upper=(0.8*fabs(beta_s0))>[11] beta_s;
 
-  vector<lower=(-0.999*fabs(beta0)),upper=(0.999*fabs(beta0))>[J] u; //subject intercepts for mean
-  vector<lower=(-0.99*fabs(beta_t0)),upper=(0.999*fabs(beta_t0))>[J] u_t; //subject intercepts for tau
-  vector<lower=(-0.999*fabs(beta_s0)),upper=(0.999*fabs(beta_s0))>[J] u_s; //subject intercepts for sigma
+  vector<lower=(-0.5*fabs(beta0)),upper=(0.8*fabs(beta0))>[J] u; //subject intercepts for mean
+  vector<lower=(-0.5*fabs(beta_t0)),upper=(0.8*fabs(beta_t0))>[J] u_t; //subject intercepts for tau
+  vector<lower=(-0.5*fabs(beta_s0)),upper=(0.8*fabs(beta_s0))>[J] u_s; //subject intercepts for sigma
 
 
   real<lower=0> sigma_u_1;
@@ -96,19 +96,19 @@ model {
 
  
   // priors on  variability in by subject intercepts
-  sigma_u_1 ~ normal(0,1);
-  sigma_u_t_1 ~ normal(0,1);
-  sigma_u_s_1 ~ normal(0,1);
+  sigma_u_1 ~ normal(0,0.1);
+  sigma_u_t_1 ~ normal(0,0.1);
+  sigma_u_s_1 ~ normal(0,0.1);
   
   // priors on variability in beta
-  sigma_beta_1 ~ double_exponential(0,10);
-  sigma_beta_t_1 ~ double_exponential(0,10);
-  sigma_beta_s_1 ~ double_exponential(0,10);
+  sigma_beta_1 ~ normal(0,0.1);
+  sigma_beta_t_1 ~ normal(0,0.1);
+  sigma_beta_s_1 ~ normal(0,0.1);
 
   // priors on variability in beta
-  sigma_beta0_1 ~ double_exponential(0,10);
-  sigma_beta0_t_1 ~ double_exponential(0,10);
-  sigma_beta0_s_1 ~ double_exponential(0,10);
+  sigma_beta0_1 ~ normal(0,1);
+  sigma_beta0_t_1 ~ normal(0,1);
+  sigma_beta0_s_1 ~ normal(0,1);
 
   
   // parameters for generating by subject intercepts
@@ -118,15 +118,15 @@ model {
 
   
   // priors on intercepts
-  beta0 ~ double_exponential(800,sigma_beta0_1); //double_exponential
-  beta_t0 ~ double_exponential(400,sigma_beta0_t_1);
-  beta_s0 ~ double_exponential(150,sigma_beta0_s_1);//cauchy(150,10); 
+  beta0 ~ normal(0,sigma_beta0_1); //double_exponential
+  beta_t0 ~ normal(0,sigma_beta0_t_1);
+  beta_s0 ~ normal(0,sigma_beta0_s_1);//cauchy(150,10); 
  
   // priors on remaining betas. got worse fit when i estimated a separate variance parameter for each beta.
   for (i in 1:11){ 
-    beta[i] ~ double_exponential(0,sigma_beta_1);//cauchy(0,10);
-    beta_t[i] ~ double_exponential(0,sigma_beta_t_1);//cauchy(0,10);
-    beta_s[i] ~ double_exponential(0,sigma_beta_s_1);//cauchy(0,10); 
+    beta[i] ~ normal(0,sigma_beta_1);//cauchy(0,10);
+    beta_t[i] ~ normal(0,sigma_beta_t_1);//cauchy(0,10);
+    beta_s[i] ~ normal(0,sigma_beta_s_1);//cauchy(0,10); 
   }
 
   
