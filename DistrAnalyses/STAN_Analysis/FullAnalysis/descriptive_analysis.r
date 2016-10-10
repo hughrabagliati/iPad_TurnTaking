@@ -28,4 +28,4 @@ des$inv_full_t <- exp(des$full_t)
 
 des$full_mu <- des$beta0 + des$u
 des[des$Age == "Five",]$full_mu <- des[des$Age == "Five",]$full_mu + des[des$Age == "Five",]$beta3
-des[des$Age == "Three",]$full_t <- des[des$Age == "Three",]$full_mu + des[des$Age == "Three",]$beta4
+des[des$Age == "Three",]$full_mu <- des[des$Age == "Three",]$full_mu + des[des$Age == "Three",]$beta4
