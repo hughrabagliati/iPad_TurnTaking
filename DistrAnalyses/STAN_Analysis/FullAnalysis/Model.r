@@ -21,7 +21,7 @@ tt$Age <- as.factor(tt$Age)
 tt$Subject <- paste(tt$Age,tt$Participant, sep = "")
 
 tt<- subset(tt, RTms <= 8000)
-# I should really try with a lower cutoff. 4s?
+# I should really try with a lower cutoff. 4s? Done now; doesn't improve fit.
 tt$rt <- tt$RTms
 tt$N_Match <- ifelse(tt$Match == "Match",0,1)
 tt$N_Pred <- ifelse(tt$Pred == "Pred",0,1)
@@ -52,6 +52,11 @@ eg_stan_exp <- stan(file="fixEf_Age_and_Conds_transf_exp2.stan",
                 data=stanDat_full,
                  chains = 4, iter = 2000, control = list(adapt_delta = 0.88))
 print(eg_stan_exp, pars = c("beta0","beta","beta_s0","beta_s","beta_t0","beta_t"), probs = c(0.025,0.5,0.975))
+
+
+
+
+
 
 
 # Full regression
