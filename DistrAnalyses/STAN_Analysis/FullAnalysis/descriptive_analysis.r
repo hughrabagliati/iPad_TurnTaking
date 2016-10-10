@@ -13,18 +13,18 @@ des <- descrip[order(descrip$Subject),]
 des <- merge(des,subj_params, by = "Subject")
 
 des$beta_t0 <- mean(eg_stan_list$beta_t0)
-des[,13:23] <- colMeans(eg_stan_list$beta_t)
+des[,13:23] <-  rep(colMeans(eg_stan_list$beta_t), each = length(des[,1]))
 colnames(des)[13:23] <- paste("beta_t",1:11, sep  = "")
 
 des$beta0 <- mean(eg_stan_list$beta0)
-des[,25:35] <- colMeans(eg_stan_list$beta_t)
+des[,25:35] <-  rep(colMeans(eg_stan_list$beta), each = length(des[,1]))
 colnames(des)[25:35] <- paste("beta",1:11, sep  = "")
 
 
 des$full_t <- des$beta_t0 + des$u_t
 des[des$Age == "Five",]$full_t <- des[des$Age == "Five",]$full_t + des[des$Age == "Five",]$beta_t3
 des[des$Age == "Three",]$full_t <- des[des$Age == "Three",]$full_t + des[des$Age == "Three",]$beta_t4
-des$inv_full_t <- 1/exp(des$full_t)
+des$inv_full_t <- exp(des$full_t)
 
 des$full_mu <- des$beta0 + des$u
 des[des$Age == "Five",]$full_mu <- des[des$Age == "Five",]$full_mu + des[des$Age == "Five",]$beta3
