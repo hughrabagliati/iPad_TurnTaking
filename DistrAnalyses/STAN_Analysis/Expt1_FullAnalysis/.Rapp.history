@@ -1,0 +1,842 @@
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:20){#
+	subj_c1[i] <- mean(rlnorm(30,0.3,0.5))#
+	subj_c2[i] <- mean(rlnorm(60,0.3,0.5))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$statistic#
+}
+length(p[abs(p) > 1.96])
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:20){#
+	subj_c1[i] <- mean(rlnorm(30,0.3,0.5))#
+	subj_c2[i] <- mean(rlnorm(60,0.3,0.5))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$statistic#
+}
+length(p[abs(p) > 1.96])
+a <- rlnorm(1000,0.3,0.5)
+?qqplot
+qqnorm(a)
+a <- rlnorm(100000,0.3,0.5)
+qqnorm(a)
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:20){#
+	subj_c1[i] <- mean(rlnorm(30,0,1))#
+	subj_c2[i] <- mean(rlnorm(30,0,1))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$statistic#
+}
+length(p[abs(p) > 1.96])
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:20){#
+	subj_c1[i] <- mean(rlnorm(30,0.1,1))#
+	subj_c2[i] <- mean(rlnorm(30,0,1))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$statistic#
+}
+length(p[abs(p) > 1.96])
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:20){#
+	subj_c1[i] <- mean(rlnorm(30,0.01,1))#
+	subj_c2[i] <- mean(rlnorm(30,0,1))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$statistic#
+}
+length(p[abs(p) > 1.96])
+length(p[abs(p) > 2])
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:20){#
+	subj_c1[i] <- mean(rlnorm(30,0.01,1))#
+	subj_c2[i] <- mean(rlnorm(30,0,1))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$statistic#
+}
+length(p[abs(p) > 2])
+length(p[abs(p) >= 1.96])
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:20){#
+	subj_c1[i] <- mean(rlnorm(30,0.01,1))#
+	subj_c2[i] <- mean(rlnorm(30,0,1))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$statistic#
+}
+length(p[abs(p) >= 1.96])
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:20){#
+	subj_c1[i] <- mean(rlnorm(30,0.01,1))#
+	subj_c2[i] <- mean(rlnorm(30,0,1))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$statistic#
+}
+length(p[abs(p) >= 1.96])
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:20){#
+	subj_c1[i] <- mean(rlnorm(30,0.01,1))#
+	subj_c2[i] <- mean(rlnorm(30,0,1))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$statistic#
+}
+length(p[abs(p) >= 1.96])
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:20){#
+	subj_c1[i] <- mean(rlnorm(30,0,1))#
+	subj_c2[i] <- mean(rlnorm(30,0,1))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$statistic#
+}
+length(p[abs(p) >= 1.96])
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:20){#
+	subj_c1[i] <- mean(rlnorm(30,0,1))#
+	subj_c2[i] <- mean(rlnorm(30,0,1))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$statistic#
+}
+length(p[abs(p) >= 1.96])
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:20){#
+	subj_c1[i] <- mean(rlnorm(30,0,1))#
+	subj_c2[i] <- mean(rlnorm(30,0,1))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$statistic#
+}
+length(p[abs(p) >= 1.96])
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:20){#
+	subj_c1[i] <- median(rlnorm(30,0,1))#
+	subj_c2[i] <- media(rlnorm(30,0,1))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$statistic#
+}
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:20){#
+	subj_c1[i] <- median(rlnorm(30,0,1))#
+	subj_c2[i] <- median(rlnorm(30,0,1))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$statistic#
+}
+length(p[abs(p) >= 1.96])
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:20){#
+	subj_c1[i] <- median(rlnorm(30,0,1))#
+	subj_c2[i] <- median(rlnorm(30,0,1))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$statistic#
+}
+length(p[abs(p) >= 1.96])
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:20){#
+	subj_c1[i] <- median(rlnorm(30,0,1))#
+	subj_c2[i] <- median(rlnorm(30,0,1))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$statistic#
+}
+length(p[abs(p) >= 1.96])
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:20){#
+	subj_c1[i] <- median(rlnorm(30,0,1))#
+	subj_c2[i] <- median(rlnorm(30,0,1))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$statistic#
+}
+length(p[abs(p) >= 1.96])
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:20){#
+	subj_c1[i] <- median(rlnorm(30,0,1))#
+	subj_c2[i] <- median(rlnorm(30,0,1))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$statistic#
+}
+length(p[abs(p) >= 1.96])
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:20){#
+	subj_c1[i] <- mean(rlnorm(30,0,1))#
+	subj_c2[i] <- mean(rlnorm(30,0,1))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$statistic#
+}
+length(p[abs(p) >= 1.96])
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:20){#
+	subj_c1[i] <- mean(rlnorm(30,0,1))#
+	subj_c2[i] <- mean(rlnorm(30,0,1))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$statistic#
+}
+length(p[abs(p) >= 1.96])
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:20){#
+	subj_c1[i] <- mean(rlnorm(30,0,1))#
+	subj_c2[i] <- mean(rlnorm(30,0,1))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$statistic#
+}
+length(p[abs(p) >= 1.96])
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:20){#
+	subj_c1[i] <- mean(rlnorm(30,0,1))#
+	subj_c2[i] <- mean(rlnorm(30,0,1))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$statistic#
+}
+length(p[abs(p) >= 1.96])
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:20){#
+	subj_c1[i] <- mean(rlnorm(30,0,1))#
+	subj_c2[i] <- mean(rlnorm(30,0,1))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$statistic#
+}
+length(p[abs(p) >= 1.96])
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:20){#
+	subj_c1[i] <- mean(log(rlnorm(30,0,1)))#
+	subj_c2[i] <- mean(log(rlnorm(30,0,1)))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$statistic#
+}
+length(p[abs(p) >= 1.96])
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:20){#
+	subj_c1[i] <- mean(log(rlnorm(30,0,1)))#
+	subj_c2[i] <- mean(log(rlnorm(30,0,1)))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$statistic#
+}
+length(p[abs(p) >= 1.96])
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:20){#
+	subj_c1[i] <- mean(log(rlnorm(30,0,1)))#
+	subj_c2[i] <- mean(log(rlnorm(30,0,1)))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$statistic#
+}
+length(p[abs(p) >= 1.96])
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:20){#
+	subj_c1[i] <- mean(log(rlnorm(30,0,1)))#
+	subj_c2[i] <- mean(log(rlnorm(30,0,1)))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$statistic#
+}
+length(p[abs(p) >= 1.96])
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:20){#
+	subj_c1[i] <- mean(log(rlnorm(30,0,1)))#
+	subj_c2[i] <- mean(log(rlnorm(30,0,1)))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$statistic#
+}
+length(p[abs(p) >= 1.96])
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:20){#
+	subj_c1[i] <- mean(log(rlnorm(30,0,1)))#
+	subj_c2[i] <- mean(log(rlnorm(30,0,1)))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$statistic#
+}
+length(p[abs(p) >= 1.96])
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:20){#
+	subj_c1[i] <- mean(log(rlnorm(30,0,1)))#
+	subj_c2[i] <- mean(log(rlnorm(30,0,1)))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$statistic#
+}
+p
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:20){#
+	subj_c1[i] <- mean(log(rlnorm(30,0,1)))#
+	subj_c2[i] <- mean(log(rlnorm(30,0,1)))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$p.value#
+}
+length(p[abs(p) <= 0.05])
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:20){#
+	subj_c1[i] <- mean(log(rlnorm(30,0,1)))#
+	subj_c2[i] <- mean(log(rlnorm(30,0,1)))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$p.value#
+}
+length(p[abs(p) <= 0.05])
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:20){#
+	subj_c1[i] <- mean(log(rlnorm(30,0,1)))#
+	subj_c2[i] <- mean(log(rlnorm(30,0,1)))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$p.value#
+}
+length(p[abs(p) <= 0.05])
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:20){#
+	subj_c1[i] <- mean(log(rlnorm(30,0,1)))#
+	subj_c2[i] <- mean(log(rlnorm(30,0,1)))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$p.value#
+}
+length(p[abs(p) <= 0.05])
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:20){#
+	subj_c1[i] <- mean(log(rlnorm(30,0,1)))#
+	subj_c2[i] <- mean(log(rlnorm(30,0,1)))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$p.value#
+}
+length(p[abs(p) <= 0.05])
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:20){#
+	subj_c1[i] <- mean((rlnorm(30,0,1)))#
+	subj_c2[i] <- mean((rlnorm(30,0,1)))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$p.value#
+}
+length(p[abs(p) <= 0.05])
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:20){#
+	subj_c1[i] <- mean((rlnorm(30,0,1)))#
+	subj_c2[i] <- mean((rlnorm(30,0,1)))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$p.value#
+}
+length(p[abs(p) <= 0.05])
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:20){#
+	subj_c1[i] <- mean((rlnorm(30,0,1)))#
+	subj_c2[i] <- mean((rlnorm(30,0,1)))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$p.value#
+}
+length(p[abs(p) <= 0.05])
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:20){#
+	subj_c1[i] <- mean((rlnorm(30,0,1)))#
+	subj_c2[i] <- mean((rlnorm(30,0,1)))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$p.value#
+}
+length(p[abs(p) <= 0.05])
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:20){#
+	subj_c1[i] <- mean((rlnorm(30,0,1)))#
+	subj_c2[i] <- mean((rlnorm(30,0,1)))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$p.value#
+}
+length(p[abs(p) <= 0.05])
+hist(rlnorm(20,0,1))
+hist(rlnorm(30,0,1))
+hist(rlnorm(30,0,1.2))
+hist(rlnorm(30,0,1.02))
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:20){#
+	subj_c1[i] <- mean((rlnorm(30,0,1.02)))#
+	subj_c2[i] <- mean((rlnorm(30,0,1.02)))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$p.value#
+}
+length(p[abs(p) <= 0.05])
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:20){#
+	subj_c1[i] <- mean((rlnorm(30,0,1.2)))#
+	subj_c2[i] <- mean((rlnorm(30,0,1.2)))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$p.value#
+}
+length(p[abs(p) <= 0.05])
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:20){#
+	subj_c1[i] <- mean((rlnorm(20,0,1.2)))#
+	subj_c2[i] <- mean((rlnorm(20,0,1.2)))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$p.value#
+}
+length(p[abs(p) <= 0.05])
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:20){#
+	subj_c1[i] <- mean((rlnorm(20,0,1.2)))#
+	subj_c2[i] <- mean((rlnorm(20,0,1.2)))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$p.value#
+}
+length(p[abs(p) <= 0.05])
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:20){#
+	subj_c1[i] <- mean((rlnorm(20,0,1.2)))#
+	subj_c2[i] <- mean((rlnorm(20,0,1.2)))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = F, var.equal = T)$p.value#
+}
+length(p[abs(p) <= 0.05])
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:20){#
+	subj_c1[i] <- mean((rlnorm(20,0,1.2)))#
+	subj_c2[i] <- mean((rlnorm(20,0,1.2)))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = F, var.equal = T)$p.value#
+}
+length(p[abs(p) <= 0.05])
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:20){#
+	subj_c1[i] <- mean((rlnorm(20,0,1.2)))#
+	subj_c2[i] <- mean((rlnorm(20,0,1.2)))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = F, var.equal = T)$p.value#
+}
+length(p[abs(p) <= 0.05])
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:20){#
+	subj_c1[i] <- mean((rlnorm(20,0,1.2)))#
+	subj_c2[i] <- mean((rlnorm(20,0,1.2)))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = F, var.equal = T)$p.value#
+}
+length(p[abs(p) <= 0.05])
+p <- rep(NA,100000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:20){#
+	subj_c1[i] <- mean((rlnorm(20,0,1.2)))#
+	subj_c2[i] <- mean((rlnorm(20,0,1.2)))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = F, var.equal = T)$p.value#
+}
+length(p[abs(p) <= 0.05])
+length(p[abs(p) <= 0.05])/100000
+p <- rep(NA,10000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:30){#
+	subj_c1[i] <- mean((rlnorm(20,0,1.2)))#
+	subj_c2[i] <- mean((rlnorm(20,0,1.2)))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$p.value#
+}
+length(p[abs(p) <= 0.05])/10000
+p <- rep(NA,10000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:30){#
+	subj_c1[i] <- mean((rlnorm(30,0,1.2)))#
+	subj_c2[i] <- mean((rlnorm(30,0,1.2)))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$p.value#
+}
+length(p[abs(p) <= 0.05])/10000
+length(p[abs(p) > 0.05])/10000
+p <- rep(NA,10000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:30){#
+	subj_c1[i] <- mean((rlnorm(5,0,1.2)))#
+	subj_c2[i] <- mean((rlnorm(5,0,1.2)))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$p.value#
+}
+length(p[abs(p) > 0.05])/10000
+p <- rep(NA,10000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:30){#
+	subj_c1[i] <- mean((rlnorm(1,0,1.2)))#
+	subj_c2[i] <- mean((rlnorm(1,0,1.2)))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$p.value#
+}
+length(p[abs(p) > 0.05])/10000
+p <- rep(NA,10000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:30){#
+	subj_c1[i] <- mean((rlnorm(100,0,1.2)))#
+	subj_c2[i] <- mean((rlnorm(100,0,1.2)))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$p.value#
+}
+length(p[abs(p) > 0.05])/10000
+subj_c1
+subj_c2
+?rlnorm
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:30){#
+	subj_c1[i] <- mean((rlnorm(30,0,0.5)))#
+	subj_c2[i] <- mean((rlnorm(30,0,0,5)))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$p.value#
+}
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:30){#
+	subj_c1[i] <- mean((rlnorm(30,0,0.5)))#
+	subj_c2[i] <- mean((rlnorm(30,0,0.5)))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$p.value#
+}
+length(p[abs(p) > 0.05])/1000
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:30){#
+	subj_c1[i] <- mean((rlnorm(30,0,0.5)))#
+	subj_c2[i] <- mean((rlnorm(30,0,0.5)))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$p.value#
+}
+length(p[abs(p) > 0.05])/1000
+hist(subj_c1)
+hist(subj_c2)
+p[j]
+t.test(subj_c1,subj_c2, paired = T, var.equal = T)
+t.test(subj_c1,subj_c2, paired = F, var.equal = F)
+hist(rlnorm(100,1,0.5))
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:30){#
+	subj_c1[i] <- mean((rlnorm(100,1,0.5)))#
+	subj_c2[i] <- mean((rlnorm(100,1,0.5)))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$p.value#
+}
+length(p[abs(p) > 0.05])/1000
+length(p[abs(p) <= 0.05])/1000
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:30){#
+	subj_c1[i] <- mean((rlnorm(25,1,0.5)))#
+	subj_c2[i] <- mean((rlnorm(25,1,0.5)))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$p.value#
+}
+length(p[abs(p) <= 0.05])/1000
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:30){#
+	subj_c1[i] <- mean((rlnorm(25,1,0.5)))#
+	subj_c2[i] <- mean((rlnorm(25,1,0.5)))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$p.value#
+}
+length(p[abs(p) <= 0.05])/1000
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:30){#
+	subj_c1[i] <- mean((rlnorm(25,1,0.5)))#
+	subj_c2[i] <- mean((rlnorm(25,1,0.5)))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$p.value#
+}
+length(p[abs(p) <= 0.05])/1000
+p <- rep(NA,1000)#
+for (j in 1:length(p)){ #
+subj_c1 = rep(NA,20)#
+subj_c2 = rep(NA,20)#
+for (i in 1:30){#
+	subj_c1[i] <- mean((rlnorm(25,1,0.5)))#
+	subj_c2[i] <- mean((rlnorm(25,1,0.5)))#
+}#
+p[j] <- t.test(subj_c1,subj_c2, paired = T, var.equal = T)$p.value#
+}
+length(p[abs(p) <= 0.05])/1000
+a <- c()"boats", "houses", "lamps", "stars", "discs", "planes" , "bags", "locks", "canes", "hands", "shoes", "bones", "squares", "bells", "bows", "cars", "crosses", "cups", "flags", "forks" "hearts", "leaves", "trees","bikes","chairs","toys","coin","keys","clocks","pumps","shells","houses","hats","planes","dolls","spoons","forks","beds","beetles","cups","bowls","bags","buckets","dogs","geese","cats","cans","hammers","bricks","bottles","pens","pencils","ribbons","cards","buttons","rings","dice","shirts","socks","shoes","belts","bells","flowers","pots","eagles","frogs")
+a <- c("boats", "houses", "lamps", "stars", "discs", "planes" , "bags", "locks", "canes", "hands", "shoes", "bones", "squares", "bells", "bows", "cars", "crosses", "cups", "flags", "forks" "hearts", "leaves", "trees","bikes","chairs","toys","coin","keys","clocks","pumps","shells","houses","hats","planes","dolls","spoons","forks","beds","beetles","cups","bowls","bags","buckets","dogs","geese","cats","cans","hammers","bricks","bottles","pens","pencils","ribbons","cards","buttons","rings","dice","shirts","socks","shoes","belts","bells","flowers","pots","eagles","frogs")
+a <- c("boats", "houses", "lamps", "stars", "discs", "planes" , "bags", "locks", "canes", "hands", "shoes", "bones", "squares", "bells", "bows", "cars", "crosses", "cups", "flags", "forks" "hearts", "leaves","trees","bikes","chairs","toys","coin","keys","clocks","pumps","shells","houses","hats","planes","dolls","spoons","forks","beds","beetles","cups","bowls","bags","buckets","dogs","geese","cats","cans","hammers","bricks","bottles","pens","pencils","ribbons","cards","buttons","rings","dice","shirts","socks","shoes","belts","bells","flowers","pots","eagles","frogs")
+a <- c("boats", "houses", "lamps", "stars", "discs", "planes" , "bags", "locks", "canes", "hands", "shoes", "bones", "squares", "bells", "bows", "cars", "crosses", "cups", "flags", "forks",leaves","trees","bikes","chairs","toys","coin","keys","clocks","pumps","shells","houses","hats","planes","dolls","spoons","forks","beds","beetles","cups","bowls","bags","buckets","dogs","geese","cats","cans","hammers","bricks","bottles","pens","pencils","ribbons","cards","buttons","rings","dice","shirts","socks","shoes","belts","bells","flowers","pots","eagles","frogs")
+a = c("boats", "houses", "lamps", "stars", "discs", "planes" , "bags", "locks", "canes", "hands", "shoes", "bones", "squares", "bells", "bows", "cars", "crosses", "cups", "flags", "forks" ,"hearts", "leaves", "trees","bikes","chairs","toys","coin","keys","clocks","pumps","shells","houses","hats","planes","dolls","spoons","forks","beds","beetles","cups","bowls","bags","buckets","dogs","geese","cats","cans","hammers","bricks","bottles","pens","pencils","ribbons","cards","buttons","rings","dice","shirts","socks","shoes","belts","bells","flowers","pots","eagles","frogs")
+length(a)
+unique(a)
+length(unique(a))
+summary(a)
+summary(as.factor(a))
+?aspell
+aspell(a)
+a = c("boats", "houses", "lamps", "stars", "discs", "planes" , "bags", "locks", "canes", "hands", "shoes", "bones", "squares", "bells", "bows", "cars", "crosses", "flags", "hearts", "leaves", "trees","bikes","chairs","toys","coin","keys","clocks","pumps","shells","houses","hats","planes","dolls","spoons","forks","beds","beetles","cups","bowls","bags","buckets","dogs","geese","cats","cans","hammers","bricks","bottles","pens","pencils","ribbons","cards","buttons","rings","dice","shirts","socks","belts","flowers","pots","eagles","frogs","combs","candies","trays","pipes","baskets","cushions","blankets","towels","cans","tubes","monkeys","napkins","crates","pills","rocks","ropes","sticks","wheels","boots","cones","squares","triangle","puppets")
+length(a)
+a <- c("boats", "houses", "lamps", "stars", "discs", "planes" , "bags", "locks", "canes", "hands", "shoes", "bones", "squares", "bells", "bows", "cars", "crosses", "flags", "hearts", "leaves", "trees","bikes","chairs","toys","coin","keys","clocks","pumps","shells","houses","hats","planes","dolls","spoons","forks","beds","beetles","cups","bowls","bags","buckets","dogs","geese","cats","cans","hammers","bricks","bottles","pens","pencils","ribbons","cards","buttons","rings","dice","shirts","socks","belts","flowers","pots","eagles","frogs","combs","candies","trays","pipes","baskets","cushions","blankets","towels","cans","tubes","monkeys","napkins","crates","pills","rocks","ropes","sticks","wheels","boots","cones","squares","triangle","puppets","violins","barrels","gloves","erasers","beans","rings","pillows","candles","mugs","books")
+length(a)
+length(unique(a))
+a <- c("boats", "houses", "lamps", "stars", "discs", "planes" , "bags", "locks", "canes", "hands", "shoes", "bones", "squares", "bells", "bows", "cars", "crosses", "flags", "hearts", "leaves", "trees","bikes","chairs","toys","coin","keys","clocks","pumps","shells","houses","hats","planes","dolls","spoons","forks","beds","beetles","cups","bowls","bags","buckets","dogs","geese","cats","cans","hammers","bricks","bottles","pens","pencils","ribbons","cards","buttons","rings","dice","shirts","socks","belts","flowers","pots","eagles","frogs","combs","candies","trays","pipes","baskets","cushions","blankets","towels","cans","tubes","monkeys","napkins","crates","pills","rocks","ropes","sticks","wheels","boots","cones","squares","triangle","puppets","violins","barrels","gloves","erasers","beans","rings","pillows","candles","mugs","books","toys","balloons",)
+a <- c("boats", "houses", "lamps", "stars", "discs", "planes" , "bags", "locks", "canes", "hands", "shoes", "bones", "squares", "bells", "bows", "cars", "crosses", "flags", "hearts", "leaves", "trees","bikes","chairs","toys","coin","keys","clocks","pumps","shells","houses","hats","planes","dolls","spoons","forks","beds","beetles","cups","bowls","bags","buckets","dogs","geese","cats","cans","hammers","bricks","bottles","pens","pencils","ribbons","cards","buttons","rings","dice","shirts","socks","belts","flowers","pots","eagles","frogs","combs","candies","trays","pipes","baskets","cushions","blankets","towels","cans","tubes","monkeys","napkins","crates","pills","rocks","ropes","sticks","wheels","boots","cones","squares","triangle","puppets","violins","barrels","gloves","erasers","beans","rings","pillows","candles","mugs","books","toys","balloons")
+length(unique(a))
+summary(as.factor(a))
+a <- c("boats", "houses", "lamps", "stars", "discs", "planes" , "locks", "canes", "hands", "shoes", "bones", "squares", "bells", "bows", "cars", "crosses", "flags", "hearts", "leaves", "trees","bikes","chairs","coin","keys","clocks","pumps","shells","hats","planes","dolls","spoons","forks","beds","beetles","cups","bowls","bags","buckets","dogs","geese","cats","cans","hammers","bricks","bottles","pens","pencils","ribbons","cards","buttons","dice","shirts","socks","belts","flowers","pots","eagles","frogs","combs","candies","trays","pipes","baskets","cushions","blankets","towels","tubes","monkeys","napkins","crates","pills","rocks","ropes","sticks","wheels","boots","cones","squares","triangle","puppets","violins","barrels","gloves","erasers","beans","rings","pillows","candles","mugs","books","toys","balloons")
+length(unique(a))
+length(a)
+summary(as.factor(a))
+a <- c("boats", "houses", "lamps", "stars", "discs", "planes" , "locks", "canes", "hands", "shoes", "bones", "squares", "bells", "bows", "cars", "crosses", "flags", "hearts", "leaves", "trees","bikes","chairs","coin","keys","clocks","pumps","shells","hats","dolls","spoons","forks","beds","beetles","cups","bowls","bags","buckets","dogs","geese","cats","cans","hammers","bricks","bottles","pens","pencils","ribbons","cards","buttons","dice","shirts","socks","belts","flowers","pots","eagles","frogs","combs","candies","trays","pipes","baskets","cushions","blankets","towels","tubes","monkeys","napkins","crates","pills","rocks","ropes","sticks","wheels","boots","cones","triangle","puppets","violins","barrels","gloves","erasers","beans","rings","pillows","candles","mugs","books","toys","balloons","clocks","letters","parcels","slippers")
+length(a)
+length(unique(a))
+summary(as.factor(a))
+a <- c("boats", "houses", "lamps", "stars", "discs", "planes" , "locks", "canes", "hands", "shoes", "bones", "squares", "bells", "bows", "cars", "crosses", "flags", "hearts", "leaves", "trees","bikes","chairs","coin","keys","clocks","pumps","shells","hats","dolls","spoons","forks","beds","beetles","cups","bowls","bags","buckets","dogs","geese","cats","cans","hammers","bricks","bottles","pens","pencils","ribbons","cards","buttons","dice","shirts","socks","belts","flowers","pots","eagles","frogs","combs","candies","trays","pipes","baskets","cushions","blankets","towels","tubes","monkeys","napkins","crates","pills","rocks","ropes","sticks","wheels","boots","cones","triangle","puppets","violins","barrels","gloves","erasers","beans","rings","pillows","candles","mugs","books","toys","balloons","letters","parcels","slippers","masks","shells")
+length(unique(a))
+length(a)
+summary(as.factor(a))
+a <- c("boats", "houses", "lamps", "stars", "discs", "planes" , "locks", "canes", "hands", "shoes", "bones", "squares", "bells", "bows", "cars", "crosses", "flags", "hearts", "leaves", "trees","bikes","chairs","coin","keys","clocks","pumps","shells","hats","dolls","spoons","forks","beds","beetles","cups","bowls","bags","buckets","dogs","geese","cats","cans","hammers","bricks","bottles","pens","pencils","ribbons","cards","buttons","dice","shirts","socks","belts","flowers","pots","eagles","frogs","combs","candies","trays","pipes","baskets","cushions","blankets","towels","tubes","monkeys","napkins","crates","pills","rocks","ropes","sticks","wheels","boots","cones","triangle","puppets","violins","barrels","gloves","erasers","beans","rings","pillows","candles","mugs","books","toys","balloons","letters","parcels","slippers","masks","seeds","cookies","dishes","drums","carrots")
+summary(as.factor(a))
+length(unique(a))
+length(a)
+a <- c(""boats", "houses", "lamps", "stars", "discs", "planes" , "locks", "canes", "hands", "shoes", "bones", "squares", "bells", "bows", "cars", "crosses", "flags", "hearts", "leaves", "trees","bikes","chairs","coin","keys","clocks","pumps","shells","hats","dolls","spoons","forks","beds","beetles","cups","bowls","bags","buckets","dogs","geese","cats","cans","hammers","bricks","bottles","pens","pencils","ribbons","cards","buttons","dice","shirts","socks","belts","flowers","pots","eagles","frogs","combs","candies","trays","pipes","baskets","cushions","blankets","towels","tubes","monkeys","napkins","crates","pills","rocks","ropes","sticks","wheels","boots","cones","triangle","puppets","violins","barrels","gloves","erasers","beans","rings","pillows","candles","mugs","books","toys","balloons","letters","parcels","slippers","masks","seeds","cookies","dishes","drums","carrots","peppers"")
+a <- c("boats", "houses", "lamps", "stars", "discs", "planes" , "locks", "canes", "hands", "shoes", "bones", "squares", "bells", "bows", "cars", "crosses", "flags", "hearts", "leaves", "trees","bikes","chairs","coin","keys","clocks","pumps","shells","hats","dolls","spoons","forks","beds","beetles","cups","bowls","bags","buckets","dogs","geese","cats","cans","hammers","bricks","bottles","pens","pencils","ribbons","cards","buttons","dice","shirts","socks","belts","flowers","pots","eagles","frogs","combs","candies","trays","pipes","baskets","cushions","blankets","towels","tubes","monkeys","napkins","crates","pills","rocks","ropes","sticks","wheels","boots","cones","triangle","puppets","violins","barrels","gloves","erasers","beans","rings","pillows","candles","mugs","books","toys","balloons","letters","parcels","slippers","masks","seeds","cookies","dishes","drums","carrots","peppers")
+length(a)
+length(unique(a))
+library(lme4)
+inv(-3)
+1/-1.3
+library(retimes)
+rexgauss(5,0,1,1)
+hist(rexgauss(50,0,1,0.5))
+rexgauss(50,0,1,1)
+help('stan')
+library(stan)
+library(rstan)
+help(stan)
+1/10
+1/2
+exp(0.1)
+?exp
+0.1/1
+1/0.1
+1/0.5
+library(retimes)
+curve(dexGAUS(x, mu=300 ,sigma=35,nu=100), 100, 600, #
+ main = "The ex-GAUS  density mu=300 ,sigma=35,nu=100")#
+curve(dexGAUS(x, mu=300 ,sigma=35,nu=300), 100, 600,add = T, #
+ main = "The ex-GAUS  density mu=300 ,sigma=35,nu=100")
+plot(0, )
+plot(1, type="n", axes=F, xlab="", ylab="")
+curve(dexGAUS(x, mu=300 ,sigma=35,nu=100), 100, 600, #
+ main = "The ex-GAUS  density mu=300 ,sigma=35,nu=100")#
+curve(dexGAUS(x, mu=300 ,sigma=35,nu=300), 100, 600,add = T, #
+ main = "The ex-GAUS  density mu=300 ,sigma=35,nu=100")
+library(gamlss.dist)
+curve(dexGAUS(x, mu=300 ,sigma=35,nu=100), 100, 600, #
+ main = "The ex-GAUS  density mu=300 ,sigma=35,nu=100")#
+curve(dexGAUS(x, mu=300 ,sigma=35,nu=300), 100, 600,add = T, #
+ main = "The ex-GAUS  density mu=300 ,sigma=35,nu=100")
+library(gamlss.dist)
+curve(dexGAUS(x, mu=300 ,sigma=35,nu=100), 100, 600, #
+ main = "The ex-GAUS  density mu=300 ,sigma=35,nu=100")#
+curve(dexGAUS(x, mu=300 ,sigma=35,nu=300), 100, 600,add = T, #
+ main = "The ex-GAUS  density mu=300 ,sigma=35,nu=100")
+curve(dexGAUS(x, mu=300 ,sigma=35,nu=100), 100, 600, #
+ main = "")#
+curve(dexGAUS(x, mu=300 ,sigma=35,nu=300), 100, 600,add = T, #
+ main = "", col = "red")
+curve(dexGAUS(x, mu=300 ,sigma=35,nu=100), 100, 600, #
+ main = "", lwd = 5)#
+curve(dexGAUS(x, mu=300 ,sigma=35,nu=300), 100, 600,add = T, #
+ main = "", col = "red", lwd = 5)
+curve(dexGAUS(x, mu=300 ,sigma=35,nu=100), 100, 600, #
+ main = "", lwd = 5, ylab = "Prob. Density", xlab  = "reaction time")#
+curve(dexGAUS(x, mu=300 ,sigma=35,nu=300), 100, 600,add = T, #
+ main = "", col = "red", lwd = 5)
+curve(dexGAUS(x, mu=300 ,sigma=35,nu=100), 100, 600, #
+ main = "", lwd = 5, ylab = "Prob. Density", xlab  = "Reaction Time")#
+curve(dexGAUS(x, mu=300 ,sigma=35,nu=300), 100, 600,add = T, #
+ main = "", col = "red", lwd = 5)
+curve(dexGAUS(x, mu=300 ,sigma=35,nu=100), 100, 600, #
+ main = "", lwd = 5, ylab = "Prob. Density", xlab  = "Reaction Time", bty = "n")#
+curve(dexGAUS(x, mu=300 ,sigma=35,nu=300), 100, 600,add = T, #
+ main = "", col = "red", lwd = 5)
+curve(dexGAUS(x, mu=300 ,sigma=35,nu=100), 100, 600, #
+ main = "", lwd = 5, ylab = "Prob. Density", xlab  = "Reaction Time", bty = "n")#
+curve(dexGAUS(x, mu=400 ,sigma=35,nu=100), 100, 600,add = T, #
+ main = "", col = "red", lwd = 5)
+curve(dexGAUS(x, mu=300 ,sigma=35,nu=100), 100, 600, #
+ main = "", lwd = 5, ylab = "Prob. Density", xlab  = "Reaction Time", bty = "n")
+curve(dexGAUS(x, mu=300 ,sigma=35,nu=300), 100, 600, #
+ main = "", lwd = 5, ylab = "Prob. Density", xlab  = "Reaction Time", bty = "n")
+curve(dexGAUS(x, mu=300 ,sigma=35,nu=300), 300, 1500, #
+ main = "", lwd = 5, ylab = "Prob. Density", xlab  = "Reaction Time", bty = "n")
+curve(dexGAUS(x, mu=300 ,sigma=35,nu=300), 200, 1500, #
+ main = "", lwd = 5, ylab = "Prob. Density", xlab  = "Reaction Time", bty = "n")
+setwd("~/GitHub/iPad_TurnTaking/DistrAnalyses/STAN_Analysis/FullAnalysis")
+des <- read.csv("descripts.csv", header = T, sep = " ")
+summary(des)
+exp(1.2)
+exp(1.02)
+cor.test(exp(des$u_t), des$CELF.Score)
+cor.test(des$u_s, des$CELF.Score)
+cor.test(des$u_s, des$Age)
+cor.test(des$u_s, des$Age..months.)
+cor.test(des$u_t, des$Age..months.)
+cor.test(des$u, des$Age..months.)
+cor.test(des$mean, des$Age..months.)
+library(ez)
+ezANOVA(des,u, wid = Subject, within = Age)
+ezANOVA(des,u, wid = Subject, within = .(Age))
+ezANOVA(des,u, wid = .(Subject), within = .(Age))
+lm(u ~ Age, data = des)
+summary(lm(u ~ Age, data = des))
+summary(lm(u_t ~ Age, data = des))
+summary(lm(inv_full_t ~ Age, data = des))
+summary(lm(inv_full_t ~ Age..months., data = des))
+summary(lm(inv_full_t ~ Age..months., data = subset(des, Age == "Three"))
+)
+summary(lm(inv_full_t ~ Age..months., data = subset(des, Age == "Five")))
+summary(lm(inv_full_t ~ Trials.Completed, data = subset(des, Age == "Five")))
+summary(lm(mean ~ Trials.Completed, data = subset(des, Age == "Five")))
+summary(lm(mean ~ Trials.Completed, data = subset(des, Age == "Three")))
