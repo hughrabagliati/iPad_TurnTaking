@@ -20,7 +20,7 @@ tt <- rbind(ads,threes)#fives,threes)
 tt$Age <- as.factor(tt$Age)
 tt$Subject <- paste(tt$Age,tt$Participant, sep = "")
 
-tt<- subset(tt, RT.ms <= 12000)
+tt<- subset(tt, RT.ms <= 8000 & RT.ms >= -1000)
 # I should really try with a lower cutoff. 4s? Done now; doesn't improve fit.
 tt$rt <- tt$RT.ms
 tt$N_Early <- ifelse(tt$Early.Late == "early",0,1)

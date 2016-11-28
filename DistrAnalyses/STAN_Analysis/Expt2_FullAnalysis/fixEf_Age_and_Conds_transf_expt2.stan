@@ -88,7 +88,7 @@ transformed parameters {
               beta[1] * factor1[i]+ 
               beta[2] * factor2[i]+ 
               //beta[3] * factor3[i] +  
-              beta[4] * factor4[i] + 
+              beta[3] * factor4[i] + 
   			     	beta[4] * factor5[i] + 
   			     	//beta[6] * factor6[i] + 
   			     	beta[5] * factor6a[i] + 
@@ -102,7 +102,7 @@ transformed parameters {
                   beta_t[1] * factor1[i]+ 
                   beta_t[2] * factor2[i]+ 
                  // beta_t[3] * factor3[i] + 
-                  beta_t[4] * factor4[i] + 
+                  beta_t[3] * factor4[i] + 
                   beta_t[4] * factor5[i]+ 
                 //  beta_t[6] * factor6[i] + 
                   beta_t[5] * factor6a[i] + 
@@ -116,7 +116,7 @@ transformed parameters {
                   beta_s[1] * factor1[i]+ 
                   beta_s[2] * factor2[i]+ 
                  // beta_s[3] * factor3[i] + 
-                  beta_s[4] * factor4[i] + 
+                  beta_s[3] * factor4[i] + 
                   beta_s[4] * factor5[i]+ 
                 //  beta_s[6] * factor6[i] + 
                   beta_s[5] * factor6a[i] + 
