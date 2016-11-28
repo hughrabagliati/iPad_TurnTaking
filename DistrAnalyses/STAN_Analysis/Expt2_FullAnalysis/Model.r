@@ -18,7 +18,7 @@ threes$Age <- "Three"
 
 tt <- rbind(ads,threes)#fives,threes)
 tt$Age <- as.factor(tt$Age)
-tt$Subject <- paste(tt$Age,tt$Participant, sep = "")
+tt$Subject <- paste(tt$Age,tt$Subject, sep = "")
 
 tt<- subset(tt, RT.ms <= 8000 & RT.ms >= -1000)
 # I should really try with a lower cutoff. 4s? Done now; doesn't improve fit.

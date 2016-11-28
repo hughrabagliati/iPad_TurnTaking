@@ -87,42 +87,30 @@ transformed parameters {
   mu[i] <-    beta0 + 
               beta[1] * factor1[i]+ 
               beta[2] * factor2[i]+ 
-              //beta[3] * factor3[i] +  
               beta[3] * factor4[i] + 
   			     	beta[4] * factor5[i] + 
-  			     	//beta[6] * factor6[i] + 
   			     	beta[5] * factor6a[i] + 
-  			     	//beta[8] * factor7[i]+ 
   			     	beta[6] * factor7a[i] + 
-  			     	//beta[10] * factor8[i] + 
   			     	beta[7] * factor8a[i] + 
   			     	u[Subj[i]]; // maybe replace u here by u_e[Subj[i]] * u_e2 ?
  
   lambda[i] <- exp(beta_t0 + 
                   beta_t[1] * factor1[i]+ 
                   beta_t[2] * factor2[i]+ 
-                 // beta_t[3] * factor3[i] + 
                   beta_t[3] * factor4[i] + 
                   beta_t[4] * factor5[i]+ 
-                //  beta_t[6] * factor6[i] + 
                   beta_t[5] * factor6a[i] + 
-                //  beta_t[8] * factor7[i]+ 
                   beta_t[6] * factor7a[i] + 
-              //    beta_t[10] * factor8[i] + 
                   beta_t[7] * factor8a[i] + 
                   u_t[Subj[i]]) ; 				
  
   sigma_e[i] <-  exp(beta_s0 + 
                   beta_s[1] * factor1[i]+ 
                   beta_s[2] * factor2[i]+ 
-                 // beta_s[3] * factor3[i] + 
                   beta_s[3] * factor4[i] + 
                   beta_s[4] * factor5[i]+ 
-                //  beta_s[6] * factor6[i] + 
                   beta_s[5] * factor6a[i] + 
-                //  beta_s[8] * factor7[i]+ 
                   beta_s[6] * factor7a[i] + 
-                //  beta_s[10] * factor8[i] + 
                   beta_s[7] * factor8a[i] +  
                   u_s[Subj[i]]); 
  
