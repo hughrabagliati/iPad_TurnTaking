@@ -63,7 +63,7 @@ print(eg_stan_exp, pars = c("beta0","beta","beta_s0","beta_s","beta_t0","beta_t"
 # Full regression
 # Initial values at 1
 initf1 <- function() {
-list(beta = c(0,rep(0,11)), beta_t = c(,rep(0,11)),beta_s = c(0,rep(0,11)))
+list(beta = c(0,rep(0,7)), beta_t = c(0,rep(0,7)),beta_s = c(0,rep(0,7)))
 }
 
 stanDat_full <- list(rt = tt$rt,
@@ -80,7 +80,7 @@ stanDat_full <- list(rt = tt$rt,
                         factor8a = tt$N_Early_Pred_AgeThree_Interact, 
                      N = nrow(tt), J = nlevels(as.factor(tt$Subject)), Subj = as.integer(as.factor(tt$Subject)))
 
-eg_stan_full <- stan(file="fixEf_Age_and_Conds_transf.stan",
+eg_stan_full <- stan(file="fixEf_Age_and_Conds_transf_expt2.stan",
                 data=stanDat_full,
-                 chains = 4, init = initf1, control = list(adapt_delta = 0.88))
+                 chains = 1,iter=50, init = initf1, control = list(adapt_delta = 0.88))
 print(eg_stan_full, pars = c("beta0","beta","beta_s0","beta_s","beta_t0","beta_t"), probs = c(0.025,0.5,0.975))
