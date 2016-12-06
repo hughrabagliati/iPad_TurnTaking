@@ -38,6 +38,7 @@ tt$N_Early_Pred_AgeThree_Interact <- tt$N_Early * tt$N_Pred * tt$N_AgeThree
 # tt$rt_scale <- (tt$rt - mean(tt$rt,na.rm = T))/sd(tt$rt, na.rm = T)
 
 tt$rt <- (tt$rt - mean(tt$rt))/sd(tt$rt)
+tt$scale_character_length <- (tt$CharacterLength.ms - mean(tt$CharacterLength.ms))/sd(tt$CharacterLength.ms)
 ggplot(tt,aes(x=rt,..density..,col=Pred))+ geom_freqpoly(alpha=1,lwd =1.5, bins = 50)+xlab("Response Time (ms)")+facet_wrap(Early.Late ~ Age) + xlim(c(-2,4))
 
 # For some reason, model won't converge with RTs above zero?
@@ -57,10 +58,10 @@ stanDat_full <- list(rt = tt$rt,
                      factor7a = tt$N_Pred_AgeThree_Interact, 
                      factor8 = tt$N_Early_Pred_AgeFive_Interact, 
                      factor8a = tt$N_Early_Pred_AgeThree_Interact, 
-                     factor9 = scale(tt$CharacterLength.ms)[,1],
+                     factor9 = tt$scale_character_length,
                      N = nrow(tt), J = nlevels(as.factor(tt$Subject)), Subj = as.integer(as.factor(tt$Subject)))
 
 eg_stan_exp <- stan(file="fixEf_Age_and_Conds_transf_expt2.stan",
                     data=stanDat_full,
-                    chains = 1, iter = 50)
+                    cores = 4, chains = 4, iter = 6000, warmup = 2000)
 print(eg_stan_exp, pars = c("beta0","beta","beta_s0","beta_s","beta_t0","beta_t"), probs = c(0.025,0.5,0.975))
