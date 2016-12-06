@@ -38,49 +38,29 @@ tt$N_Early_Pred_AgeThree_Interact <- tt$N_Early * tt$N_Pred * tt$N_AgeThree
 # tt$rt_scale <- (tt$rt - mean(tt$rt,na.rm = T))/sd(tt$rt, na.rm = T)
 
 tt$rt <- (tt$rt - mean(tt$rt))/sd(tt$rt)
-ggplot(tt,aes(x=rt,..density..,col=Age))+ geom_freqpoly(alpha=1,lwd =1.5)+xlab("Response Time (ms)")
+ggplot(tt,aes(x=rt,..density..,col=Pred))+ geom_freqpoly(alpha=1,lwd =1.5, bins = 50)+xlab("Response Time (ms)")+facet_wrap(Early.Late ~ Age) + xlim(c(-2,4))
 
 # For some reason, model won't converge with RTs above zero?
 #tt$rt <- tt$rt + abs(min(tt$rt))
 # Fit Ex-Gaussian using ML (retimes library) 
 eg_ml <- timefit(tt$rt)
 print(eg_ml)
-
-
-
-
-eg_stan_exp <- stan(file="fixEf_Age_and_Conds_transf_expt2.stan",
-                data=stanDat_full,
-                 chains = 1, iter = 50, control = list(adapt_delta = 0.88))
-print(eg_stan_exp, pars = c("beta0","beta","beta_s0","beta_s","beta_t0","beta_t"), probs = c(0.025,0.5,0.975))
-
-
-
-
-
-
-
-# Full regression
-# Initial values at 1
-initf1 <- function() {
-list(beta = c(0,rep(0,7)), beta_t = c(0,rep(0,7)),beta_s = c(0,rep(0,7)))
-}
-
 stanDat_full <- list(rt = tt$rt,
                      factor1 = tt$N_Early,
                      factor2 = tt$N_Pred,
-                     #factor3 = tt$N_AgeFive,
+                     factor3 = tt$N_AgeFive,
                      factor4 = tt$N_AgeThree, 
                      factor5 = tt$N_E_P_Interact, 
-                     #factor6 = tt$N_Early_AgeFive_Interact, 
-                        factor6a = tt$N_Early_AgeThree_Interact, 
-                     #factor7 = tt$N_Pred_AgeFive_Interact, 
-                        factor7a = tt$N_Pred_AgeThree_Interact, 
-                     #factor8 = tt$N_Early_Pred_AgeFive_Interact, 
-                        factor8a = tt$N_Early_Pred_AgeThree_Interact, 
+                     factor6 = tt$N_Early_AgeFive_Interact, 
+                     factor6a = tt$N_Early_AgeThree_Interact, 
+                     factor7 = tt$N_Pred_AgeFive_Interact, 
+                     factor7a = tt$N_Pred_AgeThree_Interact, 
+                     factor8 = tt$N_Early_Pred_AgeFive_Interact, 
+                     factor8a = tt$N_Early_Pred_AgeThree_Interact, 
+                     factor9 = scale(tt$CharacterLength.ms)[,1],
                      N = nrow(tt), J = nlevels(as.factor(tt$Subject)), Subj = as.integer(as.factor(tt$Subject)))
 
-eg_stan_full <- stan(file="fixEf_Age_and_Conds_transf_expt2.stan",
-                data=stanDat_full,
-                 chains = 1,iter=50, init = initf1, control = list(adapt_delta = 0.88))
-print(eg_stan_full, pars = c("beta0","beta","beta_s0","beta_s","beta_t0","beta_t"), probs = c(0.025,0.5,0.975))
+eg_stan_exp <- stan(file="fixEf_Age_and_Conds_transf_expt2.stan",
+                    data=stanDat_full,
+                    chains = 1, iter = 50)
+print(eg_stan_exp, pars = c("beta0","beta","beta_s0","beta_s","beta_t0","beta_t"), probs = c(0.025,0.5,0.975))
