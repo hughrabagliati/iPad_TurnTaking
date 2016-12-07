@@ -37,8 +37,8 @@ tt$N_Early_Pred_AgeFive_Interact <- tt$N_Early * tt$N_Pred * tt$N_AgeFive
 tt$N_Early_Pred_AgeThree_Interact <- tt$N_Early * tt$N_Pred * tt$N_AgeThree
 # tt$rt_scale <- (tt$rt - mean(tt$rt,na.rm = T))/sd(tt$rt, na.rm = T)
 
-tt$rt <- (tt$rt - mean(tt$rt))/2*sd(tt$rt)
-tt$scale_character_length <- (tt$CharacterLength.ms - mean(tt$CharacterLength.ms))/2*sd(tt$CharacterLength.ms)
+tt$rt <- (tt$rt - mean(tt$rt))/(2*sd(tt$rt))
+tt$scale_character_length <- (tt$CharacterLength.ms - mean(tt$CharacterLength.ms))/(2*sd(tt$CharacterLength.ms))
 ggplot(tt,aes(x=rt,..density..,col=Pred))+ geom_freqpoly(alpha=1,lwd =1.5, bins = 50)+xlab("Response Time (ms)")+facet_wrap(Early.Late ~ Age) + xlim(c(-2,4))
 
 # For some reason, model won't converge with RTs above zero?
