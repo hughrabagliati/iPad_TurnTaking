@@ -12,7 +12,7 @@ data {
   real<lower=-1,upper=1> factor7a[N];
   real<lower=-1,upper=1> factor8[N];
   real<lower=-1,upper=1> factor8a[N];
-  real factor9[N];
+//  real factor9[N];
   int<lower=1> J; // num of subject
   int<lower=1,upper=J> Subj[N]; //list of subject
 }
@@ -22,9 +22,9 @@ parameters {
   real beta_t0;
   real beta_s0;
 
-  vector[12] beta;
-  vector[12] beta_t;
-  vector[12] beta_s;
+  vector[11] beta;
+  vector[11] beta_t;
+  vector[11] beta_s;
 
   real u_e1; //subject intercepts for mean
   vector[J] u_e2; //subject intercepts for mean
@@ -44,9 +44,9 @@ parameters {
   real<lower=0> sigma_beta_t_1;
   real<lower=0> sigma_beta_s_1;   
 
-  real<lower=0> sigma_beta_continuous;
-  real<lower=0> sigma_beta_t_continuous;
-  real<lower=0> sigma_beta_s_continuous;   
+//  real<lower=0> sigma_beta_continuous;
+//  real<lower=0> sigma_beta_t_continuous;
+//  real<lower=0> sigma_beta_s_continuous;   
 
 // beta0 variance priors
   real<lower=0> sigma_beta0_1;
@@ -98,7 +98,7 @@ transformed parameters {
   			     	beta[9] * factor7a[i] + 
   			     	beta[10] * factor8[i] + 
   			     	beta[11] * factor8a[i] + 
-  			     	beta[12] * factor9[i] + 
+#  			     	beta[12] * factor9[i] + 
   			     	u[Subj[i]]; // maybe replace u here by u_e[Subj[i]] * u_e2 ?
  
   lambda[i] <- exp(beta_t0 + 
@@ -113,7 +113,7 @@ transformed parameters {
   			     	beta_t[9] * factor7a[i] + 
   			     	beta_t[10] * factor8[i] + 
   			     	beta_t[11] * factor8a[i] + 
-  			     	beta_t[12] * factor9[i] + 
+ # 			     	beta_t[12] * factor9[i] + 
                   u_t[Subj[i]]) ; 				
  
   sigma_e[i] <-  exp(beta_s0 + 
@@ -128,7 +128,7 @@ transformed parameters {
   			     	beta_s[9] * factor7a[i] + 
   			     	beta_s[10] * factor8[i] + 
   			     	beta_s[11] * factor8a[i] + 
-  			     	beta_s[12] * factor9[i] + 
+ # 			     	beta_s[12] * factor9[i] + 
                   u_s[Subj[i]]); 
  
   tau[i] <-    inv(lambda[i]);
@@ -155,9 +155,9 @@ model {
   sigma_beta0_t_1 ~ normal(0,1);
   sigma_beta0_s_1 ~ normal(0,1);
   
-  sigma_beta_continuous ~ normal(0,1);
-  sigma_beta_t_continuous ~ normal(0,1);
-  sigma_beta_t_continuous ~ normal(0,1);
+//  sigma_beta_continuous ~ normal(0,1);
+//  sigma_beta_t_continuous ~ normal(0,1);
+//  sigma_beta_t_continuous ~ normal(0,1);
   
   // parameters for generating by subject intercepts
   u_e2 ~ normal(0,sigma_u_1); // normal(0,1)
@@ -180,9 +180,9 @@ model {
     beta_t[i] ~ normal(0,sigma_beta_t_1);//cauchy(0,10);
     beta_s[i] ~ normal(0,sigma_beta_s_1);//cauchy(0,10); 
   }
-    beta[12] ~ normal(0,sigma_beta_continuous);//cauchy(0,10);
-    beta_t[12] ~ normal(0,sigma_beta_s_continuous);//cauchy(0,10);
-    beta_s[12] ~ normal(0,sigma_beta_s_continuous);//cauchy(0,10); 
+//    beta[12] ~ normal(0,sigma_beta_continuous);//cauchy(0,10);
+//    beta_t[12] ~ normal(0,sigma_beta_t_continuous);//cauchy(0,10);
+//    beta_s[12] ~ normal(0,sigma_beta_s_continuous);//cauchy(0,10); 
   
 //  estimate rts
    rt ~ exp_mod_normal(mu,sigma_e,tau);

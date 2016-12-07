@@ -1,5 +1,4 @@
-setwd("M:/Projects/turn-taking/turn-takingS1/Laura/Experiment2")
-data<-read.csv("Exp2Dataset.csv",header=T)
+data<-read.csv("exp2_adults.csv",header=T)
 head(data)
 summary(data)
 library(doBy)
