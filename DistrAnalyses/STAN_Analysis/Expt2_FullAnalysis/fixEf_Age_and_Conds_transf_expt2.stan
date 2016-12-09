@@ -3,7 +3,7 @@ data {
   real rt[N];
   real<lower=-1,upper=1> factor1[N];
   real<lower=-1,upper=1> factor2[N];
-  //real<lower=-1,upper=1> factor3[N];
+ // real<lower=-1,upper=1> factor3[N];
   real<lower=-1,upper=1> factor4[N];
   real<lower=-1,upper=1> factor5[N];
 //  real<lower=-1,upper=1> factor6[N];
@@ -100,6 +100,7 @@ transformed parameters {
   			     	beta[7] * factor8a[i] + 
 //  			     	beta[8] * factor9[i] + 
   			     	u[Subj[i]]); // maybe replace u here by u_e[Subj[i]] * u_e2 ?
+
  
   lambda[i] <- exp(beta_t0 + 
               beta_t[1] * factor1[i]+ 
@@ -112,9 +113,10 @@ transformed parameters {
 //  			     	beta_t[8] * factor7[i] + 
   			     	beta_t[6] * factor7a[i] + 
 //  			     	beta_t[10] * factor8[i] + 
-  			     	beta_t[7] * factor8a[i] );//+ 
+  			     	beta_t[7] * factor8a[i] + 
 //  			     	beta_t[8] * factor9[i] + 
-//                  u_t[Subj[i]]) ; 				
+                  u_t[Subj[i]]) ; 				
+
  
   sigma_e[i] <-  exp(beta_s0 + 
               beta_s[1] * factor1[i]+ 
@@ -127,9 +129,10 @@ transformed parameters {
 //  			     	beta_s[8] * factor7[i] + 
   			     	beta_s[6] * factor7a[i] + 
 //  			     	beta_s[10] * factor8[i] + 
-  			     	beta_s[7] * factor8a[i]);// + 
+  			     	beta_s[7] * factor8a[i] + 
 //  			     	beta_s[12] * factor9[i] + 
-//                  u_s[Subj[i]]); 
+                  u_s[Subj[i]]); 
+
  
   tau[i] <-    inv(lambda[i]);
   }
