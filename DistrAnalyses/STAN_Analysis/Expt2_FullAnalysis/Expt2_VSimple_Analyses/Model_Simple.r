@@ -37,14 +37,8 @@ tt$N_Pred_AgeThree_Interact <- tt$N_Pred * tt$N_AgeThree
 tt$N_Early_Pred_AgeThree_Interact <- tt$N_Early * tt$N_Pred * tt$N_AgeThree
 # tt$rt_scale <- (tt$rt - mean(tt$rt,na.rm = T))/sd(tt$rt, na.rm = T)
 
-summaryBy(rt ~ Subject, data = tt, FUN = length) -> n.trials
-tt <- subset(tt, Subject %in% n.trials[n.trials$rt.length >= 20,]$Subject & Accuracy == 1)
-tt$rt <- tt$rt + abs(min(tt$rt)) + 0.001
-
 tt$rt <- (tt$rt - mean(tt$rt))/(sd(tt$rt))
 tt$scale_character_length <- (tt$CharacterLength.ms - mean(tt$CharacterLength.ms))/(sd(tt$CharacterLength.ms))
-
-
 
 ggplot(tt,aes(x=rt,..density..,col=Pred))+ geom_freqpoly(alpha=1,lwd =1.5, bins = 50)+xlab("Response Time (ms)")+facet_wrap(Early.Late ~ Age) + xlim(c(-2,4))
 
@@ -54,20 +48,20 @@ ggplot(tt,aes(x=rt,..density..,col=Pred))+ geom_freqpoly(alpha=1,lwd =1.5, bins 
 eg_ml <- timefit(tt$rt)
 print(eg_ml)
 stanDat_full <- list(rt = tt$rt,
-                     factor1 = tt$N_Early,
-                     factor2 = tt$N_Pred,
+      #               factor1 = tt$N_Early,
+      #               factor2 = tt$N_Pred,
                     # factor3 = tt$N_AgeFive,
-                     factor4 = tt$N_AgeThree, 
-                     factor5 = tt$N_E_P_Interact, 
+  #                   factor4 = tt$N_AgeThree, 
+   #                  factor5 = tt$N_E_P_Interact, 
                     # factor6 = tt$N_Early_AgeFive_Interact, 
-                     factor6a = tt$N_Early_AgeThree_Interact, 
-                     # factor7 = tt$N_Pred_AgeFive_Interact, 
-                     factor7a = tt$N_Pred_AgeThree_Interact, 
+    #                 factor6a = tt$N_Early_AgeThree_Interact, 
+                    # factor7 = tt$N_Pred_AgeFive_Interact, 
+     #                factor7a = tt$N_Pred_AgeThree_Interact, 
                     # factor8 = tt$N_Early_Pred_AgeFive_Interact, 
-                     factor8a = tt$N_Early_Pred_AgeThree_Interact, 
+      #               factor8a = tt$N_Early_Pred_AgeThree_Interact, 
                      N = nrow(tt), J = nlevels(as.factor(tt$Subject)), Subj = as.integer(as.factor(tt$Subject)))
 
-eg_stan_exp <- stan(file="fixEf_Age_and_Conds_transf_expt2.stan",
+eg_stan_exp <- stan(file="fixEf_Simple_expt2.stan",
                     data=stanDat_full,
                     chains = 3, iter = 50,  control = list(adapt_delta = 0.88))
 
