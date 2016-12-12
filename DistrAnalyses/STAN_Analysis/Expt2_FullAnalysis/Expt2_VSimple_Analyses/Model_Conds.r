@@ -68,9 +68,9 @@ stanDat_full <- list(rt = tt$rt,
                     # factor8a = tt$N_Early_Pred_AgeThree_Interact, 
                      N = nrow(tt), J = nlevels(as.factor(tt$Subject)), Subj = as.integer(as.factor(tt$Subject)))
 
-eg_stan_exp <- stan(file="fixEf_Conds_transf_expt2.stan",
+simple_conds <- stan(file="fixEf_Conds_transf_expt2.stan",
                     data=stanDat_full,
                     chains = 3, iter = 50,  control = list(adapt_delta = 0.88))
 
 
-print(eg_stan_exp, pars = c("beta0","beta","beta_s0","beta_s","beta_t0","beta_t"), probs = c(0.025,0.5,0.975))
+print(simple_conds, pars = c("beta0","beta","beta_s0","beta_s","beta_t0","beta_t"), probs = c(0.025,0.5,0.975))
