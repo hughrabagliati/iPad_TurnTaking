@@ -61,7 +61,7 @@ stanDat_full <- list(rt = tt$rt,
 
 age_conds <- stan(file="fixEf_Conds_Adults_transf_expt2.stan",
                     data=stanDat_full,
-                    chains = 3, iter = 50,  control = list(adapt_delta = 0.88))
+                    chains = 4, iter = 2000,  control = list(adapt_delta = 0.9))
 
 
 print(age_conds, pars = c("beta0","beta","beta_s0","beta_s","beta_t0","beta_t"), probs = c(0.025,0.5,0.975))
