@@ -8,32 +8,32 @@ rstan_options(auto_write = TRUE)
 options(mc.cores = parallel::detectCores())
 set.seed(123)
 
-#ads <- read.csv("exp2_adults.csv")
+ads <- read.csv("exp2_adults.csv")
 fives <- read.csv("exp2_fives.csv")
 threes <- read.csv("exp2_threes.csv")
 
-#ads$Age <- "Adult"
+ads$Age <- "Adult"
 fives$Age <- "Five"
 threes$Age <- "Three"
 
-tt <- rbind(threes,fives)
+tt <- rbind(ads,threes,fives)
 tt$Age <- as.factor(tt$Age)
 tt$Subject <- paste(tt$Age,tt$Subject, sep = "")
 
-tt<- subset(tt, RT.ms <= 6000 & RT.ms >= -500)
+tt<- subset(tt, RT.ms <= 8000 & RT.ms >= -1000)
 # I should really try with a lower cutoff. 4s? Done now; doesn't improve fit.
 tt$rt <- tt$RT.ms
 tt$N_Early <- ifelse(tt$Early.Late == "early",0,1)
 tt$N_Pred <- ifelse(tt$Pred == "Pred",0,1)
-#tt$N_AgeFive <- model.matrix(~tt$Age)[,2]
-#tt$N_AgeThree <- model.matrix(~tt$Age)[,3]
-tt$N_AgeThree <- ifelse(tt$Age == "Five",0,1)#model.matrix(~tt$Age)[,2]
+tt$N_AgeFive <- model.matrix(~tt$Age)[,2]
+tt$N_AgeThree <- model.matrix(~tt$Age)[,3]
+#tt$N_AgeThree <- ifelse(tt$Age == "Five",0,1)#model.matrix(~tt$Age)[,2]
 tt$N_E_P_Interact <- tt$N_Pred * tt$N_Early
-#tt$N_Early_AgeFive_Interact <-  tt$N_Early * tt$N_AgeFive
+tt$N_Early_AgeFive_Interact <-  tt$N_Early * tt$N_AgeFive
 tt$N_Early_AgeThree_Interact <- tt$N_Early * tt$N_AgeThree
-#tt$N_Pred_AgeFive_Interact <- tt$N_Pred * tt$N_AgeFive
+tt$N_Pred_AgeFive_Interact <- tt$N_Pred * tt$N_AgeFive
 tt$N_Pred_AgeThree_Interact <- tt$N_Pred * tt$N_AgeThree
-#tt$N_Early_Pred_AgeFive_Interact <- tt$N_Early * tt$N_Pred * tt$N_AgeFive
+tt$N_Early_Pred_AgeFive_Interact <- tt$N_Early * tt$N_Pred * tt$N_AgeFive
 tt$N_Early_Pred_AgeThree_Interact <- tt$N_Early * tt$N_Pred * tt$N_AgeThree
 # tt$rt_scale <- (tt$rt - mean(tt$rt,na.rm = T))/sd(tt$rt, na.rm = T)
 
