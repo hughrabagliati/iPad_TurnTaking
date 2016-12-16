@@ -26,9 +26,9 @@ parameters {
   vector[J] u_s_e2; //subject intercepts for sigma
 
 
-  real<lower=0> sigma_u_1;
-  real<lower=0> sigma_u_t_1;
-  real<lower=0> sigma_u_s_1;
+  real<lower=0, upper =1> sigma_u_1;
+  real<lower=0, upper =1> sigma_u_t_1;
+  real<lower=0, upper =1> sigma_u_s_1;
 
 
 // beta variance priors
@@ -105,9 +105,12 @@ model {
 
  
   // priors on  variability in by subject intercepts
-  sigma_u_1 ~ normal(0,1);
-  sigma_u_t_1 ~ normal(0,1);
-  sigma_u_s_1 ~ normal(0,1);
+sigma_u_1 ~ beta(1,2);
+sigma_u_t_1 ~ beta(1,2);
+sigma_u_s_1 ~ beta(1,2);
+  //sigma_u_1 ~ normal(0,1);
+  //sigma_u_t_1 ~ normal(0,1);
+  //sigma_u_s_1 ~ normal(0,1);
   
   // priors on variability in beta
   sigma_beta_1 ~ normal(0,1);
