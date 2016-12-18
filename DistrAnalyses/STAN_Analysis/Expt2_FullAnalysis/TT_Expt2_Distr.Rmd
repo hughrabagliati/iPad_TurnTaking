@@ -164,7 +164,7 @@ stanDat_full <- list(rt = tt$rt,
 
 eg_stan_exp <- stan(file="fixEf_AllAges_and_Conds_transf_expt2_beta.stan",
                     data=stanDat_full,
-                    chains = 3, iter = 50,  control = list(adapt_delta = 0.88))
+                    chains = 3, iter = 750,  control = list(adapt_delta = 0.95))
 
 
 ```
@@ -189,7 +189,7 @@ stanDat_adult <- list(rt = tt_adult$rt,
 
 adult_model <- stan(file="fixEf_Conds_transf_expt2.stan",
                     data=stanDat_adult,
-                    chains = 2, iter = 150,  control = list(adapt_delta = 0.95))
+                    chains = 3, iter = 750,  control = list(adapt_delta = 0.95))
 
 ```
 
@@ -219,7 +219,7 @@ stanDat_kids <- list(rt = tt_kids$rt,
 
 kid_model <- stan(file="fixEf_Conds_transf_expt2.stan",
                     data=stanDat_kids,
-                    chains = 2, iter = 150,  control = list(adapt_delta = 0.95))
+                    chains = 3, iter = 750,  control = list(adapt_delta = 0.95))
 
 ```
 
