@@ -135,7 +135,7 @@ stanDat_full <- list(rt = tt$rt,factor1 = tt$N_Match,factor2 = tt$N_Pred,factor3
 
 eg_stan_exp <- stan(file="fixEf_Age_and_Conds_transf_exp2_betas.stan",
                  data=stanDat_full,
-                 chains = 2, iter = 150, control = list(adapt_delta = 0.95))
+                 chains = 2, iter = 750, control = list(adapt_delta = 0.95))
 
 ```
 
@@ -154,7 +154,7 @@ stanDat_adults <- list(rt = tt_adults$rt,factor1 = tt_adults$N_Match,factor2 = t
 
 eg_stan_adults <- stan(file="fixEf_Conds_transf_exp2_betas.stan",
                  data=stanDat_adults,
-                  chains = 2, iter = 150, control = list(adapt_delta = 0.95))
+                  chains = 3, iter = 500, control = list(adapt_delta = 0.95))
 
 
 ```
@@ -178,7 +178,7 @@ stanDat_kids <- list(rt = tt_kids$rt,factor1 = tt_kids$N_Match,factor2 = tt_kids
 
 eg_stan_kids <- stan(file="fixEf_Conds_transf_exp2_betas.stan",
                        data=stanDat_kids,
-                       chains = 2, iter = 150, control = list(adapt_delta = 0.95))
+                       chains = 3, iter = 500, control = list(adapt_delta = 0.95))
 
 
 ```
